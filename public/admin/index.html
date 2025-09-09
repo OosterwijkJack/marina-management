@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Reservation Management System</title>
+      <link rel="stylesheet" href="/style.css">
+      <style>
+         .grey-button-row {
+         display: flex;
+         justify-content: space-evenly;
+         align-items: center;
+         margin: 30px 20px;
+         }
+         .grey-btn {
+         background-color: #6b7280;
+         color: white;
+         border: none;
+         padding: 12px 24px;
+         border-radius: 8px;
+         font-size: 16px;
+         font-weight: 500;
+         cursor: pointer;
+         transition: all 0.3s ease;
+         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+         }
+         .grey-btn:hover {
+         background-color: #4b5563;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+         transform: translateY(-1px);
+         }
+         .grey-btn:active {
+         background-color: #374151;
+         transform: translateY(0);
+         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container-fluid">
+      <div class="header">
+         <h1>Reservation Management System</h1>
+         <div class="status-bar">
+            <div class="status-item" style="background-color: rgb(192, 127, 6); ">Checking in today</div>
+            <div class="status-item" style="background-color: yellow;">Overdue for check in</div>
+         </div>
+      </div>
+      <div class="nav-buttons">
+         <div class="button-group">
+            <button class="nav-btn" onclick="window.location.href = 'http://localhost:3000/'">Reservation List</button>
+            <button class="nav-btn">In Park List</button>
+            <button class="nav-btn" onclick="window.location.href = 'http://localhost:3000/new_reservation'">New Reservation</button>
+            <button class="nav-btn">New Group Reservation</button>
+            <button class="nav-btn">Find Reservation</button>
+            <button class="nav-btn">Campers</button>
+            <button class="nav-btn">Find Camper</button>
+            <button class="nav-btn">Groups</button>
+            <button class="nav-btn">Site Availability</button>
+            <button class="nav-btn">Reports</button>
+            <button class="nav-btn">Database Backup</button>
+            <button class="nav-btn primary" onclick="window.location.href = 'http://localhost:3000/admin'">Admin</button>
+         </div>
+      </div>
+      <div class="grey-button-row">
+         <button class="grey-btn" onclick="window.location.href = 'http://localhost:3000/admin/manage_spaces'">Manage Spaces</button>
+         <button class="grey-btn">Test Button</button>
+         <button class="grey-btn">Test Button</button>
+         <button class="grey-btn">Test Button</button>
+         <button class="grey-btn">Test Button</button>
+         <button class="grey-btn">Test Button</button>
+         <button class="grey-btn">Test Button</button>
+         <button class="grey-btn">Test Button</button>
+      </div>
+      <!-- Required JavaScript libraries -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+      <script src="/new_reservation/newReservation.js"></script>
+   </body>
+</html>

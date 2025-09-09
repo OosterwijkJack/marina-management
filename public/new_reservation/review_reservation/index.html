@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>New Reservation - Reservation Management System</title>
+      <link rel="stylesheet" href="/style.css">
+      <style>
+         /* Only CSS for new form elements */
+         .form-container {
+         padding: 20px;
+         }
+         .form-row {
+         display: flex;
+         align-items: center;
+         margin-bottom: 10px;
+         gap: 10px;
+         }
+         .form-label {
+         min-width: 120px;
+         font-weight: bold;
+         text-align: right;
+         padding-right: 10px;
+         }
+         .site-info-table, .rate-table {
+         border-collapse: collapse;
+         margin: 20px 0;
+         }
+         .site-info-table th,
+         .site-info-table td,
+         .rate-table th,
+         .rate-table td {
+         border: 1px solid #ccc;
+         padding: 8px;
+         text-align: center;
+         }
+         .rate-table .amount {
+         text-align: right;
+         padding-right: 10px;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container-fluid">
+         <div class="header">
+            <h1>Reservation Management System</h1>
+         </div>
+         <div class="nav-buttons">
+            <div class="button-group">
+               <button class="nav-btn" onclick="window.location.href = 'http://localhost:3000/'">Reservation List</button>
+               <button class="nav-btn">In Park List</button>
+               <button class="nav-btn primary">New Reservation</button>
+               <button class="nav-btn">New Group Reservation</button>
+               <button class="nav-btn">Find Reservation</button>
+               <button class="nav-btn">Campers</button>
+               <button class="nav-btn">Find Camper</button>
+               <button class="nav-btn">Groups</button>
+               <button class="nav-btn">Site Availability</button>
+               <button class="nav-btn">Reports</button>
+               <button class="nav-btn">Database Backup</button>
+               <button class="nav-btn" onclick="window.location.href = 'http://localhost:3000/admin'">Admin</button>
+            </div>
+         </div>
+         <div class="form-container">
+            <!-- Date Selection -->
+            <div class="form-row">
+               <span class="form-label">Start Date:</span>
+               <input type="date" id="startDate" value="2025-08-15" disabled>
+               <span style="margin: 0 10px;">End Date:</span>
+               <input type="date" id="endDate" value="2025-08-16" disabled>
+               <button onclick="changeDates()">Change Dates</button>
+            </div>
+            <!-- Customer Information -->
+            <div class="form-row">
+               <span class="form-label">Name:</span>
+               <input type="text" id="firstName" placeholder="First Name" value="Jack">
+               <input type="text" id="lastName" placeholder="Last Name" value="oosterwijk">
+            </div>
+            <div class="form-row">
+               <span class="form-label">Address:</span>
+               <input type="text" id="address" value="601 mainstreet appt 3" style="width: 300px;">
+            </div>
+            <div class="form-row">
+               <span class="form-label"></span>
+               <input type="text" id="address2" placeholder="Address Line 2" style="width: 300px;">
+            </div>
+            <div class="form-row">
+               <span class="form-label">City:</span>
+               <input type="text" id="city" value="mahone">
+               <span style="margin: 0 10px;">State:</span>
+               <input type="text" id="state" value="nova scotia">
+               <input type="text" id="zip" value="b0j 2e0" style="width: 80px;">
+            </div>
+            <div class="form-row">
+               <span class="form-label">Phone Number:</span>
+               <input type="tel" id="phone" value="9022988912">
+            </div>
+            <div class="form-row">
+               <span class="form-label">Email Address:</span>
+               <input type="email" id="email" value="oosterwijkcools@gmail.com" style="width: 250px;">
+               <button onclick="sendEmail()">Send Email</button>
+               <span style="margin-left: 20px;">Private Notes:</span>
+               <input type="text" id="privateNotes" style="width: 150px;">
+            </div>
+
+            <!-- Boat Information (NEW FIELDS) -->
+            <div class="form-row">
+               <span class="form-label">Boat Name:</span>
+               <input type="text" id="boatName" placeholder="Enter boat name" style="width: 200px;">
+               <span style="margin: 0 10px;">Boat Size:</span>
+               <input type="text" id="boatSize" placeholder="e.g., 24ft" style="width: 120px;">
+            </div>
+            <div class="form-row">
+               <span class="form-label">Rig Type:</span>
+               <select id="rigType" style="width: 150px;">
+                  <option value="Sail Boat" selected>Sail Boat</option>
+                  <option value="Motor Boat">Motor Boat</option>
+               </select>
+            </div>
+            <div class="form-row">
+               <span class="form-label">Notes:</span>
+               <textarea id="notes" rows="3" placeholder="Additional notes" style="width: 400px;"></textarea>
+            </div>
+            <div class="form-row">
+               <span class="form-label">Payment Type:</span>
+               <select id="paymentType" style="width: 150px;">
+                  <option value="">Please select</option>
+                  <option value="Cash">Cash</option>
+                  <option value="Credit Card">Credit Card</option>
+                  <option value="Debit Card">Debit Card</option>
+               </select>
+            </div>
+            <!-- Selected Site Info -->
+            <div style="font-weight: bold; margin: 20px 0 10px 0;">Selected Site Info:</div>
+            <table class="site-info-table">
+               <thead>
+                  <tr>
+                     <th>Space</th>
+                     <th>EWS</th>
+                     <th>Size</th>
+                     <th>Type</th>
+                     <th>Special</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>M10</td>
+                     <td></td>
+                     <td>32</td>
+                     <td>Std mooring</td>
+                     <td></td>
+                  </tr>
+               </tbody>
+            </table>
+            <button onclick="changeSpace()">Change Space</button>
+            <!-- Rate Info -->
+            <div style="font-weight: bold; margin: 20px 0 10px 0;">Rate Info:</div>
+            <table class="rate-table">
+               <thead>
+                  <tr>
+                     <th>Item</th>
+                     <th>Start Date</th>
+                     <th>End Date</th>
+                     <th>Count</th>
+                     <th>Each</th>
+                     <th>Amount</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>Days</td>
+                     <td>08-15-2025</td>
+                     <td>08-16-2025</td>
+                     <td>1.00</td>
+                     <td class="amount">$50.00</td>
+                     <td class="amount">$50.00</td>
+                  </tr>
+                  <tr>
+                     <td><strong>Total</strong></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td class="amount"><strong>$50.00</strong></td>
+                  </tr>
+                  <tr>
+                     <td><strong>Amount Due</strong></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td class="amount"><strong>$50.00</strong></td>
+                  </tr>
+               </tbody>
+            </table>
+            <!-- Action Buttons -->
+            <div style="margin-top: 20px;">
+               <button onclick="checkInNow()">Check In Now</button>
+               <button onclick="completeReservation()">Complete Reservation</button>
+               <button >Cancel Reservation</button>
+               <button onclick="window.print()">Print</button>
+            </div>
+         </div>
+      </div>
+      <!-- Required JavaScript libraries -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+      <script src="/new_reservation/review_reservation/review.js"></script>
+   </body>
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Grid Alignment</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f7fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            padding: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            table-layout: fixed;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1 !important;
+        }
+
+        /* Header styling - fixed widths */
+        th {
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            padding: 8px 4px; /* Reduced padding */
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            font-weight: 600;
+            color: #495057;
+            font-size: 10px;
+            line-height: 1.2;
+            white-space: nowrap;
+        }
+
+        /* Resource column */
+        th:first-child {
+            background: #f0f8ff !important;
+            font-weight: 600;
+            text-align: left;
+            width: 120px;
+            min-width: 120px;
+            max-width: 120px;
+            padding: 8px 12px;
+        }
+
+        /* Date columns - EXACT width matching */
+        th:not(:first-child) {
+            width: 80px;
+            min-width: 80px;
+            max-width: 80px;
+        }
+
+        /* Table cells */
+        td {
+            border: 1px solid #e2e8f0;
+            padding: 0;
+            vertical-align: middle;
+        }
+
+        /* Resource cells */
+        td:first-child {
+            background: #f0f8ff !important;
+            font-weight: 600;
+            text-align: left !important;
+            padding: 14px 12px !important;
+            width: 120px;
+            min-width: 120px;
+            max-width: 120px;
+        }
+
+        /* Date cell container - spans all date columns */
+        .dates-container {
+            padding: 0 !important;
+            border: none !important;
+        }
+
+        /* CSS Grid for seamless bars */
+        .row-dates {
+            display: grid;
+            grid-template-columns: repeat(var(--num-dates), 80px); /* EXACT header width */
+            position: relative;
+            height: 50px;
+            width: 100%;
+        }
+
+        /* Grid slots - invisible but provide structure */
+        .row-dates > div {
+            border-left: 1px solid #e2e8f0;
+            min-height: 50px;
+            position: relative;
+        }
+
+        .row-dates > div:last-child {
+            border-right: 1px solid #e2e8f0;
+        }
+
+        /* Beautiful seamless reservation bars */
+        .reservation-bar {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            border-radius: 6px;
+            padding: 4px 8px;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            cursor: pointer;
+            align-self: center;
+            justify-self: stretch;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            z-index: 10;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .reservation-bar:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            z-index: 20;
+        }
+
+        /* Status colors */
+        .status-occupied {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+        }
+        .status-reserved {
+            background: linear-gradient(135deg, #2196F3, #1976d2);
+        }
+        .status-blocked {
+            background: linear-gradient(135deg, #F44336, #d32f2f);
+        }
+
+        .controls {
+            padding: 20px;
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2563eb;
+        }
+
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #475569;
+        }
+
+        .btn-secondary:hover {
+            background: #cbd5e1;
+        }
+
+        /* Debug helper - remove this once working */
+        .debug {
+            background: rgba(255, 0, 0, 0.1) !important;
+            border: 1px dashed red !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="table-container">
+            <table id="reservationTable">
+                <thead>
+                    <tr id="headerRow">
+                        <th>Resource</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" onclick="addSampleReservations()">Add Sample Reservations</button>
+            <button class="btn btn-secondary" onclick="clearAllReservations()">Clear All</button>
+            <button class="btn btn-secondary" onclick="addNewResource()">Add Resource</button>
+        </div>
+    </div>
+
+    <script>
+        // Sample data
+        const siteData = [{
+                name: "Site A1",
+                reservations: [{
+                        start: '2025-08-26',
+                        end: '2025-08-28',
+                        status: 'occupied',
+                        guest: 'Smith'
+                    },
+                    {
+                        start: '2025-08-30',
+                        end: '2025-09-02',
+                        status: 'reserved',
+                        guest: 'Johnson'
+                    }
+                ]
+            },
+            {
+                name: "Site A2",
+                reservations: [{
+                    start: '2025-08-27',
+                    end: '2025-08-29',
+                    status: 'occupied',
+                    guest: 'Brown'
+                }]
+            },
+            {
+                name: "Site B1",
+                reservations: [{
+                    start: '2025-08-23',
+                    end: '2025-08-31',
+                    status: 'occupied',
+                    guest: 'Davis'
+                }]
+            },
+            {
+                name: "Site B2",
+                reservations: [{
+                        start: '2025-08-28',
+                        end: '2025-09-01',
+                        status: 'reserved',
+                        guest: 'Wilson'
+                    },
+                    {
+                        start: '2025-09-05',
+                        end: '2025-09-11',
+                        status: 'blocked',
+                        guest: 'Maintenance'
+                    }
+                ]
+            },
+            {
+                name: "Site C1",
+                reservations: []
+            }
+        ];
+
+        let currentDate = new Date();
+
+        function formatDate(date) {
+            return date.toLocaleDateString('en-US', {
+                weekday: 'short',
+                day: 'numeric',
+                month: 'short'
+            }).toUpperCase();
+        }
+
+        function toLocalDateOnly(str) {
+            const [y, m, d] = str.split("-").map(Number);
+            return new Date(y, m - 1, d);
+        }
+
+        function addDays(date, days) {
+            const result = new Date(date);
+            result.setDate(result.getDate() + days);
+            return result;
+        }
+
+        function getDateRange() {
+            let smallestDate;
+            let largestDate;
+
+            siteData.forEach(element => {
+                element.reservations.forEach(res => {
+                    if (!res.start || !res.end) return;
+
+                    let startDate = new Date(toLocalDateOnly(res.start).toString());
+                    let endDate = new Date(toLocalDateOnly(res.end).toString());
+
+                    if (!smallestDate || !largestDate) {
+                        smallestDate = startDate;
+                        largestDate = endDate;
+                        return;
+                    }
+
+                    if (startDate < smallestDate) {
+                        smallestDate = startDate;
+                    }
+                    if (endDate > largestDate) {
+                        largestDate = endDate;
+                    }
+                });
+            });
+
+            // Default range if no reservations
+            if (!smallestDate || !largestDate) {
+                smallestDate = new Date();
+                largestDate = addDays(new Date(), 14);
+            }
+
+            const days = ((largestDate - smallestDate) / (1000 * 60 * 60 * 24)) + 1;
+
+            return {
+                startDate: smallestDate,
+                endDate: largestDate,
+                days
+            };
+        }
+
+        function generateDateSlots() {
+            let dateData = getDateRange();
+            const slots = [];
+
+            for (let i = 0; i < dateData.days; i++) {
+                const d = addDays(dateData.startDate, i);
+                slots.push({
+                    key: d.toISOString().split('T')[0],
+                    label: formatDate(d)
+                });
+            }
+            return slots;
+        }
+
+        function isDateInRange(date, start, end) {
+            const checkDate = new Date(date);
+            const startDate = new Date(start);
+            const endDate = new Date(end);
+            return checkDate >= startDate && checkDate <= endDate;
+        }
+
+        // Generate date slots
+        const dateSlots = generateDateSlots();
+
+        // Build header
+        const headerRow = document.getElementById("headerRow");
+        dateSlots.forEach(slot => {
+            const th = document.createElement("th");
+            th.textContent = slot.label;
+            th.dataset.date = slot.key;
+            headerRow.appendChild(th);
+        });
+
+        class ReservationManager {
+            constructor() {
+                this.reservations = new Map();
+            }
+
+            addReservation(resourceId, startDate, endDate, guestName, status = 'occupied') {
+                const startIndex = dateSlots.findIndex(s => s.key === startDate);
+                const endIndex = dateSlots.findIndex(s => s.key === endDate);
+                if (startIndex === -1 || endIndex === -1 || endIndex < startIndex) return;
+
+                const row = document.querySelector(`[data-resource="${resourceId}"]`);
+                if (!row) return;
+
+                const grid = row.querySelector(".row-dates");
+                if (!grid) return;
+
+                const bar = document.createElement("div");
+                bar.className = `reservation-bar status-${status}`;
+                bar.textContent = guestName;
+                bar.style.gridColumn = `${startIndex + 1} / ${endIndex + 2}`; // grid columns are 1-based
+                bar.addEventListener("click", () => {
+                    const newName = prompt("Enter new guest name:", guestName);
+                    if (newName) bar.textContent = newName;
+                });
+
+                grid.appendChild(bar);
+                const id = `res_${Date.now()}_${Math.random().toString(36).substr(2,9)}`;
+                this.reservations.set(id, {
+                    resourceId,
+                    startDate,
+                    endDate,
+                    guestName,
+                    element: bar
+                });
+
+                return id;
+            }
+
+            clearAll() {
+                this.reservations.forEach(r => r.element.remove());
+                this.reservations.clear();
+            }
+
+            addResource(name, id) {
+                const tableBody = document.getElementById("tableBody");
+                const tr = document.createElement("tr");
+                tr.dataset.resource = id;
+
+                const labelCell = document.createElement("td");
+                labelCell.textContent = name;
+                tr.appendChild(labelCell);
+
+                const datesCell = document.createElement("td");
+                datesCell.className = "dates-container";
+                datesCell.colSpan = dateSlots.length;
+
+                const grid = document.createElement("div");
+                grid.className = "row-dates";
+                grid.style.setProperty("--num-dates", dateSlots.length);
+
+                dateSlots.forEach(() => {
+                    const slot = document.createElement("div");
+                    grid.appendChild(slot);
+                });
+
+                datesCell.appendChild(grid);
+                tr.appendChild(datesCell);
+                tableBody.appendChild(tr);
+            }
+        }
+
+        const reservationManager = new ReservationManager();
+
+        // Button functions
+        function addSampleReservations() {
+            // Load sample data
+            siteData.forEach(site => {
+                site.reservations.forEach(res => {
+                    reservationManager.addReservation(site.name, res.start, res.end, res.guest, res.status);
+                });
+            });
+        }
+
+        function clearAllReservations() {
+            reservationManager.clearAll();
+        }
+
+        function addNewResource() {
+            const name = prompt("Enter resource name:");
+            if (!name) return;
+            const id = name.toLowerCase().replace(/\s+/g, "-");
+            reservationManager.addResource(name, id);
+        }
+
+        // Initialize resources
+        document.addEventListener('DOMContentLoaded', function() {
+            siteData.forEach(site => {
+                reservationManager.addResource(site.name, site.name);
+            });
+
+            // Auto-load reservations
+            setTimeout(() => {
+                addSampleReservations();
+            }, 100);
+        });
+    </script>
+</body>
+</html>

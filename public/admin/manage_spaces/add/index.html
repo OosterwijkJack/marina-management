@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Site Management - Reservation System</title>
+<link rel="stylesheet" href="/style.css">
+<style>
+/* Additional form-specific styles */
+.form-container {
+    padding: 32px;
+}
+
+.form-wrapper {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 32px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.form-input {
+    padding: 12px 16px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.form-select {
+    padding: 12px 16px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.form-textarea {
+    padding: 12px 16px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    font-size: 14px;
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.price-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.form-actions {
+    text-align: center;
+    padding-top: 24px;
+    border-top: 1px solid #e9ecef;
+}
+
+.btn-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.btn-cancel {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-cancel:hover {
+    background: #545b62;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .price-group {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .btn-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .form-container {
+        padding: 16px;
+    }
+    
+    .form-wrapper {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+<body>
+<div class="container-fluid">
+<div class="header">
+<h1>Reservation Management System</h1>
+</div>
+<div class="nav-buttons">
+<div class="button-group">
+<button class="nav-btn" onclick="window.location.href = 'http://localhost:3000/'">Reservation List</button>
+<button class="nav-btn">In Park List</button>
+<button class="nav-btn">New Reservation</button>
+<button class="nav-btn">New Group Reservation</button>
+<button class="nav-btn">Find Reservation</button>
+<button class="nav-btn">Campers</button>
+<button class="nav-btn">Find Camper</button>
+<button class="nav-btn">Groups</button>
+<button class="nav-btn">Site Availability</button>
+<button class="nav-btn">Reports</button>
+<button class="nav-btn">Database Backup</button>
+<button class="nav-btn primary" onclick="window.location.href = 'http://localhost:3000/admin'">Admin</button>
+</div>
+</div>
+
+<div class="form-container">
+<div class="form-wrapper">
+<h2 class="form-title">Site Management</h2>
+<form id="siteForm">
+<div class="form-grid">
+<div class="form-group">
+<label class="form-label" for="spaceName">Space Name</label>
+<input type="text" id="spaceName" name="spaceName" class="form-input" placeholder="e.g., Dock A1, Site 15">
+</div>
+
+<div class="form-group">
+<label class="form-label" for="spaceSize">Space Size</label>
+<input type="number" id="spaceSize" name="spaceSize" class="form-input" placeholder="e.g., 30">
+</div>
+
+<div class="form-group">
+<label class="form-label" for="type">Type</label>
+<input type="text" id="spaceType" class="form-input" placeholder="e.g., heavy mooring">
+</div>
+
+<div class="form-group full-width">
+<label class="form-label">Pricing</label>
+<div class="price-group">
+<div>
+<label class="form-label" for="dailyPrice">Daily Price ($)</label>
+<input type="number" id="dailyPrice" name="dailyPrice" class="form-input" step="0.01" min="0" placeholder="0.00">
+</div>
+<div>
+<label class="form-label" for="weeklyPrice">Weekly Price ($)</label>
+<input type="number" id="weeklyPrice" name="weeklyPrice" class="form-input" step="0.01" min="0" placeholder="0.00">
+</div>
+<div>
+<label class="form-label" for="monthlyPrice">Monthly Price ($)</label>
+<input type="number" id="monthlyPrice" name="monthlyPrice" class="form-input" step="0.01" min="0" placeholder="0.00">
+</div>
+</div>
+</div>
+
+<div class="form-group full-width">
+<label class="form-label" for="special">Special Notes</label>
+<textarea id="special" name="special" class="form-textarea" placeholder="Enter any special features, amenities, or requirements for this site..."></textarea>
+</div>
+</div>
+
+<div class="form-actions">
+<div class="btn-group">
+<button type="button" class="btn-cancel" onclick="window.location.href='http://localhost:3000/admin/manage_spaces/'">Back</button>
+<button type="submit" class="niceButton">Save Site</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+
+
+<!-- Required JavaScript libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="/admin/manage_spaces/add/add.js"></script>
+</body>
+</html>

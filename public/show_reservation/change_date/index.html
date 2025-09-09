@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Management System</title>
+    
+    
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<body>
+    <div class="container-fluid">
+        <div class="header">
+            <h1>Reservation Management System</h1>
+        </div>
+
+        <div class="nav-buttons">
+            <div class="button-group">
+                <button class="nav-btn" onclick="window.location.href = 'http://localhost:3000/'">Reservation List</button>
+                <button class="nav-btn">In Park List</button>
+                <button class="nav-btn primary">New Reservation</button>
+                <button class="nav-btn">New Group Reservation</button>
+                <button class="nav-btn">Find Reservation</button>
+                <button class="nav-btn">Campers</button>
+                <button class="nav-btn">Find Camper</button>
+                <button class="nav-btn">Groups</button>
+                <button class="nav-btn">Site Availability</button>
+                <button class="nav-btn">Reports</button>
+                <button class="nav-btn">Database Backup</button>
+                <button class="nav-btn" onclick="window.location.href = 'http://localhost:3000/admin'">Admin</button>
+            </div>
+        </div>
+
+       <div class="datepicker-container" style="padding: 50px;">
+            <div class="datepicker-group">
+                <label for="startDate">Start Date</label>
+                <input type="text" id="startDate" placeholder="Select start date">
+            </div>
+            
+            <div class="datepicker-group">
+                <label for="endDate">End Date</label>
+                <input type="text" id="endDate" placeholder="Select end date">
+            </div>
+        </div>
+        <div style="padding: 0 50px 20px 50px;">
+            <button id="searchBtn" class="niceButton" onclick="submitChange()">
+            Submit Change
+            </button>
+            <h3 id="failText" style="padding-top: 10px; color: red" hidden>Unable to complete date change, selected dates are reserved/occupied for another user.</h3>
+        </div>
+
+    
+    <!-- Required JavaScript libraries -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="/show_reservation/change_date/changeDate.js"></script>
+</body>
+</html>

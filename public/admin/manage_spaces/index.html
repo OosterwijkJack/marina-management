@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Management System</title>
+    
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="/libraries/dataTables.dataTables.min.css">
+    <link rel="stylesheet" href="/style.css">
+   
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="header">
+            <h1>Reservation Management System</h1>
+            
+        </div>
+
+        <div class="nav-buttons">
+            <div class="button-group">
+                <button class="nav-btn" onclick="window.location.href = 'http://localhost:3000/'">Reservation List</button>
+                <button class="nav-btn">In Park List</button>
+                <button class="nav-btn" onclick="window.location.href = 'http://localhost:3000/new_reservation'">New Reservation</button>
+                <button class="nav-btn">New Group Reservation</button>
+                <button class="nav-btn">Find Reservation</button>
+                <button class="nav-btn">Campers</button>
+                <button class="nav-btn">Find Camper</button>
+                <button class="nav-btn">Groups</button>
+                <button class="nav-btn">Site Availability</button>
+                <button class="nav-btn">Reports</button>
+                <button class="nav-btn">Database Backup</button>
+                <button class="nav-btn primary" onclick="window.location.href = 'http://localhost:3000/admin'">Admin</button>
+            </div>
+        </div>
+        <button class="niceButton" style="margin: 20px; background: green !important;" onclick="window.location.href = 'http://localhost:3000/admin/manage_spaces/add/'">Add Space</button>
+        <div class="table-container">
+            <div class="table-wrapper">
+                <table id="spaceTable" class="table table-striped table-bordered dt-responsive nowrap">
+                    <thead>
+                        <tr>
+                            <th>Space</th>
+                            <th>Size</th>
+                            <th>Daily Cost $</th>
+                            <th>Weekly Cost $</th>
+                            <th>Monthly Cost $</th>
+                            <th>Type</th>
+                            <th>Special</th>
+                            <th></th> <!--Edit-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be populated by DataTables -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Required JavaScript libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
+    <script src="/admin/manage_spaces/manage_spaces.js"></script>
+</body>
+</html>
