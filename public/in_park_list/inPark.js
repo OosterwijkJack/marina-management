@@ -30,7 +30,7 @@ async function appendTable(){
 
         let resRow = reservationList[i]
 
-        if(resRow.status != "reserved"){
+        if(resRow.status != "occupied"){
             continue;
         }
 
@@ -51,14 +51,14 @@ async function appendTable(){
 
         row = [resRow.id, resRow.start, resRow.end, resRow.first_name + " " + resRow.last_name, resRow.type, resRow.length, resRow.space, resRow.payment, resRow.due]
         // append buttons
-        row.push('<button class="show-btn">Show</button>', '<button class="check-in-btn">Check in</button>', '<button class="cancel-btn">Cancel</button>');
+        row.push('<button class="show-btn">Show</button>', '<button class="check-out-btn">Check out</button>', '<button class="cancel-btn">Cancel</button>');
         let node = table.row.add(row).draw().node();
         console.log(startDate)
-        if(now > startDate){ // will use for checking in and overdue in future
-            $(node).css('background-color', 'yellow');
+        if(now > endDate){ // will use for checking in and overdue in future
+            $(node).css('background-color', 'grey');
         }
-        if(isSameDay(now, startDate)){
-            $(node).css('background-color', "lightgreen");
+        if(isSameDay(now, endDate)){
+            $(node).css('background-color', "green");
         }
     }
     table.draw();
@@ -89,19 +89,18 @@ $('#reservationTable').on('click', '.show-btn', function () {
 });
 
 // Check in button
-$('#reservationTable').on('click', '.check-in-btn', async function () {
+$('#reservationTable').on('click', '.check-out-btn', async function () {
     let rowData = table.row($(this).parents('tr')).data();
-
-    if(confirm(`Confirm check in of reservation #${rowData[0]}`)){
+    if(confirm(`Confirm checkout of reservation #${rowData[0]}`)){
+        // Your check-in logic here
         await fetch("/api/reservations/update", {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({id: rowData[0], name: "status", value: "occupied"})
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({id: rowData[0], name: "status", value: "complete"})
         })
         .then(res => res.json())
         .then(data =>{
             if(data.success){
-                window.location.reload();
             }
         })
     }

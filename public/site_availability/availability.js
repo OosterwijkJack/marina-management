@@ -110,7 +110,10 @@ let dateSlots;
          this.reservations = new Map();
      }
 
-     addReservation(resourceId, startDate, endDate, guestName,resID, status = 'occupied') {
+     addReservation(resourceId, startDate, endDate, guestName,resID, status) {
+        if(status != "occupied" && status != "reserved"){
+            return
+        }
 
         const tmpDate = new Date(toLocalDateOnly(endDate).toString())
         endDate = dateToStr(addDays(tmpDate, -1))
@@ -225,7 +228,8 @@ let dateSlots;
 
     reservationList.forEach(res => {
         let name = res.first_name + " " + res.last_name
-        reservationManager.addReservation(res.space, res.start, res.end, name, res.id)
+        console.log(res.status)
+        reservationManager.addReservation(res.space, res.start, res.end, name, res.id, res.status)
         //first = false;
         
     })

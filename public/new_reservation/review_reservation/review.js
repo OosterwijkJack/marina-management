@@ -1,10 +1,13 @@
+let resID;
+
 window.onload = async function () {
     const urlParams = new URLSearchParams(window.location.search);
 
     console.log(urlParams);
     populateFields(urlParams);
 
-    await calcPrice();
+    await calcPrice(); // reserve spa
+    await enterReservation(); // reserve space 
     
 }
 
@@ -46,6 +49,9 @@ function populateFields(data){
     siteTable.rows[1].cells[0].innerText = data.get("space")
 
 }   
+function completeReservation(){
+    window.location.href = "http://localhost:3000"
+}
 // Basic form functionality
 function changeDates() {
     // Your date change logic here
@@ -59,11 +65,23 @@ function changeSpace() {
     // Your space change logic here
 }
 
-function checkInNow() {
-    // Your check-in logic here
+async function checkInNow() {
+    if(confirm(`Confirm check in of reservation #${resID}?`)){
+        await fetch("/api/reservations/update", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({id: resID , name: "status", value: "occupied"})
+        })
+        .then(res => res.json())
+        .then(data =>{
+            if(data.success){
+                window.location.href = "http://localhost:3000"
+            }
+        })
+    }
 }
 
-function completeReservation() {
+async function enterReservation() {
     // Validate required fields
     const requiredFields = ['firstName', 'lastName', 'address', 'city', 'phone', 'email'];
     let isValid = true;
@@ -106,11 +124,12 @@ function completeReservation() {
         email: document.getElementById("email").value,
         boat_name: document.getElementById("boatName").value,
         last_name: document.getElementById("lastName").value,
-        first_name: document.getElementById("firstName").value
+        first_name: document.getElementById("firstName").value,
+        status: "reserved"
 
     }
 
-    fetch("/api/reservations", {
+    await fetch("/api/reservations", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(requestBody)
@@ -118,9 +137,11 @@ function completeReservation() {
     .then(res => res.json())
     .then(data => {
         console.log(data)
-        if(data.success){
-            alert("Reservation complete.")
-            window.location.href = "http://localhost:3000/"
+        if(!data.success){
+            alert(data.error)
+        }
+        else{
+            resID = data.id
         }
     })
 }

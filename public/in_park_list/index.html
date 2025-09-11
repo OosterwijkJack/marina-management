@@ -15,15 +15,15 @@
         <div class="header">
             <h1>Reservation Management System</h1>
             <div class="status-bar">
-                <div class="status-item" style="background-color: lightgreen ">Checking in today</div>
-                <div class="status-item" style="background-color: yellow;">Overdue for check in</div>
+                <div class="status-item" style="background-color: green;">Leaving today</div>
+                <div class="status-item" style="background-color: grey;">Overstaying reservation</div>
             </div>
         </div>
 
         <div class="nav-buttons">
             <div class="button-group">
-                <a class="nav-btn primary" href="http://localhost:3000/">Reservation List</a>
-                <button class="nav-btn" onclick="window.location.href='http://localhost:3000/in_park'">In Park List</button>
+                <a class="nav-btn" href="http://localhost:3000/">Reservation List</a>
+                <button class="nav-btn primary">In Park List</button>
                 <button class="nav-btn" onclick="window.location.href = 'http://localhost:3000/new_reservation'">New Reservation</button>
                 <button class="nav-btn">New Group Reservation</button>
                 <button class="nav-btn">Find Reservation</button>
@@ -67,6 +67,6 @@
     <!-- Required JavaScript libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
-    <script src="/reservation_list/loadReservations.js"></script>
+    <script src="/in_park_list/inPark.js"></script>
 </body>
 </html>

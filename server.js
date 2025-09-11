@@ -57,6 +57,9 @@ app.get("/show_reservation/change_date", (req, res) =>{
 app.get("/site_availability", (req,res) =>{
     res.sendFile(__dirname + "/public/site_availability/index.html")
 })
+app.get("/in_park", (req, res) => {
+    res.sendFile(__dirname + "/public/in_park_list/index.html")
+})
 
 app.listen(port, () =>{
     console.log(`Server running at http://localhost:${port}`)
@@ -87,8 +90,8 @@ app.get('/api/reservations', async (req, res) => {
 // API to add a reservation
 app.post('/api/reservations', async (req, res) => {
     try {
-        await masterDB('reservations').insert(req.body);
-        res.json({ success: true });
+        const [id] = await masterDB('reservations').insert(req.body);
+        res.json({ success: true, id: id });
     } catch (err) {
         res.status(500).json({ error: err.message });
     }

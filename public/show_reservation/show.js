@@ -91,8 +91,19 @@ function changeSpace() {
     // Your space change logic here
 }
 
-function checkInNow() {
+async function checkInNow() {
     // Your check-in logic here
+    await fetch("/api/reservations/update", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({id: new URLSearchParams(window.location.search).get("number"), name: "status", value: "occupied"})
+    })
+    .then(res => res.json())
+    .then(data =>{
+        if(data.success){
+            alert("User checked in")
+        }
+    })
 }
 
 // Auto-calculate dates and rates
