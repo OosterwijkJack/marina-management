@@ -37,7 +37,7 @@ async function populateSpaceTable(){
     let row;
     for(let i=0; i<spaceList.length; i++){
         // make dates easy to read for the hard working marina employee
-
+        
         row = Object.values(spaceList[i]);
         // append buttons
         row.push('<button class="select-btn">Select</button>');
