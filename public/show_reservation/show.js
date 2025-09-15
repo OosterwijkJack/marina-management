@@ -3,6 +3,9 @@
 let idNumber;
 let resStatus;
 
+let dateStart;
+let dateEnd;
+
 const fieldMapping = {
   "startDate": "start",
   "endDate": "end",
@@ -28,9 +31,9 @@ window.onload = async function () {
 
     await populateFields(urlParams);
 
-    await calcPrice();
-    
+    await calcPrice(); 
 }
+
 
 async function populateFields(data){
     console.log("HERE")
@@ -45,6 +48,9 @@ async function populateFields(data){
         console.log(data)
         document.getElementById("startDate").value = data.start;
         document.getElementById("endDate").value = data.end;
+
+        startDate = data.start
+        endDate = data.end
 
         document.getElementById("firstName").value = data.first_name
         document.getElementById("lastName").value = data.last_name;
@@ -135,29 +141,91 @@ async function checkInNow() {
  function calcPrice() {
     const startDate = document.getElementById('startDate');
     const endDate = document.getElementById('endDate');
-    const start = new Date(startDate.value);
-    const end = new Date(endDate.value);
-    const days = Math.max(1, Math.ceil((end - start) / (1000 * 60 * 60 * 24)));
-    
-    // Update the rate table
-    const rateRow = document.querySelector('.rate-table tbody tr:first-child');
-    if (rateRow) {
-        rateRow.cells[1].textContent = startDate.value;
-        rateRow.cells[2].textContent = endDate.value;
-        rateRow.cells[3].textContent = days.toFixed(2);
+    const start = toLocalDateOnly(startDate.value);
+    const end = toLocalDateOnly(endDate.value);
+
+    console.log(start)
+    console.log(end)
+ 
+    const days = Math.floor((end - start) / (1000 * 60 * 60 * 24));
+    console.log(days)
         
-        const dailyRate = 50.00;
-        const total = days * dailyRate;
-        rateRow.cells[5].textContent = `$${total.toFixed(2)}`;
-        
-        // Update totals
-        const totalRow = document.querySelector('.rate-table tbody tr:nth-child(2)');
-        const amountDueRow = document.querySelector('.rate-table tbody tr:nth-child(3)');
-        totalRow.cells[5].textContent = `$${total.toFixed(2)}`;
-        amountDueRow.cells[5].textContent = `$${total.toFixed(2)}`;
+    let daysCalc = days;
+    const monthlyRate = 400.00;
+    const weeklyRate = 200.00;
+    const dailyRate = 50.00;
+
+    let monthCount = 0;
+    let weekCount = 0;
+    let dayCount = 0;
+
+    while(true){
+        if(daysCalc >= 30){ // month
+            daysCalc -= 30
+            monthCount += 1;
+            continue;
+        }
+        else if(daysCalc >= 7){ // week
+            daysCalc -= 7;
+            weekCount += 1;
+            continue;
+        }   
+        else if(daysCalc > 0){
+            daysCalc -= 1;
+            dayCount += 1;
+            continue
+        }
+        else{
+            break
+        } 
     }
+    let monthCost = monthlyRate*monthCount;
+    let weekCost = weeklyRate*weekCount;
+    let dayCost = dailyRate*dayCount;
+    let total = monthCost + weekCost + dayCost;
+    let payment = 0;
+
+    console.log(`Months: ${monthCount}`)
+    console.log(`Weeks: ${weekCount}`)
+    console.log(`Days: ${dayCount}`)
+
+    let rateTableRows = []
+    let monthDateEnd;
+    let weekDateEnd;
+    if(monthCount != 0){
+        monthDateEnd = dateToStr(addDays(startDate.value, 30 * monthCount));
+        rateTableRows.push(["Monthly",startDate.value, (monthDateEnd), monthCount.toString(),"$"+monthlyRate.toFixed(2), "$"+monthCost.toFixed(2)])
+    }
+    if(weekCount!=0){
+        let tmpStart = monthDateEnd ? monthDateEnd : startDate.value;
+        weekDateEnd = dateToStr(addDays(tmpStart, weekCount*7))
+        rateTableRows.push(["Weekly",(tmpStart), (weekDateEnd), weekCount.toString(),"$"+weeklyRate.toFixed(2), "$"+weekCost.toFixed(2)])
+    }
+    if(dayCount != 0){
+        let tmpStart = weekDateEnd ? weekDateEnd : (monthDateEnd ? monthDateEnd : startDate.value);
+        let dayDateEnd = dateToStr(addDays(tmpStart, dayCount));
+        rateTableRows.push(["Daily",tmpStart, (dayDateEnd), dayCount.toString(),"$"+dailyRate.toFixed(2), "$"+dayCost.toFixed(2)])
+    }
+    rateTableRows.push(["Total","","","","","$"+total.toFixed(2)])
+
+    if(payment != 0)
+        rateTableRows.push(["Payment","","","","","$"+payment.toFixed(2)])
+
+    rateTableRows.push(["Amount Owed","","","","","$"+ (total - payment).toFixed(2)])
     
+    fillTable("rateTable", rateTableRows, window)
+
+
+    //rateRow.cells[5].textContent = `$${total.toFixed(2)}`;
+    
+    // Update totals
+    //const totalRow = document.querySelector('.rate-table tbody tr:nth-child(2)');
+    //const amountDueRow = document.querySelector('.rate-table tbody tr:nth-child(3)');
+    //totalRow.cells[5].textContent = `$${total.toFixed(2)}`;
+    //amountDueRow.cells[5].textContent = `$${total.toFixed(2)}`;
 }
+    
+
 function formatDate(date) {
     return date.toLocaleDateString('en-US', {
         month: '2-digit',
@@ -270,11 +338,76 @@ async function printRes(){
         printWindow.focus();
 
         printWindow.document.getElementById("email").innerText = "dingle@berry.ca"
+        printWindow.document.getElementById("start").innerText = "2025-09-16";
+        printWindow.document.getElementById("end").innerText = "2025-09-20";
+
+        // Customer info
+        printWindow.document.getElementById("name").innerText = "John Doe";
+        printWindow.document.getElementById("address1").innerText = "123 Harbor Street";
+        printWindow.document.getElementById("address2").innerText = "Unit 4B";
+        printWindow.document.getElementById("city").innerText = "Halifax";
+        printWindow.document.getElementById("state").innerText = "NS";
+        printWindow.document.getElementById("postal").innerText = "B3J 1X5";
+        printWindow.document.getElementById("number").innerText = "(902) 555-1234";
+        printWindow.document.getElementById("email").innerText = "john.doe@email.com";
+
+        // Boat info
+        printWindow.document.getElementById("boatName").innerText = "Sea Breeze";
+        printWindow.document.getElementById("boatSize").innerText = "34 ft";
+        printWindow.document.getElementById("rigType").innerText = "Sloop";
+
+        const siteRows = [
+        ["M51", "Yes", "32", "Std mooring", "Near dock"],
+        ];
+        fillTable("spaceTable", siteRows, printWindow);
+
+    // Example data for Rate Information
+        const rateRows = [
+            ["Days", "2025-09-16", "2025-09-20", "4.00", "$50.00", "$200.00"],
+            // Summary rows
+            ["Total", "", "", "", "", "$200.00"],
+            ["Payment", "", "", "", "", "$100.00"],
+            ["Amount Due", "", "", "", "", "$100.00"]
+        ];
+        fillTable("priceTable", rateRows, printWindow);
+
         printWindow.print();
         printWindow.close();
     }
    
-    
-    
+
 
 }
+
+function fillTable(tableId, rows, pageWindow) {
+    let tbody = pageWindow.document.getElementById(tableId).querySelector("tbody");
+    tbody.innerHTML = ""; // clear existing
+    rows.forEach(row => {
+        let tr = pageWindow.document.createElement("tr");
+        row.forEach(cell => {
+            let td = pageWindow.document.createElement("td");
+            td.textContent = cell;
+            tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+    });
+}
+
+function toLocalDateOnly(str) {
+     const [y, m, d] = str.split("-").map(Number);
+     return new Date(y, m - 1, d);
+ }
+
+function dateToStr(date) {
+  let year = date.getFullYear();
+  let month = String(date.getMonth() + 1).padStart(2, '0'); // months are 0-based
+  let day = String(date.getDate()).padStart(2, '0');
+
+  return `${year}-${month}-${day}`;
+}
+
+ function addDays(date, days) {
+     const result = toLocalDateOnly(date);
+     result.setDate(result.getDate() + days);
+     return result;
+ }
