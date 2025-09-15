@@ -25,25 +25,8 @@ function populateFields(data){
     document.getElementById("boatSize").value = data.get("boatLength");
     document.getElementById("rigType").value = data.get("type")
 
-    let dateStart = new Date(data.get("start"))
-
-    let yyyy = dateStart.getFullYear();
-    let mm = String(dateStart.getMonth() + 1).padStart(2, '0'); // months are 0-based
-    let dd = String(dateStart.getDate()).padStart(2, '0');
-
-    let formatted = `${yyyy}-${mm}-${dd}`;
-
-    document.getElementById("startDate").value = formatted
-
-    let dateEnd = new Date(data.get("end"))
-
-    yyyy = dateEnd.getFullYear();
-    mm = String(dateEnd.getMonth() + 1).padStart(2, '0'); // months are 0-based
-    dd = String(dateEnd.getDate()).padStart(2, '0');
-
-    formatted = `${yyyy}-${mm}-${dd}`;
-
-    document.getElementById("endDate").value=formatted
+    document.getElementById("startDate").value=data.get("start")
+    document.getElementById("endDate").value=data.get("end")
 
     let siteTable = document.querySelector(".site-info-table");
     siteTable.rows[1].cells[0].innerText = data.get("space")

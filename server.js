@@ -192,7 +192,7 @@ app.post("/api/spaces/available", async(req, res) => {
         let endDate = toLocalDateOnly(res.end);
 
         // only check same spaces and different res
-        if(res.space != space || res.id == id || free == false){
+        if(res.space != space || res.id == id || free == false || res.status == "complete"){
             return
         }
 

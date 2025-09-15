@@ -1,6 +1,7 @@
 
 
 let idNumber;
+let resStatus;
 
 const fieldMapping = {
   "startDate": "start",
@@ -67,8 +68,13 @@ async function populateFields(data){
         
         let spaceTable = document.querySelector(".site-info-table");
         spaceTable.rows[1].cells[0].innerText = data.space;
-    })
 
+        resStatus = data.status;
+        if(resStatus == "occupied"){
+            document.getElementById("checkButton").innerText = "Check Out Now"
+        }
+    })
+    console.log(resStatus);
     
 }   
 // Basic form functionality
@@ -91,19 +97,38 @@ function changeSpace() {
     // Your space change logic here
 }
 
+function completeReservation(){
+
+    window.location.href = "http://localhost:3000"
+}
+
 async function checkInNow() {
     // Your check-in logic here
-    await fetch("/api/reservations/update", {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({id: new URLSearchParams(window.location.search).get("number"), name: "status", value: "occupied"})
-    })
-    .then(res => res.json())
-    .then(data =>{
-        if(data.success){
-            alert("User checked in")
-        }
-    })
+    let resID = new URLSearchParams(window.location.search).get("number")
+    let msg = resStatus == "occupied" ? "out" : "in"
+    if(confirm(`Confirm check ${msg} of reservation #${resID}?`)){
+        
+        let sendValue = resStatus == "occupied" ? "reserved":"occupied"
+
+        await fetch("/api/reservations/update", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({id: resID, name: "status", value: sendValue})
+        })
+        .then(res => res.json())
+        .then(data =>{
+            if(data.success){
+                if(sendValue == "reserved"){
+                    alert("User checkout out")
+                }
+                else{
+                    alert("User checked in")
+                }
+                
+                window.location.href = "http://localhost:3000"
+            }
+        })
+    }
 }
 
 // Auto-calculate dates and rates
@@ -228,4 +253,28 @@ document.addEventListener('keydown', function(e) {
 function saveSelect(fieldID){
     let selectValue = document.getElementById(fieldID).value;
     console.log(selectValue)
+}
+async function printRes(){
+    const response = await fetch("print.html")
+    let template = await response.text();
+
+    console.log(template)
+    //document.body.innerHTML = template
+
+    
+    const printWindow = await window.open('', '', 'width=800,height=800');
+    await printWindow.document.write(template);
+    await printWindow.document.close();
+
+    printWindow.onload = () =>{
+        printWindow.focus();
+
+        printWindow.document.getElementById("email").innerText = "dingle@berry.ca"
+        printWindow.print();
+        printWindow.close();
+    }
+   
+    
+    
+
 }
