@@ -66,6 +66,20 @@ app.listen(port, () =>{
 })
 
 
+app.post("/api/reservations/update/payment", async (req,res)=>{
+    try{
+        await masterDB('reservations')
+        .where("id", req.body.id)
+        .update({
+            payment: masterDB.raw('?? + ?', ["payment", parseInt(req.body.payment, 10)])
+        })
+        res.json({success: "true"})
+    }
+    catch(err){
+        res.status(500).json({error: err.message})
+    }
+})
+    
 
 app.post('/api/reservations/update', async (req, res) => {
     try {

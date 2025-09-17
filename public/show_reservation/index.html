@@ -69,6 +69,7 @@
          align-items: center;
          gap: 5px;
          }
+
       </style>
    </head>
    <body>
@@ -201,16 +202,23 @@
                <span class="form-label">Payment Type:</span>
                <div class="input-group">
                   <select id="paymentType" style="width: 150px;" onchange="saveSelect('paymentType')">
-                     <option value="">Please select</option>
+                     <option value="none">Please select</option>
                      <option value="Cash">Cash</option>
                      <option value="Credit Card">Credit Card</option>
                      <option value="Debit Card">Debit Card</option>
                   </select>
                </div>
             </div>
+            <div class="form-row" id="paymentContainer" style="display: none;">
+               <span class="form-label">Enter payment amount:</span>
+               <div class="input-group">
+                  <input type="number" id="paymentAmount" value="" style="width: 300px;">
+                  <button class="edit-btn" onclick="paymentSubmit('paymentAmount')">Submit</button>
+               </div>
+            </div>
             <!-- Selected Site Info -->
             <div style="font-weight: bold; margin: 20px 0 10px 0;">Selected Site Info:</div>
-            <table class="site-info-table">
+            <table class="site-info-table" id="spaceTable">
                <thead>
                   <tr>
                      <th>Space</th>
@@ -274,7 +282,7 @@
             <!-- Action Buttons -->
             <div style="margin-top: 20px;">
                <button id="checkButton" onclick="checkInNow()">Check In Now</button>
-               <button  onclick="completeReservation()">Complete Reservation</button>
+               <button  onclick="completeReservation()">Finish</button>
                <button onclick="cancelReservation()">Cancel Reservation</button>
                <button onclick="printRes()">Print</button>
             </div>

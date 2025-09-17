@@ -5,6 +5,7 @@ let resStatus;
 
 let dateStart;
 let dateEnd;
+let resPayment = 0;
 
 const fieldMapping = {
   "startDate": "start",
@@ -31,13 +32,13 @@ window.onload = async function () {
 
     await populateFields(urlParams);
 
-    await calcPrice(); 
+    await calcPrice(window); 
 }
 
 
 async function populateFields(data){
     console.log("HERE")
-    let reservationData;
+    let resData;
     await fetch("/api/reservations/get_by_id", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
@@ -45,6 +46,7 @@ async function populateFields(data){
     })
     .then(res => res.json())
     .then(data => {
+        resData = data;
         console.log(data)
         document.getElementById("startDate").value = data.start;
         document.getElementById("endDate").value = data.end;
@@ -71,6 +73,8 @@ async function populateFields(data){
         document.getElementById("boatName").value = data.boat_name;
         document.getElementById("boatSize").value = data.length;
         document.getElementById("rigType").value = data.type;
+
+        resPayment = data.payment;
         
         let spaceTable = document.querySelector(".site-info-table");
         spaceTable.rows[1].cells[0].innerText = data.space;
@@ -80,6 +84,18 @@ async function populateFields(data){
             document.getElementById("checkButton").innerText = "Check Out Now"
         }
     })
+
+    await fetch("/api/spaces", {
+        method: "GET",
+        headers: {"Content-Type": "applicaiton/json"}
+    })
+    .then(res => res.json())
+    .then(spaceData =>{
+        console.log(spaceData)
+        const resSpace = spaceData.filter(inner => inner.name == resData.space);
+        fillTable("spaceTable", [[resData.space, "", resSpace[0].size,resSpace[0].type, resSpace[0].special]], window)
+    });
+
     console.log(resStatus);
     
 }   
@@ -138,7 +154,7 @@ async function checkInNow() {
 }
 
 // Auto-calculate dates and rates
- function calcPrice() {
+ function calcPrice(pageWindow) {
     const startDate = document.getElementById('startDate');
     const endDate = document.getElementById('endDate');
     const start = toLocalDateOnly(startDate.value);
@@ -183,7 +199,7 @@ async function checkInNow() {
     let weekCost = weeklyRate*weekCount;
     let dayCost = dailyRate*dayCount;
     let total = monthCost + weekCost + dayCost;
-    let payment = 0;
+    let payment = parseFloat(resPayment);
 
     console.log(`Months: ${monthCount}`)
     console.log(`Weeks: ${weekCount}`)
@@ -207,13 +223,12 @@ async function checkInNow() {
         rateTableRows.push(["Daily",tmpStart, (dayDateEnd), dayCount.toString(),"$"+dailyRate.toFixed(2), "$"+dayCost.toFixed(2)])
     }
     rateTableRows.push(["Total","","","","","$"+total.toFixed(2)])
-
     if(payment != 0)
         rateTableRows.push(["Payment","","","","","$"+payment.toFixed(2)])
 
     rateTableRows.push(["Amount Owed","","","","","$"+ (total - payment).toFixed(2)])
     
-    fillTable("rateTable", rateTableRows, window)
+    fillTable("rateTable", rateTableRows, pageWindow)
 
 
     //rateRow.cells[5].textContent = `$${total.toFixed(2)}`;
@@ -321,7 +336,45 @@ document.addEventListener('keydown', function(e) {
 function saveSelect(fieldID){
     let selectValue = document.getElementById(fieldID).value;
     console.log(selectValue)
+    
+    if(selectValue == "none"){
+        console.log("HELPPPP MEEEE");
+        window.document.getElementById("paymentContainer").style = "display: none;";
+    }
+    else{
+    window.document.getElementById("paymentContainer").style = "";
+    }
+
 }
+async function paymentSubmit(fieldID){
+    let paymentAmount = document.getElementById(fieldID).value;
+    
+    if(!paymentAmount){
+        alert("Payment amount must be a number");
+        return;
+    }
+
+    await fetch("/api/reservations/update/payment", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({"id": idNumber, "payment": paymentAmount})
+    })
+    .then(res => res.json())
+    .then(data => {
+        if(data.error){
+            console.log(data.error)
+        }
+    })
+
+    let rateTable = document.getElementById("rateTable");
+
+    while(rateTable.rows.length > 1){
+        rateTable.deleteRow(1);
+    }
+    await populateFields(new URLSearchParams(window.location.search))
+    calcPrice(window);
+}
+
 async function printRes(){
     const response = await fetch("print.html")
     let template = await response.text();
@@ -334,43 +387,51 @@ async function printRes(){
     await printWindow.document.write(template);
     await printWindow.document.close();
 
-    printWindow.onload = () =>{
+    let resData;
+    printWindow.onload = async () =>{
         printWindow.focus();
+        await fetch("/api/reservations/get_by_id", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({"id": idNumber})
+        })
+        .then(res => res.json())
+        .then(data => {
+            resData = data;
+            console.log(data)
+            printWindow.document.getElementById("start").innerText = data.start;
+            printWindow.document.getElementById("end").innerText = data.end;
 
-        printWindow.document.getElementById("email").innerText = "dingle@berry.ca"
-        printWindow.document.getElementById("start").innerText = "2025-09-16";
-        printWindow.document.getElementById("end").innerText = "2025-09-20";
+            // Customer info
+            printWindow.document.getElementById("name").innerText = data.first_name + " " + data.last_name;
+            printWindow.document.getElementById("address1").innerText = data.address;
+            printWindow.document.getElementById("address2").innerText = data.address2;
+            printWindow.document.getElementById("city").innerText = data.city;
+            printWindow.document.getElementById("state").innerText = data.state;
+            printWindow.document.getElementById("postal").innerText = data.postal;
+            printWindow.document.getElementById("number").innerText = data.phone;
+            printWindow.document.getElementById("email").innerText = data.email;
 
-        // Customer info
-        printWindow.document.getElementById("name").innerText = "John Doe";
-        printWindow.document.getElementById("address1").innerText = "123 Harbor Street";
-        printWindow.document.getElementById("address2").innerText = "Unit 4B";
-        printWindow.document.getElementById("city").innerText = "Halifax";
-        printWindow.document.getElementById("state").innerText = "NS";
-        printWindow.document.getElementById("postal").innerText = "B3J 1X5";
-        printWindow.document.getElementById("number").innerText = "(902) 555-1234";
-        printWindow.document.getElementById("email").innerText = "john.doe@email.com";
+            // Boat info
+            printWindow.document.getElementById("boatName").innerText = data.boat_name;
+            printWindow.document.getElementById("boatSize").innerText = data.length ? data.length +"ft": "";
+            printWindow.document.getElementById("rigType").innerText = data.type;
 
-        // Boat info
-        printWindow.document.getElementById("boatName").innerText = "Sea Breeze";
-        printWindow.document.getElementById("boatSize").innerText = "34 ft";
-        printWindow.document.getElementById("rigType").innerText = "Sloop";
+            calcPrice(printWindow); // fill rateInfi
 
-        const siteRows = [
-        ["M51", "Yes", "32", "Std mooring", "Near dock"],
-        ];
-        fillTable("spaceTable", siteRows, printWindow);
+           
+        });
 
-    // Example data for Rate Information
-        const rateRows = [
-            ["Days", "2025-09-16", "2025-09-20", "4.00", "$50.00", "$200.00"],
-            // Summary rows
-            ["Total", "", "", "", "", "$200.00"],
-            ["Payment", "", "", "", "", "$100.00"],
-            ["Amount Due", "", "", "", "", "$100.00"]
-        ];
-        fillTable("priceTable", rateRows, printWindow);
-
+        await fetch("/api/spaces", {
+            method: "GET",
+            headers: {"Content-Type": "applicaiton/json"}
+        })
+        .then(res => res.json())
+        .then(spaceData =>{
+            console.log(spaceData)
+            const resSpace = spaceData.filter(inner => inner.name == resData.space);
+            fillTable("spaceTable", [[resData.space, "", resSpace[0].size,resSpace[0].type, resSpace[0].special]], printWindow)
+        });
         printWindow.print();
         printWindow.close();
     }
