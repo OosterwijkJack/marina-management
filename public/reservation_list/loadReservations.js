@@ -45,11 +45,24 @@ async function appendTable(){
         let now = new Date();
         
 
-        if(!(resRow.payment.includes("$"))){
-            resRow.payment = "$" + resRow.payment + ".00"
-        }
+        let payment = 0;
+        await fetch("/api/payments", {
+            method: "GET",
+            headers: {"Content-Type": "application/json"}
+        })
+        .then(res => res.json())
+        .then(data => {
+            const paymentData = data.filter(element => element.id == resRow.id);
+            paymentData.forEach(element => {
+                let paymentFloat = parseFloat(element.amount)
+                payment += paymentFloat;
+            });
+        })
+        console.log(resRow.due)
+        let dueStr = "$"+ (parseFloat(resRow.due) - payment).toFixed(2);
+        let paymentStr = "$" + payment.toFixed(2);
 
-        row = [resRow.id, resRow.start, resRow.end, resRow.first_name + " " + resRow.last_name, resRow.type, resRow.length, resRow.space, resRow.payment, resRow.due]
+        row = [resRow.id, resRow.start, resRow.end, resRow.first_name + " " + resRow.last_name, resRow.type, resRow.length, resRow.space, paymentStr, dueStr]
         // append buttons
         row.push('<button class="show-btn">Show</button>', '<button class="check-in-btn">Check in</button>', '<button class="cancel-btn">Cancel</button>');
         let node = table.row.add(row).draw().node();

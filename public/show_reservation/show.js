@@ -154,7 +154,7 @@ async function checkInNow() {
 }
 
 // Auto-calculate dates and rates
- async function calcPrice(pageWindow, isPrint=false) {
+async function calcPrice(pageWindow, isPrint=false) {
     const startDate = document.getElementById('startDate');
     const endDate = document.getElementById('endDate');
     const start = toLocalDateOnly(startDate.value);

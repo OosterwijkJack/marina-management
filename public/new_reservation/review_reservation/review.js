@@ -1,10 +1,11 @@
 let resID;
-
+let totalCost = 0;
 window.onload = async function () {
     const urlParams = new URLSearchParams(window.location.search);
 
     console.log(urlParams);
     await populateFields(urlParams);
+    await calcPrice();
 
     await enterReservation(); // reserve space 
     location.replace(`http://localhost:3000/show_reservation/?number=${resID}`);
@@ -88,7 +89,6 @@ async function enterReservation() {
     let space = siteTable.rows[1].cells[0].innerText;
 
     let rateDatble = document.querySelector(".rate-table");
-    let due = rateDatble.rows[2].cells[5].innerText;
 
     let requestBody = {
         start: document.getElementById("startDate").value,
@@ -97,7 +97,7 @@ async function enterReservation() {
         length: document.getElementById("boatSize").value,
         space: space,
         payment: 0,
-        due: due,
+        due: totalCost,
         address: document.getElementById("address").value,
         address2: document.getElementById("address2").value,
         state: document.getElementById("state").value,
@@ -130,36 +130,62 @@ async function enterReservation() {
 }
 
 // Auto-calculate dates and rates
- function calcPrice() {
+async function calcPrice() {
     const startDate = document.getElementById('startDate');
     const endDate = document.getElementById('endDate');
-    const start = new Date(startDate.value);
-    const end = new Date(endDate.value);
-    const days = Math.max(1, Math.ceil((end - start) / (1000 * 60 * 60 * 24)));
-    
-    // Update the rate table
-    const rateRow = document.querySelector('.rate-table tbody tr:first-child');
-    if (rateRow) {
-        rateRow.cells[1].textContent = startDate.value;
-        rateRow.cells[2].textContent = endDate.value;
-        rateRow.cells[3].textContent = days.toFixed(2);
+    const start = toLocalDateOnly(startDate.value);
+    const end = toLocalDateOnly(endDate.value);
+
+    console.log(start)
+    console.log(end)
+ 
+    const days = Math.floor((end - start) / (1000 * 60 * 60 * 24));
+    console.log(days)
         
-        const dailyRate = 50.00;
-        const total = days * dailyRate;
-        rateRow.cells[5].textContent = `$${total.toFixed(2)}`;
-        
-        // Update totals
-        const totalRow = document.querySelector('.rate-table tbody tr:nth-child(2)');
-        const amountDueRow = document.querySelector('.rate-table tbody tr:nth-child(3)');
-        totalRow.cells[5].textContent = `$${total.toFixed(2)}`;
-        amountDueRow.cells[5].textContent = `$${total.toFixed(2)}`;
+    let daysCalc = days;
+    const monthlyRate = 400.00;
+    const weeklyRate = 200.00;
+    const dailyRate = 50.00;
+
+    let monthCount = 0;
+    let weekCount = 0;
+    let dayCount = 0;
+
+    while(true){
+        if(daysCalc >= 30){ // month
+            daysCalc -= 30
+            monthCount += 1;
+            continue;
+        }
+        else if(daysCalc >= 7){ // week
+            daysCalc -= 7;
+            weekCount += 1;
+            continue;
+        }   
+        else if(daysCalc > 0){
+            daysCalc -= 1;
+            dayCount += 1;
+            continue
+        }
+        else{
+            break
+        } 
     }
-    
+    let monthCost = monthlyRate*monthCount;
+    let weekCost = weeklyRate*weekCount;
+    let dayCost = dailyRate*dayCount;
+    let total = monthCost + weekCost + dayCost;
+    totalCost = total;
+
 }
 function formatDate(date) {
-        return date.toLocaleDateString('en-US', {
-            month: '2-digit',
-            day: '2-digit',
-            year: 'numeric'
-        });
-    }
+    return date.toLocaleDateString('en-US', {
+        month: '2-digit',
+        day: '2-digit',
+        year: 'numeric'
+    });
+}
+function toLocalDateOnly(str) {
+     const [y, m, d] = str.split("-").map(Number);
+     return new Date(y, m - 1, d);
+ }

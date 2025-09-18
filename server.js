@@ -241,6 +241,25 @@ app.get("/api/payments", async(req, res)=>{
     }
 })
 
+app.post("/api/campers/add", async (req,res) => {
+    try{
+        await masterDB("campers").insert(req.body);
+        res.json({success: true})
+    }
+    catch(err){
+        res.status(500).json({error: err.message})
+    }
+})
+app.get("/api/campers", async (req, res)=>{
+    try{
+        const campers = await masterDB("campers").select("*");
+        res.json(campers);
+    }
+    catch(err){
+        res.status(500).json({error: err.message})
+    }
+}) 
+
 function toLocalDateOnly(str) {
      const [y, m, d] = str.split("-").map(Number);
      return new Date(y, m - 1, d);
