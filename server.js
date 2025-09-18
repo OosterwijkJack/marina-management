@@ -223,6 +223,23 @@ app.post("/api/spaces/available", async(req, res) => {
         res.json({"free": true})
     }
 })
+app.post("/api/payments", async (req,res) => {
+    try{
+        await masterDB("payments").insert(req.body);
+        res.json({"success": true});
+    }
+    catch(err){
+        res.status(500).json({error: err.message})
+    }
+})
+app.get("/api/payments", async(req, res)=>{
+    try {
+        const payments = await masterDB('payments').select('*');
+        res.json(payments);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+})
 
 function toLocalDateOnly(str) {
      const [y, m, d] = str.split("-").map(Number);

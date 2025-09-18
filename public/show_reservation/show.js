@@ -154,7 +154,7 @@ async function checkInNow() {
 }
 
 // Auto-calculate dates and rates
- function calcPrice(pageWindow) {
+ async function calcPrice(pageWindow, isPrint=false) {
     const startDate = document.getElementById('startDate');
     const endDate = document.getElementById('endDate');
     const start = toLocalDateOnly(startDate.value);
@@ -199,7 +199,6 @@ async function checkInNow() {
     let weekCost = weeklyRate*weekCount;
     let dayCost = dailyRate*dayCount;
     let total = monthCost + weekCost + dayCost;
-    let payment = parseFloat(resPayment);
 
     console.log(`Months: ${monthCount}`)
     console.log(`Weeks: ${weekCount}`)
@@ -223,9 +222,24 @@ async function checkInNow() {
         rateTableRows.push(["Daily",tmpStart, (dayDateEnd), dayCount.toString(),"$"+dailyRate.toFixed(2), "$"+dayCost.toFixed(2)])
     }
     rateTableRows.push(["Total","","","","","$"+total.toFixed(2)])
-    if(payment != 0)
-        rateTableRows.push(["Payment","","","","","$"+payment.toFixed(2)])
 
+    let payment = 0;
+    await fetch("/api/payments", {
+        method: "GET",
+        headers: {"Content-Type": "application/json"}
+    })
+    .then(res => res.json())
+    .then(data => {
+        const paymentData = data.filter(element => element.id == idNumber);
+        paymentData.forEach(element => {
+            let paymentFloat = parseFloat(element.amount)
+            payment += paymentFloat;
+            if(!isPrint)
+                rateTableRows.push([element.type + " Payment", element.date, element.date, "","", "$" +paymentFloat.toFixed(2)])
+        });
+    })
+    if(payment > 0)
+        rateTableRows.push(["Total Payment","","","","","$"+ (payment).toFixed(2)])
     rateTableRows.push(["Amount Owed","","","","","$"+ (total - payment).toFixed(2)])
     
     fillTable("rateTable", rateTableRows, pageWindow)
@@ -342,7 +356,7 @@ function saveSelect(fieldID){
         window.document.getElementById("paymentContainer").style = "display: none;";
     }
     else{
-    window.document.getElementById("paymentContainer").style = "";
+        window.document.getElementById("paymentContainer").style = "";
     }
 
 }
@@ -354,10 +368,10 @@ async function paymentSubmit(fieldID){
         return;
     }
 
-    await fetch("/api/reservations/update/payment", {
+    await fetch("/api/payments", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({"id": idNumber, "payment": paymentAmount})
+        body: JSON.stringify({"id": idNumber, "amount": paymentAmount, "type": document.getElementById("paymentType").value, "date": dateToStr(new Date())})
     })
     .then(res => res.json())
     .then(data => {
@@ -373,6 +387,9 @@ async function paymentSubmit(fieldID){
     }
     await populateFields(new URLSearchParams(window.location.search))
     calcPrice(window);
+    window.document.getElementById("paymentContainer").style = "display: none;";
+    document.getElementById("paymentType").value = "none"
+
 }
 
 async function printRes(){
@@ -417,7 +434,7 @@ async function printRes(){
             printWindow.document.getElementById("boatSize").innerText = data.length ? data.length +"ft": "";
             printWindow.document.getElementById("rigType").innerText = data.type;
 
-            calcPrice(printWindow); // fill rateInfi
+            calcPrice(printWindow, true); // fill rateInfi
 
            
         });

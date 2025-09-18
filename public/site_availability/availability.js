@@ -35,7 +35,7 @@
      let largestDate;
 
      reservationList.forEach(res => {
-        if (!res.start || !res.end) return;
+        if (!res.start || !res.end || res.status == "complete") return;
 
         let startDate = new Date(toLocalDateOnly(res.start).toString());
         let endDate = new Date(toLocalDateOnly(res.end).toString());

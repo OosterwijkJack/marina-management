@@ -4,10 +4,10 @@ window.onload = async function () {
     const urlParams = new URLSearchParams(window.location.search);
 
     console.log(urlParams);
-    populateFields(urlParams);
+    await populateFields(urlParams);
 
-    await calcPrice(); // reserve spa
     await enterReservation(); // reserve space 
+    location.replace(`http://localhost:3000/show_reservation/?number=${resID}`);
     
 }
 
