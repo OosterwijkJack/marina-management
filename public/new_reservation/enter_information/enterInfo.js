@@ -1,6 +1,8 @@
 let userTable;
 let customerList = []
 let saveCustomerData = true;
+let lastSelectedID;
+let lastUser;
 
 $("#reservationForm").on("submit", async function (event) {
 
@@ -48,6 +50,39 @@ $("#reservationForm").on("submit", async function (event) {
             }
         })
     }   
+    else{
+        let afterList = {
+            "first_name": document.getElementById("firstName").value,
+            "last_name": document.getElementById("lastName").value,
+            "address1": document.getElementById("address").value,
+            "address2": document.getElementById("address2").value,
+            "city": document.getElementById("city").value,
+            "state": document.getElementById("state").value,
+            "postal": document.getElementById("zip").value,
+            "phone": document.getElementById("phone").value,
+            "email": document.getElementById("email").value,
+            "boat_name": document.getElementById("boatName").value,
+            "boat_size": document.getElementById("boatLength").value,
+            "boat_type": document.getElementById("boatLength").value,
+            "id": lastSelectedID
+        }
+        if(hasChanged(afterList)){
+            if(confirm("Would you like to save changes to existing selected customer (\"Ok\" for yes \"Cancel\" for no)?")){
+
+                await fetch("/api/campers/update", {
+                    method: "POST",
+                    headers: {"Content-Type": "application/json"},
+                    body: JSON.stringify(afterList)
+                })
+                .then(res => res.json())
+                .then(data =>{
+                    if(data.error){
+                        alert(`error saving customer data\n${data.error}`)
+                    }
+                })
+            }
+        }
+    }
     
     // If validation passes, process the form
     console.log('Form submitted with data:', data);
@@ -64,8 +99,10 @@ $("#reservationForm").on("submit", async function (event) {
 let userData = {};
 
 function selectUser(user) {
-    
+    console.log("USER: ")
+    console.log(user)
     if (user) {
+        lastUser = user;
         // Fill the form with user data
         document.getElementById('firstName').value = user.first_name || '';
         document.getElementById('lastName').value = user.last_name || '';
@@ -89,6 +126,7 @@ function selectUser(user) {
         });
         saveCustomerData = false;
     }
+    hasChanged(user)
 }
 
 function cancelReservation() {
@@ -110,7 +148,7 @@ function cancelReservation() {
 // Initialize DataTable
 $(document).ready(async function() {
     userTable = $('#usersTable').DataTable({
-        pageLength: 50,
+        pageLength: 10,
         lengthMenu: [10, 25, 50, 100],
         order: [[0, 'asc']],
         columnDefs: [
@@ -121,6 +159,7 @@ $(document).ready(async function() {
 
 $('#usersTable').on('click', '.btn-select', async function () {
     let rowData = userTable.row($(this).parents('tr')).data();
+    lastSelectedID = rowData[0];
     
     await fetch("/api/camper/id", {
         method: "POST",
@@ -132,7 +171,26 @@ $('#usersTable').on('click', '.btn-select', async function () {
         console.log(data[0])
         selectUser(data[0])
     })
+});
 
+$('#usersTable').on('click', '.btn-delete', async function () {
+    let rowData = userTable.row($(this).parents('tr')).data();
+    if(!confirm(`Confirm deletion of customer ${rowData[1]}?`)){
+        return;
+    }
+
+    await fetch("/api/campers/delete", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({"id": rowData[0]})
+    })
+    .then(res => res.json())
+    .then(data =>{
+        if(data.error){
+            alert("error deleting camper\n" + data.error)
+        }
+    })
+   searchExistingUser("lastName"); // reload
 });
 
 // Add real-time validation feedback
@@ -162,25 +220,40 @@ async function searchExistingUser(inputID){
     customerList = [] // reset list
     userTable.clear().draw();
     
-    await fetch("/api/campers/get", {
+     const res = await fetch("/api/campers/get", {
         method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({"lastName": lastName})
-    })
-    .then(res => res.json())
-    .then(data => {
-        data.forEach(customer => {
-            customerList.push(customer)
-        });
-    })
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ lastName })
+    });
 
-    console.log(customerList)
-    if(customerList.length > 0){
-        customerList.forEach(customer => {
-            let row = [customer.id, customer.first_name + " " + customer.last_name, customer.email, customer.phone, customer.city, "<button class='btn btn-select'>Select</button>"]
-            userTable.row.add(row)
-        });
-        userTable.draw();
-    }
+    const data = await res.json();
+
+    data.forEach(customer => {
+        customerList.push(customer);
+        let row = [
+            customer.id,
+            customer.first_name + " " + customer.last_name,
+            customer.email,
+            customer.phone,
+            customer.city,
+            "<button class='btn btn-select'>Select</button>",
+            "<button class='btn btn-delete'>Delete</button>"
+        ];
+        userTable.row.add(row);
+    });
+
+    userTable.draw();
         
+}
+function hasChanged(user){
+    let userAfterValues = Object.values(user);
+    let userBeforeValues = Object.values(lastUser);
+    console.log(userBeforeValues);
+    console.log(userAfterValues);
+    for(let i = 0; i < userAfterValues.length; i++){
+        if(userAfterValues[i] != userBeforeValues[i]){
+            return true;
+        }
+    }
+    return false;
 }

@@ -1,0 +1,659 @@
+id	last_name	first_name	address	city	state	mail_code	activity	lock_version	phone	email	idnumber	country_id	phone_2	address2	notes	addl
+4	Pomeroy	Keith	217 Edgewater st	Mahone Bay	NS	Boj2e0	2025-07-02	20	902 523 0845	kgpomeroy@gmail.com	NULL	0	NULL		NULL	NULL
+6	Gaulton	Thomas 	45 Colllicut Rd	Chester	NS		2023-01-24	13	(902) 275-0023	maxy@eastlink.ca	NULL	0	NULL		NULL	NULL
+8	weld	rob					2020-09-06	12			NULL	0	NULL		NULL	NULL
+9	miller	ed					2020-06-24	8	(902)765-6966	edjoemiller@gmail.com	NULL	0	NULL		NULL	NULL
+10	Boudreau	Andre	47 Church Court	Bedford	NS		2025-08-08	24	902-456-4996	michboudreau@icloud.com	NULL	0	NULL		NULL	NULL
+16	Anderson	George 					2018-10-13	6	902-624-0862		NULL	0	NULL		NULL	NULL
+22	Clark	John					2020-06-24	8	(902) 624-9764		NULL	0	NULL		NULL	NULL
+23	Krizan	Igor	100 Hawthorn Hill	Mahone Bay	NS	B0J 2E0	2020-07-06	13	902-398-3323		NULL	0	NULL		NULL	NULL
+25	Little	Gregg	984 Main St.	Mahone Bay			2020-05-22	11	902-277-0870		NULL	0	NULL		NULL	NULL
+27	blankenson	blanky					2018-06-03	3			NULL	0	NULL		NULL	NULL
+31	Sheppard	Peter	497 Burgess Mtn. Rd.				2018-10-13	6			NULL	0	NULL		NULL	NULL
+32	Singer	Matthew	22 Hillsburn Ct.	Dartmouth			2020-07-06	11	902-410-2698		NULL	0	NULL		NULL	NULL
+33	Clark	Ryerson	362 Woodstock Road	Mahone Bay	NS	B0J 2E0	2025-06-07	33	902 523 3481	ryersonclark@mac.com	NULL	0	NULL		NULL	NULL
+34	adams	larry					2020-05-22	5	902-680-0337		NULL	0	NULL		NULL	NULL
+35	Peterson	Marc	34 Nunn Rd.	Summerville	NS	B0N 2K0	2025-06-07	22	902 633 2229	kemptshorefestivals@gmail.com	NULL	0	NULL		NULL	NULL
+36	Hanrahan	N/A	N/A	N/A	Nova Scotia	B0J 2E0	2017-08-24	2	902-471-3963	N/A	NULL	0	NULL		NULL	NULL
+51	Benoit	Denise	138 Hubleys Rd	hubley	NS		2020-08-05	12	902 209 1783		NULL	0	NULL	B3Z1B9	NULL	NULL
+54	dewolf						2017-08-31	1			NULL	0	NULL		NULL	NULL
+70	Goodwin	Carl Goodwin		halifax			2020-08-09	4	902 477 1400	goodhalifax@gmail.com	NULL	0	NULL		NULL	NULL
+73	Pomeroy	Keith	217 Edgewater st	Mahone Bay	NS	Boj2e0	2021-06-07	5	9025230845	kgpomeroy@gmail.com	NULL	0	NULL		NULL	NULL
+75	McMillan	Jim	1299 Church Street	Port Williams	Nova Scotia	B0P 1T0	2024-11-22	12	9025429748	jamesivormcmillan@gmail.com	NULL	0	NULL		NULL	NULL
+76	Primeau	William		Mahone Bay	NS	Boj2e0	2019-10-19	4	9024354074		NULL	0	NULL		NULL	NULL
+77	Drummond	aly		Mahone Bay	Nova Scotia	B0J 2E0	2020-06-24	7	9024034514		NULL	0	NULL	box 618	NULL	NULL
+79	Williams	Ifan	box 3008	Tantallon		B3Z 4G9	2020-05-22	13	902-456-7749		NULL	0	NULL		NULL	NULL
+81	Crouse	Geoff		Gold River			2020-09-05	16	902-698-2985	geoff@scotiacom.com	NULL	0	NULL		NULL	NULL
+82	Madek	Tom	208 Ridue Ave. 	Waverley	NS		2018-08-09	1	902-499-7398		NULL	0	NULL		NULL	NULL
+83	Harrington	Stephen		Mill Village			2020-05-22	3	902-677-2170		NULL	0	NULL		NULL	NULL
+84	McColm	Jan	16 Anchor Dr.	Halifax	NS		2018-10-13	1	902-449-9288		NULL	0	NULL		NULL	NULL
+85	Mandale	Michael	3399 Hwy 10	Pinehurst	NS		2020-05-22	3	902-529-0610		NULL	0	NULL		NULL	NULL
+86	Nadin	Jared	285 Martins Point Rd	Mahone Bay	Nova Scotia	B0J 2E0	2020-07-27	4	902-298-3522		NULL	0	NULL		NULL	NULL
+87	Mawdsley	Anthony		Lunenburg	NS		2020-05-22	3	902-298-2985		NULL	0	NULL		NULL	NULL
+88	Stewart	Paul	283 Jubilee Road	Bridgewater	NS	B4V 3L4	2020-07-27	9	902-212-2543		NULL	0	NULL		NULL	NULL
+89	Coade	Peter	18 Juniper Pl.	Upper Tantallon	NS		2020-05-22	6	902-414-1852		NULL	0	NULL		NULL	NULL
+92	Daniels	Blair	342 Shore Drive	Bedford			2018-10-14	1	902-817-5489		NULL	0	NULL		NULL	NULL
+93	Crowell	Doug	18 Mountain View St	Kentville	NS	B4N 1A6	2020-06-24	15	902 599 0925 - 902		NULL	0	NULL		NULL	NULL
+95	Molloy	Sue	4 Oceanview Drive	Halifax			2018-07-16	3	902 233 3265	suemolloy@gmail.com	NULL	0	NULL		NULL	NULL
+99	McKenzie	Colin	1648 Edward St	Halifax	NS		2025-08-11	16	902 499 2666	cbmckenzie22@gmail.com	NULL	0	NULL		NULL	NULL
+100	Sawlor	Keith					2020-08-17	12	902-880-7738	keithsawlor@sawlor.com	NULL	0	NULL		Quality Control	NULL
+101	Turner	David	10 leighton Dr.	mahone bay	nova scotia		2018-10-14	4	902-757-3936	insulationman43@hotmail.com	NULL	0	NULL		NULL	NULL
+109	Pickens	Justin	46 Smith Ave.	Bridgewater			2019-10-19	3	902-523-4344		NULL	0	NULL		NULL	NULL
+110	Desborough	Rod	:          712-85 Spinnaker Dr 	Halifax			2018-07-24	2	902 240 1574	rdesborough@ns.sympatico.ca	NULL	0	NULL		NULL	NULL
+112	LeBlanc	Donnie		Deep Cove			2019-08-25	15	902 277 0887		NULL	0	NULL		NULL	NULL
+117	Hines	Derrick	82 Flagstone Drive	Dartmouth			2018-08-17	6	902 488 5133	Hunter336chillout@gmail.com	NULL	0	NULL		NULL	NULL
+118	Rice	Paul	39 Seapoint Road	Dartmouth	NS		2023-08-14	12	902 499 1312	pwrice65@gmail.com	NULL	0	NULL	Appt 504	NULL	NULL
+122	Hartley	Robin		Portsmouth	UK		2018-07-28	1		syblackthorn@gmail.com	NULL	0	NULL		NULL	NULL
+124	purcell	lee	dartmouth yacht cub 	halifax			2018-08-06	2	9028771091		NULL	0	NULL		NULL	NULL
+129	norman	rick	39 Sea Point Rd		NS	B3B 0K2	2018-08-04	6	902 240 7616	rnorman@newcastlehotels.com	NULL	0	NULL		NULL	NULL
+132	Sutherland	Ed					2020-08-21	8	902 826 7252		NULL	0	NULL		NULL	NULL
+140	Fry	Melissa	82 Rum Runners Lane	Mahone Bay	NS	B0J2E0	2024-08-05	17	709-740-0198	melissadawnfry@gmail.com	NULL	0	NULL		NULL	NULL
+141	Nolan	David					2020-06-24	7	416-986-7829		NULL	0	NULL		NULL	NULL
+151	Larsen	Jeff	37 bremount dr	Halifax	NS	B3M 3P3	2025-08-08	15	902-478-8151	larlow@eastlink.ca	NULL	0	NULL		NULL	NULL
+152	Park	Barb					2020-09-04	23	902-209-2954		NULL	0	NULL		NULL	NULL
+155	Mullins	Conrad					2020-08-13	13	9027907777	conradsadventure@gmail.com	NULL	0	NULL		NULL	NULL
+159	park	barb					2019-08-10	5			NULL	0	NULL		NULL	NULL
+166	Mader	Tom	208 Ridge Ave	Waverly	NS		2024-11-22	23	902 499 7398	tmmader6@gmail.com	NULL	0	NULL		NULL	NULL
+173	Leyland	Marcus 					2019-07-11	5	9024027022		NULL	0	NULL		NULL	NULL
+179	Boutilier	Brad					2018-08-14	0	902 225 5223		NULL	0	NULL		NULL	NULL
+185	Claus	Eric		314 239 6378			2018-08-19	3	561 662 4708		NULL	0	NULL		NULL	NULL
+189	Bancroft	David	6 Noonan Drive	Prospect	NS	B3T 2H2	2025-08-11	41	902 410 2959	davidbancroft65@outlook.com	NULL	0	NULL		NULL	NULL
+190	Hopkins	Dean	131 Sunset Drive	Glen Haven	NS	B3Z 2T3	2024-07-24	27	902 233 6354	dhopkins@belzonaatlantic.com	NULL	0	NULL		NULL	NULL
+192	fletcher	jim	78 Pheasant Lane	Tantallon	NS	B3Z 2L9	2025-07-07	24	902 403 3001	jimfletcher@eastlink.ca	NULL	0	NULL		NULL	NULL
+198	Chipman	Brian	194 Russia road 	Harbourville	NS	B0P 1E0	2024-06-26	14	902 691 0462	Kickinmule51@gmail.com	NULL	0	NULL		NULL	NULL
+200	prange	robert					2019-07-21	5	19023002542		NULL	0	NULL		NULL	NULL
+201	texieira	jose					2019-07-30	2	9022757818		NULL	0	NULL		NULL	NULL
+212	judge	jamie					2018-09-02	1	9024783768		NULL	0	NULL		NULL	NULL
+221	barclay	Richard					2020-05-22	3	9026240258		NULL	0	NULL	mahone bay	NULL	NULL
+222	doane	greg	85 murray street	brooklyn coner	nova scotia	b4n 3v7	2021-06-07	4	902 680 6295	tld2121@yahoo.ca	NULL	0	NULL		NULL	NULL
+224	Mackay	Peter					2020-08-10	7	506 321 0888	petmac@hotmail.ca	NULL	0	NULL		NULL	NULL
+225	sherman	randal	92 maine street 	mahone bay	nova scotia	b0j 2e0	2021-06-07	3	902 430 7022	rsherman45@icloud.com	NULL	0	NULL		NULL	NULL
+226	dismais	majella	962 kingstow hights dr	kingstown	nova scotia		2020-05-22	1	902 804 	mag.dumais@yahoo.ca	NULL	0	NULL		NULL	NULL
+227	krouse	paul	p.o box 295	mahone bay 	nova scotia	boj2eo	2020-05-22	2	9059025539	pcrouse@hotmail.com	NULL	0	NULL		NULL	NULL
+228	kinicle	nick	po box 226	mahone bay 	nova scotia	boj 2e0	2020-05-22	1	902 943 4030	nickkinickle@gmail.com	NULL	0	NULL		NULL	NULL
+229	webb	Tom	232 Main Street 		NS	B0J 2E0	2020-06-24	8	902 624 0396	twebb@bellaliant.net 	NULL	0	NULL		NULL	NULL
+230	MacDonald	Jim					2019-08-14	4			NULL	0	NULL			NULL
+234	Mailer	Brenda					2019-08-25	4	902 212 1196		NULL	0	NULL		NULL	NULL
+238	Van-Schalkyk	John					2019-08-06	8	902-889-9110	van-s@mindspring.com	NULL	0	NULL		NULL	NULL
+243	Stachowiak	Weis					2020-07-06	3			NULL	0	NULL		NULL	NULL
+247	marine	Mills		martins river	ns		2019-07-11	3	902 298 6672		NULL	0	NULL		NULL	NULL
+248	Harding	Dennis	202 Walter havill Drive	Halifax	NS	B0R 1A0	2024-08-16	29	902-802-4555	Den@carefreepropertieshfx.com	NULL	0	NULL	Unit 603	NULL	NULL
+249	Pomeroy	David	1010 Montague Rd	Dartmouth	NS	B2R 1T8	2025-08-04	25	902 499 8194	djpomeroy@gmail.com	NULL	0	NULL		NULL	NULL
+255	taylor	mary					2019-07-14	1	9022404022		NULL	0	NULL		NULL	NULL
+256	Russell	Denise	111 Pebblecreek Crescent	darmouth	NS	B2W 0L1	2024-08-06	35	902-209-2969	mdenise.russell@gmail.com	NULL	0	NULL	apt. 209	NULL	NULL
+257	Baikie	Andrew	south shore marine	chester	ns		2022-07-13	7	902-222-0822	abaikie@yahoo.com	NULL	0	NULL		NULL	NULL
+258	Boudreau	Pierre					2019-07-23	1	418 295 8193		NULL	0	NULL		NULL	NULL
+260	Camfield	peter					2020-08-18	9	902 222 1516		NULL	0	NULL		NULL	NULL
+261	Clarkson	Max	194802 Grey Road 13	Flesherton	Ontario	N0C 1E0	2025-08-14	42	519 374 9158	maxclarkson@markdalecable.com	NULL	0	NULL			NULL
+264	Breeding	Christian					2019-08-13	1	360-220-5352		NULL	0	NULL		NULL	NULL
+266	Gray	Lynn	453 Sackville Drive	Halifax	NS		2025-08-14	20	902-225-7665	lynn@lynngray.ca	NULL	0	NULL		NULL	NULL
+267	Jarvis	Carl					2020-06-28	4	902-240-4537		NULL	0	NULL		NULL	NULL
+275	Hammond	Liz					2019-08-25	1	902 222 2475		NULL	0	NULL		NULL	NULL
+278	name unknown	White power boat					2020-05-22	1			NULL	0	NULL		NULL	NULL
+280	Hughes	Tom	Royal Fern Way	Bedford		NS	2019-07-31	4			NULL	0	NULL		NULL	NULL
+286	Sheffer	Greg	43 Andrew Cobb Ct	Bedford	NS	b4a4j9	2024-05-05	24	902 499 4626	gsheffer1958@gmail.com	NULL	0	NULL		NULL	NULL
+288	mackenzie	colin					2020-09-05	11			NULL	0	NULL		Annapolisa	NULL
+289	Lyons	Karen			ns	b4v 3t7	2019-08-05	4	902-530-2549	karen.lyons@nspower.ca	NULL	0	NULL		NULL	NULL
+290	Amuiralt	Gretchen					2019-08-08	3	902-229-3727		NULL	0	NULL		NULL	NULL
+292	norman	rick					2020-08-06	8			NULL	0	NULL		NULL	NULL
+296	rutledge	Tyler	40 Bellroyal crt	Dartmouth	NS		2025-08-13	19	902 223 1432	trutledge@hrce.ca	NULL	0	NULL		NULL	NULL
+305	Langille	Lynn	2 Kings Way rd	Hammonds Plains	NS		2025-07-17	27	902 414 3396	langilles@live.ca	NULL	0	NULL		NULL	NULL
+323	park	Doug	1445 south park street	halifax			2019-08-13	7	902 441 7275	doug@cedarbaygrilling.com	NULL	0	NULL		NULL	NULL
+325	Roy	Paul	Box 1951	Pleasantville	NS		2024-11-22	25	902 220 6417	paul@paulroy.ca	NULL	0	NULL		NULL	NULL
+334	nicholson	micheal	408-5234 Morris St	Halifax	NS		2025-08-04	13	902 414 9670	michaelnicholson897@yahoo.com	NULL	0	NULL	b3j 0a3	NULL	NULL
+342	George	Mike					2019-09-13	3	902-541-0826		NULL	0	NULL		NULL	NULL
+346	wilkinson	Bill	42 Blind Bay Drive	Blind Bay	NS	B3Z 4C1	2025-06-07	9	(902)-499-9426	bllwlknsn17@gmail.com	NULL	0	NULL		NULL	NULL
+351	Weissbach/Smith	Knut/Jane					2020-06-24	1	9026240800	junglejanesmith@gmail.com	NULL	0	NULL		NULL	NULL
+352	Horne	David					2020-06-24	1	9025438493/ 902521	n/a	NULL	0	NULL		NULL	NULL
+353	Gaulton	Thomas					2020-06-24	2	9022755857/ 902275	maxy@eastlink.ca	NULL	0	NULL		NULL	NULL
+354	Tremblay	John/Linda	3 Fairfield Avenue	Dartmouth	NS	B2T 1W8	2025-07-02	15	902 809 9897	mjohntremblay1@gmail.com	NULL	0	NULL		NULL	NULL
+355	Barclay	R					2020-06-24	1		barclay@ns.sympatico.ca	NULL	0	NULL		NULL	NULL
+356	Feener	Wade			ns		2020-06-24	2	9026271033/ 902527	lowefeener@gmail.com	NULL	0	NULL		NULL	NULL
+357	Chipman	Brian/ Michael					2020-06-24	1	9026910462/ 902538	Kickinmulesi@gmail.com	NULL	0	NULL		NULL	NULL
+358	Aylmer	Anne Patricia	6 Mabou Ave.	Halifax			2020-07-09	2	902 441 4613	annepaylmer@gmail.com	NULL	0	NULL		NULL	NULL
+359	Primeau	William and Rose	100 Portland Estates Blvd	Dartmouth	ns	B2W 6E5	2025-06-07	16	902 435 4074	rose.primeau@hotmail.com	NULL	0	NULL		NULL	NULL
+360	Headway Marine	Sail and Sea	574 Oakland rd	Mahone bay			2020-06-24	0	9025410399	Info@sailandsee.ca	NULL	0	NULL		NULL	NULL
+361	MacKinnon	Mike	39 Flat Lake Dr.	Stillwater Lake			2020-06-24	0	9025781794	mmackinnon2@gmail.com	NULL	0	NULL		NULL	NULL
+362	merrett	Doug and Alisa	3198 Northfield Rd	Upper Northfield			2020-06-24	0	9025211905	dmerrett@gmail.com	NULL	0	NULL		NULL	NULL
+363	Adams	Helen	po box 159 	Centreville 			2020-06-24	0	9026795464	munchnog@xcountry.tv	NULL	0	NULL		NULL	NULL
+364	Kelley	Bruce	5682 hwy 331	Petite Riviere	NS	B4V 5Y9	2025-07-31	17	902 483 1092	ebrucekelley@gmail.com	NULL	0	NULL		NULL	NULL
+368	Stevens	Troy	82 Shelby Drive	Hammonds Plains			2020-08-17	10	902 225 2960	troystevens_19@hotmail.com	NULL	0	NULL		NULL	NULL
+370	Funder	Robert	33 Overdale Lane	Dartmouth			2020-07-17	2	902 497 2730	Robertfunder@gmail.com	NULL	0	NULL		NULL	NULL
+373	Oulahen	Michael	110 Maple Street	Mahone Bay	NS	B0J 2E0	2020-08-17	5	902 456 8511		NULL	0	NULL		NULL	NULL
+374	Noonan	Kent	4 Ross Drive	Dartmouth	NS	B2X 3L5	2022-05-27	3	902 292 3834	kent.noonan@gmail.com	NULL	0	NULL		NULL	NULL
+375	McDonald	Peter	994 Highway 329	Hubbards			2020-07-14	2	902 279 9050	pete.mcdonald@hotmail.com	NULL	0	NULL	RR2	NULL	NULL
+377	klaus	brian	30 assex drive	herring cove	ns		2023-06-28	14	9022092954	bklaus100@msn.com	NULL	0	NULL		NULL	NULL
+378	Ilves	Peter	1647 Edward St	Halifax	NS	B3H 3H9	2025-06-07	17	902-452-3551	ptrilves@gmail.com	NULL	0	NULL		NULL	NULL
+381	Oulahen	Michael	110 Maple Street	Mahone Bay	NS	B0J 2E0	2020-07-20	2	9024568511		NULL	0	NULL		NULL	NULL
+383	Alex	madill	2476 robie st.	halifax	ns	b3k4n1	2020-07-21	2	9024991299	madill.alex@gmail.com	NULL	0	NULL		NULL	NULL
+384	Landry	Garrett	5 Cherry Drive	Dartmouth	NS	B3A 2Z1	2024-08-07	21	902-403-6025	garrett.landry@gmail.com	NULL	0	NULL		NULL	NULL
+385	hoeksma	henry	380 Peck Meadow Road	lumsden dam		B4P 2R1	2020-07-20	6	902 6801632	hhoeksma@me.com	NULL	0	NULL		NULL	NULL
+386	Kelley	Cameron	287 Indian Point Road	Mahone Bay			2020-07-20	4	902-499-3716	camkelly@gmail.com	NULL	0	NULL		NULL	NULL
+387	parsons	Craig	874 main st	kingston		b0p1r0	2020-07-20	2	9028257127	craig.parsons@mvc1997.ca	NULL	0	NULL		NULL	NULL
+390	Ellis	Todd					2020-08-08	3	9028309892	todd@nationalwealth.ca	NULL	0	NULL		NULL	NULL
+392	Peddle	Ray					2020-07-22	0		rayrayblues13@gmail.com	NULL	0	NULL		NULL	NULL
+393	Robertson	Steve	95 foster ave	fall river			2020-08-05	3		steve.robertson@nederman.com	NULL	0	NULL		NULL	NULL
+394	mutch	andrew	171 first pennisula				2020-07-27	1	902 523 5802	andrew.lisa.mutch@gmail.com	NULL	0	NULL		NULL	NULL
+395	Crouse	Geoff	57 Westwood Ave	Wolfville	NS		2022-08-12	19	902 698 2985	geoff@scotiacom.com	NULL	0	NULL		NULL	NULL
+396	laufer	manual	121 brook st.	halifax			2020-07-26	0	902 499 6783	eelaufre@bellaliant.net	NULL	0	NULL		NULL	NULL
+397	douglas	robin	20 bremner dr	hacket cove			2020-09-11	4	9028022066	robindouglas5007@gmail.com	NULL	0	NULL		NULL	NULL
+402	davis	mike	64 meadow lane	pine grove	ns		2020-07-30	1	403 973 2046		NULL	0	NULL		NULL	NULL
+413	Sibley	Bob	9 Forest dr.	Dartmouth	b2w4c1		2020-08-05	5		sibleysales01@hotmail.com	NULL	0	NULL	coleharbour	NULL	NULL
+415	sawler	keith 					2020-08-13	5	902-880-7738	keithsawlor@sawlor.com	NULL	0	NULL		NULL	NULL
+417	Weatherbee	Brian	25 Argus Drive	Dartmouth	NS		2021-08-09	12	902 449 2310	bweatherbee@ns.sympatico.ca	NULL	0	NULL		NULL	NULL
+430	mitchell	Chris	1 Prince Street	Dartmouth	NS	B2Y 4L3	2020-08-15	10	902 789 9864		NULL	0	NULL	Unit 103	NULL	NULL
+432	Wilson	Leslie			n.s		2020-08-11	3	902 897 8132	lwilson@kerrcontrols.ca	NULL	0	NULL		NULL	NULL
+434	theunissen	michael	po box 32 lahave 	lahave		b0r1c0	2020-08-12	1	9026932073		NULL	0	NULL		NULL	NULL
+435	Lambie	Chris	6350 York Street	Halifax	NS		2020-08-22	4	902 456 9548		NULL	0	NULL		NULL	NULL
+438	Oulahen	Michael	110 Maple Street	Mahone Bay	NS	B0J 2E0	2020-08-13	0	19024568511		NULL	0	NULL		NULL	NULL
+441	Camfield	Peter	1208 Blenheim Terrace	Halifax	NS	B3H 4B2	2025-08-04	12	902 222 1516	camfield@dal.ca	NULL	0	NULL		NULL	NULL
+448	Richards	Eric		Halifax	Nova Scotia		2020-09-27	9	902 489 2889	eric.richards@richardsonwealth.com	NULL	0	NULL		NULL	NULL
+452	rafuse	Victor	33 Benalder Lane	Halifax		B3P 0A3	2020-08-22	8	902 476 8632	vrafuse@live.ca	NULL	0	NULL		NULL	NULL
+453	nauss	david	100 sage brush lane	upper tantalon			2020-08-21	4	9022234802	david.c.nauss@gmail.com	NULL	0	NULL		NULL	NULL
+454	smith	Blaine					2020-08-24	3	902 430 3908		NULL	0	NULL		NULL	NULL
+456	burgess	clifford	po box millvillage	port medway		b0j2h0	2020-08-21	1	9025213252		NULL	0	NULL		NULL	NULL
+466	joyce	neil	69 madishak rd	mahone bay		b0j2e0	2020-09-11	1	9022296056		NULL	0	NULL		NULL	NULL
+468	murdoch	david					2020-09-11	4	2770766		NULL	0	NULL		Yellowtail	NULL
+469	.	NSSG					2020-09-11	5	.		NULL	0	NULL		NULL	NULL
+475	layland	Marcus					2020-10-04	1	902 402 7022		NULL	0	NULL		NULL	NULL
+477	Barclay	Richard	PO Box 609	Mahone Bay	Nova Scotia	B0J2E0	2023-01-24	10	902 624 0258	barclay@ns.sympatico.ca	NULL	0	NULL		NULL	NULL
+478	Hanuska	Dennis	51 Cannon Terrace	Dartmouth	NS	B3A 0A2	2025-06-07	24	902 452 2450	dennishanuska@gmail.com	NULL	0	NULL		NULL	NULL
+479	Houlahan	Barb	53 Lexington Ave	Dartmouth	NS	B2X 3	2025-08-03	31	902 220 0097	terryhickey@e3officefurniture.ca	NULL	0	NULL		NULL	NULL
+480	sail and sea	sail and sea	574 oakland rd	Indian Point 	ns	B0J 2E0	2023-01-24	7	9025410399	info@sailandsea.ca	NULL	0	NULL		NULL	NULL
+481	Singer	Matt	22 Hillsburn Court	dartmouth	ns	b2w4m8	2025-06-07	13	9024102698	matt.singer@mattsinger.ca	NULL	0	NULL		NULL	NULL
+482	Nolan	david and tracey	1034 oakland rd 	Mahone Bay	NS	B0J 2E0	2023-07-27	10	14165506805	dnolan1034@gmail.com	NULL	0	NULL		NULL	NULL
+483	sherman	R	PO Box 572	Mahone Bay	Nova Scotia	B0J2E0	2023-01-24	3	9026240255	rsherman45@icloud.com	NULL	0	NULL		NULL	NULL
+484	lamb	ken	171 conrads rd	hubbards 	ns	B0G 1T0	2025-07-02	14	902 880 8200	klambca@yahoo.ca	NULL	0	NULL		NULL	NULL
+485	Nauss	Patrick	27 Youden Lane, APT#31 Chester N	chester	 Nova scotia		2021-07-26	1	902-277-0046	Patricknaussbuild@gmail.com	NULL	0	NULL		NULL	NULL
+486	Palfreyman	Bryan	54 Pleasant St, Mahone Bay	Mahone Bay	Nova Scotia		2025-07-02	9	902-553-0050	bryanpalfreyman54@gmail.com	NULL	0	NULL		NULL	NULL
+487	Boudreau	Lou	331B Main St, Mahone Bay	Mahone Bay	Nova Scotia		2022-05-27	1	902-531-2258	Captlou1251@gmail.ca	NULL	0	NULL		NULL	NULL
+488	McDonald	Dan	Box 235 Mahone Bay 	Mahone Bay	NS	B0J 2E0	2021-06-26	1	 250-946-6093	 dannymc@hotmail.com	NULL	0	NULL		NULL	NULL
+489	James	Don	1060 Highway 3	Lower East Pubmico	Nova Scotia	B0W 2A0	2024-05-05	13	519 317 9852	jettstjames@gmail.com	NULL	0	NULL		NULL	NULL
+490	MacDonald	Pete	329 RR#2 Hubbards NS	Hubbards	Nova Scotia		2022-05-27	1	902-279-9050	pete.macdonald@hotmail.com	NULL	0	NULL		NULL	NULL
+491	Kenny	Alan	3043 Highway 3	East Chester	Nova Scotia	B0J 1J0	2025-08-06	19	902-799-0724	alankennycan@gmail.com	NULL	0	NULL		NULL	NULL
+492	Krizan	Igor	PO Box 609	Mahone Bay	Nova Scotia	B0J2E0	2025-07-15	5	9026240348	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+493	Houlahan	Barb	53 Lexington Ave	Dartmouth	NS	B2X 3	2024-05-05	3	9022200097	terryhickey@e30fficefurniture.ca	NULL	0	NULL		NULL	NULL
+494	Hopkins	Jody	PO Box 559 Barrington	Yarmouth	Nova Scotia	B0W1G0	2022-09-10	22	902-320-2217	jodyfhrek@hotmail.com	NULL	0	NULL	razzmatazz	NULL	NULL
+495	McDonald	Dan	Po Box 235	Mahone Bay	NS	B0J 2E0	2022-05-27	1	2509466093	dannymc@hotmail.com	NULL	0	NULL		NULL	NULL
+496	RNYS	Group	Halifax	Halifax	NS		2023-07-30	17	902 889 9110	van-s@mindspring.com	NULL	0	NULL		NULL	NULL
+497	jolin	mathieu	6 fortress dr	fergusons cove	ns		2021-07-11	4		mjolin17@gmail.com	NULL	0	NULL		NULL	NULL
+498	stringer	mike	1129 rock cliff st	halifax	ns	b3h3y7	2021-07-04	3	7097700812	mike.stringer.yyt@gmail.com	NULL	0	NULL		NULL	NULL
+499	Singer	Matt	22 Hillsburg Court	dartmouth	ns	b2w4m8	2021-06-30	1	9024102698	matt.singer@mattsinger.ca	NULL	0	NULL		NULL	NULL
+500	oulahen	evan	101 dartmouth road	bedford	ns		2021-07-03	1	9024560215	evanoulahen@gmail.com	NULL	0	NULL		NULL	NULL
+501	williams	craig 	3287 st.margites bay road	st margrites bay	ns		2021-07-04	3	9025800807	gregdecoste@gmail.com	NULL	0	NULL		NULL	NULL
+502	buckleand	shawn	33 elgin 	halifax	ns	b3r 2c4	2021-07-08	1	9022338687	sbuckland@ambassitors.com	NULL	0	NULL		NULL	NULL
+503	buckleand	shawn	33 elgin	halifax	ns	b3r 2c4	2021-07-08	1	9022338687	sbuckland@ambasitor.com	NULL	0	NULL		NULL	NULL
+504	McDonald	Dan	Po Box 235	Mahone Bay	NS	B0J 2E0	2021-07-04	0	2509466093	dannymc@hotmail.com	NULL	0	NULL		NULL	NULL
+505	Robertson	Judy	34 reserve road 	halifax 	NS		2023-07-26	2	9028027730 	armdalecove@gmail.com 	NULL	0	NULL		NULL	NULL
+506	Jardine	Nancy	A205, 16 Anchor Drive	Halifax	NS		2024-06-26	7	902 240 8037	vickinancy@gmail.com	NULL	0	NULL		NULL	NULL
+507	Conquest	Engineering	x	y	NS		2021-07-14	1	902 789 6046	dmckenny@conquest-engineering.com	NULL	0	NULL		NULL	NULL
+508	Barclay	Richard	PO Box 609	Mahone Bay	Nova Scotia	B0J2E0	2021-07-12	1	9026240258	barclay@ns.sympatico.ca	NULL	0	NULL		NULL	NULL
+509	schumacher	Ed	12 Basinview dr	Dartmouth	NS		2023-10-01	7		schumacher.ed@gmail.com	NULL	0	NULL		NULL	NULL
+510	Wilkie	David	207 haven dr	Bridgewater	NS	B4V 4E6	2021-08-01	1	9025273029	david.wilkie@exitinterlake.com	NULL	0	NULL		NULL	NULL
+511	dacey	marc	5 port midship close 	deepcove	ns	b0j1t0	2021-10-06	8	4168314121	svalchemy@gmail.com	NULL	0	NULL		NULL	NULL
+512	McDonald	Dan	159 woodstock road 	Mahone Bay	NS	B0J 2E0	2024-11-22	11	2509466093	dannymc_@hotmail.com	NULL	0	NULL		NULL	NULL
+513	bankcroft	david and tracey	1034 oakland rd	Mahone Bay	NS	B0J 2E0	2021-07-23	1	9022213767	dnolan1034@gmail.com	NULL	0	NULL		NULL	NULL
+514	Burgess	Cliff	426 Port Medway Road	Mill Village	NS	B0J 2H0	2025-07-02	9	902 350 0104	mr.cwburgess@gmail.com	NULL	0	NULL		NULL	NULL
+515	allen	hellen	142 peggott ave	fall river	ns	b2t1s6	2021-07-25	2	9027199909	hma555@gmail.com	NULL	0	NULL		NULL	NULL
+516	murray	mike	24 valley field rd	Dartmouth	ns	b2w1n3	2022-08-01	6	9024832597	kildoon@eastlink.ca	NULL	0	NULL		NULL	NULL
+517	murray	mike	24 valley field rd	Dartmouth	ns	b2w1n3	2021-07-27	2	9024832597	kildoon@eastlink.ca	NULL	0	NULL		NULL	NULL
+518	smith	pat	219 spinnaker dr.	halifax	NS	B3N 3C3	2022-05-28	3	902 802 7964	schooner79@hotmail.com	NULL	0	NULL		NULL	NULL
+519	norwood	carlisle	2116 gotting street	halifax	NS	b3k0c5	2021-07-27	2	9029992882	carlisle.norwood.5@gmail.com	NULL	0	NULL		NULL	NULL
+520	Sani	Roberto	30 convoy Ave 	Halifax 	Ns	B3N2P6	2024-08-26	8	902 499 3995	robertosani1304@gmail.com	NULL	0	NULL		NULL	NULL
+521	Baker	Gregory	34 Forward Ave	Halifax	NS		2021-07-27	1		gcbaker@ns.sympatico.ca	NULL	0	NULL		NULL	NULL
+522	MacLeod	Kathy	6623 South St	Halifax	NS		2022-08-25	20	902 449 0131	anchor@eastlink.ca	NULL	0	NULL		NULL	NULL
+523	Dube	Norman	991 shore dr	bedford	NS	B4A2E6	2025-08-08	16	902-209-1894	onyxproperty@gmail.com	NULL	0	NULL		NULL	NULL
+524	Brinston	Woody	22 Kingston Close	Halifax	NS	B35 1H5	2021-08-02	2	9023297444	wbrinston@icloude.com	NULL	0	NULL		NULL	NULL
+525	Lindsey	Kevin	145 Indian Point Road	Mahone Bay	NS	B0J 2E0	2021-08-03	1	613 410 4183	jkplindsey@gmail.com	NULL	0	NULL		NULL	NULL
+526	bankcroft	David	1034 oakland rd	Mahone Bay	NS	B0J 2E0	2021-07-29	1	9022213767	dnolan1034@gmail.com	NULL	0	NULL		NULL	NULL
+527	Porter	Luke	1-75 Augusta Lane	Halifax	NS	B3N 0A1	2021-07-31	2	902 414 3284	svlittlesthobo@gmail.com	NULL	0	NULL		NULL	NULL
+528	Campbell	Colin	Ships Lane	Fergusons Cove	NS		2021-07-31	5	902 456 1161	colincampbell.cmc@gmail.com	NULL	0	NULL		NULL	NULL
+529	boctor	marc	181 vaneer st	gatenau	ns	g9g1c3	2021-08-27	4	8199211799	pnenusxpress@gmail.com	NULL	0	NULL		NULL	NULL
+530	Latulippe	Sebastien	6234 Willow Street	Halifax	NS	B3L 1N9	2023-08-15	7	902 220  4000	sebastienlatulippe@evrealestat.com	NULL	0	NULL		NULL	NULL
+531	Latulippe	Sebastien	6234 Willow Street	Halifax	NS	B3L 1N9	2021-08-09	1	9022204000	sebastienlatulippe@evrealestat.com	NULL	0	NULL		NULL	NULL
+532	Richardson	Frank	PO Box 176	Western Shore	NS	B0J 3M0	2024-08-17	4	902 440 7130	frank.richardsondvm@gmail.com	NULL	0	NULL		NULL	NULL
+533	Hancock	Tony	41 Royal Fern Way	Bedford	NS	B4B 0J7	2024-08-27	4	902 220 8627	tony@admiralsailing.com	NULL	0	NULL		NULL	NULL
+534	Campbell	Chris	80 Stanford Lake Road	Chester	NS	B0J 1Jo	2021-07-31	1	902 237 4331	campbell@ramoak.com	NULL	0	NULL		NULL	NULL
+535	hachc	alan	937 mlancon road 	dieppe	nb		2021-08-02	2	506 381 3966	alanhachc@hotmail.com	NULL	0	NULL		NULL	NULL
+536	Hughes	Tom	Royal Fern Way	Bedford	NS	B4B 0J7	2024-07-07	2	9022208627	tony@admiralsailing.com	NULL	0	NULL		NULL	NULL
+537	haynes	steven	3555 claremont st	halifax	ns	b3l3l9	2021-08-05	2		steve@noblegrape.ca	NULL	0	NULL		NULL	NULL
+538	nicoll	james	6574 quinpool rd	halifax	NS	b3l1b5	2021-08-03	1	9024412654	omjamienicoll@gmail.com	NULL	0	NULL		NULL	NULL
+539	haynes	steven	3555 claremont st	halifax	ns	b3l3l9	2021-08-02	1	902 4568548	steve@noblegrape.ca	NULL	0	NULL		NULL	NULL
+540	giaco	margo	6013 belmont rd	halifax	ns	b3h1n3	2021-08-01	0	9024568548	margog@bellalliant.net	NULL	0	NULL		NULL	NULL
+541	Feindel	Kevin 	Box 496 	Mahone Bay	NS	B0J2E0	2025-08-11	6	9025215045	Kfeindel@oceangear.ca	NULL	0	NULL		NULL	NULL
+542	Davis	George	2 sheffield court	fall river 	NS		2021-08-28	3	9024568079	agdavis@ns.sympatico.ca	NULL	0	NULL		NULL	NULL
+543	Morefield	Dave	49 Nadine Drive	Porters Lake	NS	B3E 1G8	2021-08-20	5	902 225 9291	davemorefield@accesswave.ca	NULL	0	NULL		NULL	NULL
+544	Towill	Gary	1517 Myra Road	Porters Lake	NS	B3E 1G8	2021-08-20	4	902 456 6618	gtfpe@accesscable.net	NULL	0	NULL		NULL	NULL
+545	Purcell	Lee	756 West Porters Lake Road	Porters Lake	NS	B3E 1K6	2021-08-07	2	902 817 1091	leepurcell151@gmail.com	NULL	0	NULL		NULL	NULL
+546	Beaudet	Mario	3237 Ralston Ave	Halifax	NS	B3L 4A7	2021-09-03	2	902 430 9185	ktm3237@gmail.com	NULL	0	NULL		NULL	NULL
+547	Weld	Rob	647 Bedford Hwy	Halifax	NS	B3M 0A5	2023-07-24	10	902 483 6082	rob_weld@ajg.com	NULL	0	NULL	Unit 403	NULL	NULL
+548	Power	Betty Ann	6 Ann Ct	Halifax	NS	B3V 1s1	2021-08-08	2	902 452 7021	powfield@eastlink.ca	NULL	0	NULL		NULL	NULL
+549	Dugre	Bernard	26 Bondville St	Knowlton	PQ		2021-08-07	2	819 342 2742	bernarddugre@gmail.com	NULL	0	NULL		NULL	NULL
+550	Grant	Sandra	23 Glenmorren Ct	Fall River	NS	B2T 1A4	2021-08-09	5	902 293 4040	scgrant@bellaliant.net	NULL	0	NULL		NULL	NULL
+551	Morrison	Jane	1734 Oxford St	Halifax	NS	B3H 3Z6	2021-08-07	1	902 497 8660	jane.morrison@me.com	NULL	0	NULL		NULL	NULL
+552	Sibley	Bob	9 forest hills dr	Dartmouth	NS	B2W 6G7	2021-08-08	3	9028522922	civicmarina000@gmail.com	NULL	0	NULL	unit 139	NULL	NULL
+553	Lane	Michelle	45 abby rd	Stillwater Lake	NS	B3Z 1R1	2022-08-08	10	9024141318	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+554	Thompson	Kodd	10 walker street	Chester	Ns	B0J1K0	2021-08-08	2	9024485815	svsweettango@gmail.com	NULL	0	NULL		NULL	NULL
+555	Greenwood	Bill	80 Duggers Arm Lane	Seabright	NS	B3Z 3B3	2023-09-03	7	902 471 9631	bill.greenwood@greenwoodlane.com	NULL	0	NULL		NULL	NULL
+556	MacDonald	Joe	2 Twining Drive	Fall River	NS	B2T 1E5	2022-08-03	4	902 449 7174	joeymac3333@hotmail.com	NULL	0	NULL		NULL	NULL
+557	Sea School	Nova Scotia 	174 bluenose dr	Luenburg	Ns	B0J2C0	2025-07-11	42	19026907340	programs@seaschool.org	NULL	0	NULL		NULL	NULL
+558	Sea School	Nova Scotia	174 bluenose dr	Luenburg	Ns	B0J2C0	2021-08-24	2	9025233400	Linda.schneidereit@gmail.com	NULL	0	NULL		NULL	NULL
+559	Sea School	Nova Scotia	174 bluenose dr	Luenburg	Ns	B0J2C0	2021-09-03	2	9025233400	Linda.schneidereit@gmail.com	NULL	0	NULL		NULL	NULL
+560	Yue	Patricia	6496 Edgewood Ave	Halifax	NS	E3L2N9	2021-08-11	2	902-817-9044	anthonyryue@gmail.com	NULL	0	NULL		NULL	NULL
+561	Weld	Rob	647 Bedford Hwy	Halifax	NS	B3M 0A5	2021-08-11	2	9024836082	rob_weld@ajg.com	NULL	0	NULL	Unit 403	NULL	NULL
+562	Greenwood	Peter	901-1388 Purcells Cove	Halifax	NS	B3P 0K8	2022-07-26	4	902 499 0187	tpetergreenwood@gmail.com	NULL	0	NULL		NULL	NULL
+563	Barclay	Richard	Box 196	Mahone Bay	Nova Scotia	B0J2E0	2025-07-22	16	298 4222	barclay@ns.sympatico.ca	NULL	0	NULL		NULL	NULL
+564	macneil	brendan	15 burchard cres	quispansis	nb	e2e 5z2	2021-08-18	5	5066502556	brendanmacniel@hotmail.com	NULL	0	NULL		NULL	NULL
+565	Leblanc	Tim	79 Golden Glow Lane	Little River Harbour	NS	B0W 1B0	2021-08-14	2	902 749 8800	leblanctim8800@gmail.com	NULL	0	NULL		NULL	NULL
+566	Harrington	Katie	27 Norman Cres	Halifax	NS	B3M 3E9	2022-08-26	9	902 473 9298	katie.hfx@gmail.com	NULL	0	NULL		NULL	NULL
+567	Taylor	Mary	9 McManus Road	Halifax	NS	B3P 1R1	2021-08-12	2	902 495 9248	pftaylorpf@gmail.com	NULL	0	NULL		NULL	NULL
+568	McRory	Lindsay	102 Maplewoode Drive	Dartmouth	NS	B2V 2R1	2021-08-22	3	902 462 8885	lindsaymcrory@gmail.com	NULL	0	NULL		NULL	NULL
+569	Jensen	Roy and Margie	6000 Highway 332	Middle Lehave	NS	B4V 2X4	2021-08-19	3	902 521 5456	teresa.lorman@yahoo.ca	NULL	0	NULL		NULL	NULL
+570	Lorman-Jensen	Teresa	6000 Highway 332	Middle Lehave	NS	B4V 2X4	2021-08-19	3	9025215456	teresa.lorman@yahoo.ca	NULL	0	NULL		NULL	NULL
+571	Coldwell	Greg	41 Coleridge Ct	Dartmouth	NS	B2Z 1B9	2024-11-22	3	902 225 3383	gcoldwell@bellaliant.net	NULL	0	NULL		NULL	NULL
+572	Cashin	Cathy	61 Bristol St	Fredericton	NB	E3B4W2	2023-08-17	7	5066502556	cathy.cashin@snb.ca	NULL	0	NULL		NULL	NULL
+573	Leblanc	Connie	Po box 1 	Blandford	NS	B0j 1C0	2022-07-09	6	9022270887	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+574	Taylor	Mary	9 McManus Road	Halifax	NS	B3P 1R1	2021-08-15	2	9024959248	pftaylorpf@gmail.com	NULL	0	NULL		NULL	NULL
+575	Behring	Barb	34 Wright Crescent, Niagara	Niagara on the lake	Ontario	L0S1J0	2021-08-17	2	(905)-321-8818	nbehring@sympatico.ca	NULL	0	NULL		NULL	NULL
+576	Savage	Jim	Apt 1308-5870 Demone St	Halifax	NS	B3K 0G9	2023-10-08	4	902 997 1837	savagecs36@gmail.com	NULL	0	NULL		NULL	NULL
+577	Bailey	Chris	44 Hermans Island	Lunenburg	Nova Scotia	B0J2E0	2021-08-17	1	902 471 1800	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+578	Watts	Peter	Box 535	Canning	NS	B0P 1H0	2025-07-19	6	902 679 9248	ulidia@ns.sympatico.ca	NULL	0	NULL		NULL	NULL
+579	Goodday	Reg	962 Lindola PL	Halifax	NS	B3H 4M1	2021-08-19	1	902 499 3702	reginald.goodday@dal.ca	NULL	0	NULL		NULL	NULL
+580	Hopewell	Phil	PO Box 609	Mahone Bay	Nova Scotia	B0J2E0	2021-08-19	1	9026240348	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+581	Duggin	Stan	10742 Peggy's Cove Road	Seabright	NS	B3Z 3E1	2021-08-19	1	902 449 5026	standeuggin@gmail.com	NULL	0	NULL		NULL	NULL
+582	Bradbury	Andrew	14 Birchdale Ave	Dartmouth	NS	B2X 1E5	2021-08-19	1	902 818 8078	sailmakerbrad@gmail.com	NULL	0	NULL		NULL	NULL
+583	Graham	Bill	18 Inverary Court	West Porters Lake	NS	B3E 1M8	2021-08-20	1	902 448 0090	billsharongraham@bellaliant.net	NULL	0	NULL		NULL	NULL
+584	mckee	paul	10 Saraguay place 	Halifax	NS	B3P 2N9	2025-08-13	11	4166552799	mckee.deeks@gmail.com	NULL	0	NULL		NULL	NULL
+585	Godfrey	David	74 Grindstone dr 	Halifax	NS	B3R 0A5	2025-08-08	15	9022938770	dgodfrey2204@icloud.com	NULL	0	NULL		NULL	NULL
+586	Piotte	William	48 franklyn st apt 4	Derry	NH	03038	2024-08-06	9	978 994 0407	williampiotte@yahoo.com	NULL	0	NULL		NULL	NULL
+587	Godfrey	david	74 Grindstone dr	Halifax	NS	B3R 0A5	2023-01-24	7	9022938770	dgodfrey2204@icloud.com	NULL	0	NULL		NULL	NULL
+588	Coastal Action	Richard	PO Box 609	Mahone Bay	Nova Scotia	B0J2E0	2021-09-01	1	902 789 6046	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+589	Wiele	Heinz	1 brennar branch Ln.	Prospect	ns	B3T2A2	2021-08-28	3	9028522922	didnt@haveone.com	NULL	0	NULL		NULL	NULL
+590	MacDonald	Chris	10318 St. Margarets bay road	hubbards	ns		2021-08-28	3	9024996431	chris.macd@live.com	NULL	0	NULL		NULL	NULL
+591	Melonie	Tanja	181 vaneer st	gatenau	ns	g9g1c3	2021-08-28	1	8199211799	mm.com22@.com	NULL	0	NULL		NULL	NULL
+592	Leblanc	Don	341 indian point road 	glenheaven 	ns		2023-08-09	7	9024011116	don.leblanc@istar.ca	NULL	0	NULL		NULL	NULL
+593	Meloni	Tania	9 lawlor crescent	Dartmouth	NS	B2Z1C2	2022-08-11	4	902-430-7494	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+594	Bourassia	Guy	1301 Route Lagueux	Levis	Quebec	G1A2B3	2022-07-07	3		guybourassa@hotmail.com	NULL	0	NULL		NULL	NULL
+595	McCurdy	Candace	PO Box 316	Chester	NS	B0J 1J0	2021-09-01	1	778 839 4058	candacemccurdy@hotmail.com	NULL	0	NULL		NULL	NULL
+596	Webber	Laura	52 Birch Point Road	Martins River	NS	B0J 2E0	2021-09-19	5	902 521 0628	wbbr@eastlinl.ca	NULL	0	NULL		NULL	NULL
+597	Whynot	Norman	680 main street.	mahonebay 	ns	B0J2E0	2021-09-10	1	5410964	kinburn@eastlink.ca	NULL	0	NULL		NULL	NULL
+598	Ruitenberg	Gary	29 Sunnywood Rd	Head of St Margaret's Bay	NS	B3Z2C1	2025-08-04	9	(902)-456-8165	gary@ruitenberginc.com	NULL	0	NULL		NULL	NULL
+599	Doucet	Ubald	873 boul louis	Tour Vreeies	NS	GA8Z2m8	2021-09-18	1	8196886688105	civicmarina000@gmail.com	NULL	0	NULL	Apt 201	NULL	NULL
+600	visser	Peter	Box 535	Canning	NS	B0P 1H0	2021-09-18	2	9026799248	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+601	Currin	Simon	89 Indian Point Road	Mahone Bay	NS	B0J 2E0	2021-10-06	2	447775778041	simon@medex.org.uk	NULL	0	NULL		NULL	NULL
+602	Young	Philip	75 Claremont St	Mahone Bay	NS	B0J2E0	2021-09-18	1	9025212499	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+603	Lindsey	Kevin	145 Indian Point Road	Mahone Bay	NS	B0J 2E0	2022-05-27	3	6134104183	jkplindsey@gmail.com	NULL	0	NULL		NULL	NULL
+604	Bendor-Samuel	Richard	6 boulderwood rd	Halifax	Nova Scotia	B3P 2J3	2022-08-26	11	9024761091	rbendors@me.com	NULL	0	NULL		NULL	NULL
+605	Balmer	kim	7140 arenel lane	Carlsbad	CA	902009	2021-10-06	1	5306872048	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+606	Kasprzak	Tony	2150 Shore Road	Eastern Passage	NS	B3G 1H6	2022-09-01	2	902 719 8107	royaula@mail.com	NULL	0	NULL		NULL	NULL
+607	Fowler	Jonathan	1052 Robie St	Halifax	NS	B3H 3C5	2024-05-05	7	902 478 1896	fowler@ns.sympatico.ca	NULL	0	NULL		NULL	NULL
+608	Stewart	Craig	605 Main Street	Mahone Bay	NS	B0J 2E0	2024-05-05	8	613 883 0461	craig@aldeo.co	NULL	0	NULL		NULL	NULL
+609	fleet	schooner	box 609	Mahone Bay	Nova Scotia	B0J2E0	2022-08-07	12	9026240348	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+610	Oulton	Alex	67 eveangeline beach Road	Grand pre	NS	B0P1T0	2024-05-05	11	506 650 2556	brendanmacneil@hotmail.com	NULL	0	NULL		Jakes phone #	NULL
+611	Baldwin	Peter	1948 Church Str.	Port Williams	NS	B0P1T0	2025-06-07	11	902 300 1487	p.baldwin4@gmail.com	NULL	0	NULL		NULL	NULL
+612	Welch / Whalen	Dan / Anna	15 Sweet Way lane 	Mahonebay	NS	B0J2E0	2024-11-22	9	902-456-2337 	welchwhalen@yahoo.ca	NULL	0	NULL		(Anna's Phone) 902 229 9707	NULL
+613	Smith	Dianne 	11 lavista drive  	Western Shore	ns		2024-06-28	4		Smitten1954@gmail.com	NULL	0	NULL		NULL	NULL
+614	Mullaly	Shawn	36 Sagewood cr.	Halifax	ns		2023-01-24	1	519 386 5549	mullaly.online@gmail.com	NULL	0	NULL		NULL	NULL
+615	Shneidereit	Linda	26 shady lane 	mahonebay	ns		2022-06-04	0	902 523 3400	linda.schneidereit@gmail.com	NULL	0	NULL		NULL	NULL
+616	Shneidereit	Linda	26 shady lane 	mahonebay	ns		2023-01-24	2	902 523 3400	linda.schneidereit@gmail.com	NULL	0	NULL		NULL	NULL
+617	Matear	Greg	778 main street	Mahone Bay	ns	B0J 2E0	2025-06-07	13	902 343 2523	gregmatear@gmail.com	NULL	0	NULL		NULL	NULL
+618	Hofstetter	Joshua	686 main str.	Mahone Bay	ns	B0J 2E0	2025-06-07	9	902 930 3636	joshuahofstetter@gmail.com	NULL	0	NULL		NULL	NULL
+619	McGillivary	Angus	20 Concorde Way	Enfiels	NS	B2T 0P1	2025-07-31	10	902 497 9275	angusmcgillivary@gmail.com	NULL	0	NULL	Apt 308	NULL	NULL
+620	Kelly	Tammy	43 East View Drive	Halifax	NS	B3P 1E6	2023-08-07	6	902 497 8010	kellytammyb@outlook.com	NULL	0	NULL		NULL	NULL
+621	Ward	Britt	2216 Lakewood Rd	Centreville	NS		2023-01-24	1	902 298 4189	bwardjm@gmail.com	NULL	0	NULL		NULL	NULL
+622	Redden	Scott	10 Park Court	Hatchett Lake	NS	B3T 2E3	2022-06-24	2	902 210 4046	scott@hfxmotorsports.com	NULL	0	NULL		NULL	NULL
+623	Bailey	Paul	1414 Highway 331	Pleasantville	NS	B0R 1G0	2025-08-14	23	902 521 8273	runningfree@bellaliant.net	NULL	0	NULL		NULL	NULL
+624	Prange	Robert	5 - 581 Main St	Wolfville	NS	B4P 1E7	2023-10-01	11	902 300 2542	rkprange@gmail.com	NULL	0	NULL		NULL	NULL
+625	Smith	John	PO Box 609	Mahone Bay	Nova Scotia	B0J2E0	2022-06-24	2	9026240348	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+626	Smith	John	25 Main St	Berwick	Nova Scotia 	B3Z4P5	2022-06-24	0	9026343676	Smith@gmail.com	NULL	0	NULL		NULL	NULL
+627	Wymenda	Arte	Bron beeklaan 24	Arnheim	NL	000 000	2022-07-01	1	252 518 3137	arte@wymenga.demon.nl	NULL	0	NULL		NULL	NULL
+628	Jones	Joe	25 Blackstreet 	New Minas	Nova Scotia	B2Z1B1	2022-06-24	1	9025251234	Joe@Yahoo.ca	NULL	0	NULL		NULL	NULL
+629	Jones	Joe	25 Blackstreet	New Minus	Nova Scotia	B2Z1B1	2022-06-24	0	9025251234	Joe@Yahoo.ca	NULL	0	NULL		NULL	NULL
+630	Jones	Joe	25 MainSt	Mahone bay	Nova Scotia	B0J2E0	2022-06-24	0	9026241111	jones@live.ca	NULL	0	NULL		NULL	NULL
+631	Smith	Joe	10 Main st 	Lunenburg	NS	B0J 2C0	2022-06-24	0	(902)634-7734	joe@yahoo.ca	NULL	0	NULL		NULL	NULL
+632	Gallupe	Rick	57 Karen Cresent	porters lake	ns		2025-08-14	11	9022090067	rgallupe@hotmail.com	NULL	0	NULL		NULL	NULL
+633	Court	Michael	414 hermans island road 	hermans island	ns		2025-08-12	21	9053218122	mikec@courtholdings.com	NULL	0	NULL	boj 2e0	NULL	NULL
+634	Locke	Scott	76 Bellshire Drive	Lower Sackville	NS	B4C 1M5	2022-07-04	2	902 223 1744	lockesr@hotmail.com	NULL	0	NULL		NULL	NULL
+635	Winterbourne	Graham	142 Piggott Ave	Fall River	NS		2022-08-22	17	 902 719 9909	HMA555@gmail.com	NULL	0	NULL		NULL	NULL
+636	Uluer	Veronica	14 peach court	halifax	NS	B3N3K3	2022-07-05	1	9024011003	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+637	King	Carl	58 Colchester Lane	Palm Coast	Fl	32137	2023-07-01	5	802 379 2275	carlsking@gmail.com	NULL	0	NULL		NULL	NULL
+638	Richardson	Frank	PO Box 176	Western Shore	NS	B0J 3M0	2022-07-10	2	9024407130	frank.richardsondvm@gmail.com	NULL	0	NULL		NULL	NULL
+639	Swinimer	Alan	PO Box 176	Western Shore	NS	B0J 3M0	2022-07-10	4	9024407130	frank.richardsondvm@gmail.com	NULL	0	NULL		NULL	NULL
+640	Walker	David	PO Box 176	Western Shore	NS	B0J 3M0	2024-08-17	5	9024407130	frank.richardsondvm@gmail.com	NULL	0	NULL		NULL	NULL
+641	Sitvert	Ed	411 Walnut St	Green Cove Springs	Fl	32043	2022-07-08	2		esitver@icloud.com	NULL	0	NULL		NULL	NULL
+642	Miller	Peter	51 Sprucehill Road	Toronto	Ont	M4E 3G2	2022-07-12	3	873 354 7785	peter@petermiller.ca	NULL	0	NULL		NULL	NULL
+643	Grantmyre	John	PO Box 609	Mahone Bay	Nova Scotia	B0J2E0	2022-07-09	1	9026240348	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+644	Oulahen	Mike	110 Maple st	Mahone Bay	NS	B0J2E0	2023-01-24	4	9024568511	mikeoulahen61@gmail.com	NULL	0	NULL		NULL	NULL
+645	Mcewen	Ian	35 High st south	Thunder Bay	Ontario	P7B3K3	2023-07-15	6	8073560001	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+646	Murray	Michael	24 Valleyfield Rd	Dartmouth	NS	B2W 1N3	2025-07-02	13	9024832597	Kildoon@eastlink.ca	NULL	0	NULL		NULL	NULL
+647	Vlatten	Arnem	5955 engle wood drive	halifax	ns	b381b2	2022-07-20	3	9022235153	a.vlatten@gmail.com	NULL	0	NULL		NULL	NULL
+648	gellrich	pascal	oakland road	mahonebay	ns		2022-08-04	5	9024562943	pascal.gellrich@dal.ca	NULL	0	NULL		NULL	NULL
+649	Lee	Christa	3676 Route 530	Grande Digue	NB		2022-07-14	3	506 9613455	kmteed03@hotmail.com	NULL	0	NULL		NULL	NULL
+650	Murphy	Andrew	19 keefe dr	Halifax	NS	B3P 2J1	2024-05-05	10	902 830 6430	ajmurphy02@gmail.com	NULL	0	NULL		NULL	NULL
+651	Genier	Daniel	366 Des tiuelles	Beloiel	PQ	J3G 3P3	2022-07-17	2	514 952 5445	dangenier@msn.com	NULL	0	NULL		NULL	NULL
+652	oosterwijk	otto	416 main street	mahonebay	N.S		2022-07-31	2	902 298 8912	oosterwijkcools@gmail.com	NULL	0	NULL		NULL	NULL
+653	Helfand	Alex	111	campton	maine		2022-07-19	4	9174883234	ahelfand534@gmail.com 	NULL	0	NULL		NULL	NULL
+654	Greenwood	Bill	80 Duggers Arm Lane	Seabright	NS	B3Z 3B3	2022-07-17	1	9024719631	bill.greenwood@greenwoodlane.com	NULL	0	NULL		NULL	NULL
+655	pittman	Winston	631 upper branch rd	whileville	NS	B4V 5M6	2023-10-01	11	9025277913	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+656	hopkins	jody 	144 sluice dr	yarmouth	ns	bow1go	2022-07-24	3	9023202217	jodyshrek@hotmail.com	NULL	0	NULL		NULL	NULL
+657	Agla	Dave	5 james street	clifford	ON	N0J1M0	2022-07-26	1	N/A	daveagla@gmail.com	NULL	0	NULL		NULL	NULL
+658	Barclay	Richard	PO Box 609	Mahone Bay	Nova Scotia	B0J2E0	2024-06-01	2	9026240348	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+659	Greenwood	Bill	80 Duggers Arm Lane	Seabright	NS	B3Z 3B3	2022-07-17	0	9024719631	bill.greenwood@greenwoodlane.com	NULL	0	NULL		NULL	NULL
+660	Mackley	Paul	39 Seapoint Road	Dartmouth	Nova Scotia	B3B 0K2	2025-08-13	33	902 471 9620	paul.mackley@icloud.com	NULL	0	NULL	Apt 504	NULL	NULL
+661	Tingley	Jeff	1204 Italy Cross Road	Crousetown	NS	B4V rR2	2022-08-11	5	902 499 7824	adare1905@hotmail.com	NULL	0	NULL		NULL	NULL
+662	Markert	Jeff	11 Brookdale Cres	Dartmouth	NS	B3A 2R3	2022-07-28	2	902 579 7644	markertjeff@gmail.com	NULL	0	NULL		NULL	NULL
+663	Gammon	Mark	14 Fleming Drive	Halifax	NS	B3P 1A9	2022-09-09	5	902 414 2864	gammon.m@gmail.com	NULL	0	NULL		NULL	NULL
+664	Smith	Richard	474 Bollivar Road	Rhodes Corner	NS	B4V 5N7	2022-07-24	1	902 521 4642	nshemi56@gmail.com	NULL	0	NULL		NULL	NULL
+665	pasquale	antonio	38 longbeach road 	russle	new zeland	0202	2022-07-29	2	0064272702065	antonio@pasquale.co.nz	NULL	0	NULL		NULL	NULL
+666	White	Louise	175 lakewood drive	Brookside	ns		2025-08-12	26	9024891110	louise.white@ns.sympatico.ca	NULL	0	NULL		NULL	NULL
+667	Forbrigger	Blair	9 sunset court	hatch lake	ns		2023-08-11	5	902 499 2737	blairforb@gmail.com	NULL	0	NULL		NULL	NULL
+668	Czerwinski	Mark	29 Webb st	Lexington	Massachusetts		2022-07-25	7	339 223 9397	mark@svgalatea.com	NULL	0	NULL		NULL	NULL
+669	Gangan	Michel	9652 hwy 3 	maders cove	ns		2022-07-23	0	9024712224	leincdesign@gmail.com	NULL	0	NULL		NULL	NULL
+670	Gangan	Michel	9652 hwy 3 	maders cove	ns		2022-07-26	2	9024712224	leincdesign@gmail.com	NULL	0	NULL		NULL	NULL
+671	Frankil	James	29 Mason Street	Lexington	Massachusetts	02421	2022-07-26	11	6174017480	frankel@faa.com	NULL	0	NULL		NULL	NULL
+672	Ruben	Bob	10 Wiley Street	Gloucester	Massachusetts		2022-07-26	5	6174017480	frankil@faa.com	NULL	0	NULL		NULL	NULL
+673	Ciaramitaro	Tony	Gloucester	massachusetts	na		2022-07-26	3	6174017480	frankil@faa.com	NULL	0	NULL		NULL	NULL
+674	Mackley	Paul	39 Seapoint Road	Dartmouth	NS	B3B 0K2	2025-08-13	21	902 499 1312	paulmackley@icloud.com	NULL	0	NULL	Apt 504	NULL	NULL
+675	Theriault	Stephen	30 Tilley Court	Lower Sackville	NS	B4C 1S9	2025-07-24	13	902 717 4344	sjtheriault60@gmail.com	NULL	0	NULL		NULL	NULL
+676	Uren	Heather	1470 Summer Street	Halifax	NS	B3H 3A3	2022-07-28	2	902 809 8697	heatherjuren@gmail.com	NULL	0	NULL	#1205	NULL	NULL
+677	Mullins	Cecil	40 wittenburg rd	West St. Andrews	NS	B0J 2K0	2024-07-26	15	902 229 0030	cmullins@ns.sympatico.ca	NULL	0	NULL		NULL	NULL
+678	Bolton	Lisa	29 Croucher's Point Road	Glen Haven	NS	B3Z  2v6	2023-07-04	6		lisa.bolton@outlook.com	NULL	0	NULL		NULL	NULL
+679	Barclay	Richard	PO Box 609	Mahone Bay	Nova Scotia	B0J2E0	2022-07-27	0	9026240348	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+680	Barclay	Richard	PO Box 609	Mahone Bay	Nova Scotia	B0J2E0	2022-07-27	0	9026240348	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+681	Strother	Karen	18 Woodland Ave	Morristown	NJ	07960	2022-07-28	1	973 270 4417	kstrother2@gmail.com	NULL	0	NULL		NULL	NULL
+682	Fine	Steven	5350 Desoto Road	Sarasota	Fl	34235	2022-08-15	2	941 264 8027	steven@svtimeout.com	NULL	0	NULL		NULL	NULL
+683	Mackley	Paul	5 Rainmaker Drive	Dartmouth	NS	B3B 0K8	2025-08-12	9	9024719620	paul.mackley@icloud.com	NULL	0	NULL		NULL	NULL
+684	Quigley	david	11 Ravine Park Crescent	Halifax	ns	B3M 4S6	2025-07-17	7	9024306195	quigleydds@gmail.com	NULL	0	NULL		NULL	NULL
+685	allain	natalie	111	liverpool	ns		2022-07-27	0	5068755250	natlyneallain@gmail.com	NULL	0	NULL		NULL	NULL
+686	allain	natalie	111	liverpool	ns		2022-07-29	2	5068755250	natlyneallain@gmail.com	NULL	0	NULL		NULL	NULL
+687	ferguson	scott	46 abbey road	still water lake	ns		2022-07-28	0	9028804919	rsferguson10@hotmail.com	NULL	0	NULL		NULL	NULL
+688	stookey	crane	126 rock cliff street	halifax	ns		2022-07-28	0	9022405904	crane58@gmail.com	NULL	0	NULL		NULL	NULL
+689	liam	oalen	nsss	nsss	ns		2022-07-28	0	7822354999	bosen@seaschool.org	NULL	0	NULL		NULL	NULL
+690	Douglas	heather	10 Morse Lane	boutliers point	ns		2023-06-29	7	9028186596	heatheralix@gmail.com	NULL	0	NULL		NULL	NULL
+691	Morrison	Jane	1734 Oxford Street	Halifax	NS	B3H 3Z6	2022-07-30	2	902 497 8660	jane.morrison@me.com	NULL	0	NULL		NULL	NULL
+692	Neatt	Kevin	250 parklea drive 	st. margutits bay	ns		2022-08-01	2	9024566964	kneatt@gmail.com	NULL	0	NULL		NULL	NULL
+693	murray	mike	24 valley field rd	Dartmouth	ns	b2w1n3	2022-08-01	1	9024832597	kildoon@eastlink.ca	NULL	0	NULL		NULL	NULL
+694	murray	mike	24 valley field rd	Dartmouth	ns	b2w1n3	2022-08-03	1	9024832597	kildoon@eastlink.ca	NULL	0	NULL		NULL	NULL
+695	coady	Micheal	50 colindale st	halifax	NS	B3P 2A4	2022-08-03	2	9022662165	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+696	tingle	joanne	dfghjk	lunenburg	ns		2022-08-05	2	9029800106	jo.tingle@hotmail.com	NULL	0	NULL		NULL	NULL
+697	Christiansen	Eric	89 King St	Chester	NS	B0J 1J0	2025-08-06	4	902 277 2917	ericchristiansen1944@gmail.com	NULL	0	NULL		NULL	NULL
+698	Williamson	Mark	435 New Ross Road	Leominster	NS	B0N 2T0	2023-08-09	5	902 798 7898	markwilliamson68@gmail.com	NULL	0	NULL		NULL	NULL
+699	Henn	David	164 Lakewodd Drive	Brookside	NS	B3T 1S6	2022-08-04	2	902 789 4271	bhenn05@gmail.com	NULL	0	NULL		NULL	NULL
+700	Greyling	Cathy	PO Box 131	Washington	Virginia	22747	2022-08-03	1	540 522 4911	pakreyling@gmail.com	NULL	0	NULL		NULL	NULL
+701	Rygiel	Jamie	4492 St Mararet;s bay Road	Tantallon	NS	B3Z 1C3	2022-08-03	1	902 430 9655	jamierygiel@gmail.com	NULL	0	NULL		NULL	NULL
+702	Hoyt	Elizabeth	23 John Way	Belfast	Maine	04915	2022-08-05	3	513 607 8210	ehhoyt@gmail.com	NULL	0	NULL		NULL	NULL
+703	Morris	Bill	.	Chester	ns		2025-08-06	5	5149241640	bill@lazerette.ca	NULL	0	NULL		NULL	NULL
+704	Savage	Jim	5870 Demone St	Halifax	NS	B3K 0G9	2023-09-08	7	902 997 1837	savagecs36@gmail.com	NULL	0	NULL		NULL	NULL
+705	Drucker	Arik	6443 Almon St	Halifax	NS	B3L 1V6	2025-07-29	11	902 499 2104	adrucker@dal.ca	NULL	0	NULL		NULL	NULL
+706	snow	monte	fishermans market 607 bedford hw	halifax	NS	B3M2l6	2025-07-11	21	9024975483	monte@fishermansmarket.com	NULL	0	NULL		NULL	NULL
+707	Alix	Denis	160 Gary Carter rd	Montreal	QC		2023-07-04	11	514 616 3169	dalix02@me.com	NULL	0	NULL		NULL	NULL
+708	Thibodeau	Greg	26 sunny point lane	East River	NS	B0J 1J0	2022-08-10	1	902 521 0599	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+709	meredith	Eric	179 kinburn st	Mahone Bay	NS	B0J 2E0	2022-08-07	1	9028305139	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+710	english	bill	240 spinnaker dr	halifax	NS	B3N 3C6	2022-08-07	1	9024714373	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+711	ray	sasha	158 newtonville ave	newton	MA	02458	2022-08-07	1	9176973841	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+712	Haughn	Krut	1850 hwy 331	pleasantville	NS	B0R1G0	2022-08-08	1	9025232586	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+713	Campbell	Colin	9 Ship's Lane	Halifax	NS	B3V 1S7	2025-07-15	5	902 456 1161	colincampbell.cmc@gmail.com	NULL	0	NULL		NULL	NULL
+714	Hutchinson	Allan	70 Port Mersey Road	Brooklyn	NS	B0T 1K0	2022-08-18	2	902 452 6123	al@coveyisland.com	NULL	0	NULL		NULL	NULL
+715	Theriault	Giles	3310 Rte 320	Descouss	NS	B0E iK0	2022-08-10	1	902 623 0281	gtannick@gmail.com	NULL	0	NULL		NULL	NULL
+716	Rubarth	Marc	791 Shore Drive	Bedford	NS	B4A 2E3	2023-09-08	7	902 209 1267	cornspec1@gmail.com	NULL	0	NULL		NULL	NULL
+717	Aaboe	Kim	58 Galrock Drive	Head of Jeddore	NS	B0J 1P0	2022-08-28	2	902 497 6484	kimaaboe@gmail.com	NULL	0	NULL		NULL	NULL
+718	Babin	Megan	35 north cliff dr	halifax	NS	B3T 1S6	2022-08-12	3	9022370604	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+719	NcGillivary	Angus	First St	Oak Iskland	NS	BoJ 2E0	2022-08-13	1	902 497 9275	angusmcgillivary@gmail.com	NULL	0	NULL		NULL	NULL
+720	Beaulieu	Darline	11	dartmouth	NS		2025-08-06	6	902 240 3401	darlinewb@gmail.com	NULL	0	NULL		NULL	NULL
+721	beaulieu	darline	11	dartmouth	ns		2023-08-14	9	902 240 3401	darlinewb@gmail.com	NULL	0	NULL		NULL	NULL
+722	Forgeron	Dean	86 Amelinda Crescent	Boutiliers Point	NS	B3Z 1X5	2022-08-16	1	902 980 0886	dsforg@hotmail.com	NULL	0	NULL		NULL	NULL
+723	Vygovsky	Rosty	N/A	N/A	FL	N/A	2022-08-16	1	5163613392	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+724	Leblanc	dm	391 indian point rd	Mahone Bay	NS	B32 2S8	2022-08-27	4	9024011116	dm.leblanc@istan.ca	NULL	0	NULL		NULL	NULL
+725	Orton	Karen	1039 belmont rd	Halifax	NS	B3T 3V8	2023-07-29	6	902 989 5107	orton.karen@gmail.com	NULL	0	NULL		NULL	NULL
+726	Mailer	Brenda	11617 Peggy's Cove Road	Seabright	NS	B3Z 2Y1	2023-10-01	13	902 210 1196	brendalmailer@gmail.com	NULL	0	NULL		NULL	NULL
+727	Clark	Ian	18 Riverside Drive	Liverpool	NS	B0T iK0	2023-01-24	3	902 350 3753	ian.clark@emeraenergy.com	NULL	0	NULL		NULL	NULL
+728	LeBlanc	Chris	83 Nauss Point Road	Chester	NS	B0J 1J0	2022-08-29	3	902 220 6705	chris@theboatshop.ca	NULL	0	NULL		NULL	NULL
+729	Marcotte	Andre	10840 Meunier st.	Montreal 	PQ	H3L 2U6	2023-07-10	4	514  717  7318	amarcotte333@gmail.com	NULL	0	NULL		NULL	NULL
+730	Peat	Tim	161 Victoria St	Newmarket	ON	l9y 2w4	2023-01-24	1	289 380 1399	timothypeat13@gmail.com	NULL	0	NULL		NULL	NULL
+731	Lawnsby	Rob	101 Narragansett Ave	barrington	RI	02806	2022-08-20	1	401 699 7084	rob@narragansettsailing.com	NULL	0	NULL		NULL	NULL
+732	kelly	cameron	11	gold river	ns		2022-08-19	2	9024993716	camkelly@gmail.com	NULL	0	NULL		NULL	NULL
+733	speed	paul	1365 	second penisula	ns		2022-08-27	5	5198780090	pspeed@eastlink.ca	NULL	0	NULL		NULL	NULL
+734	Mcdonald	Sandy	16 Anchor Drive	Halifax	NS		2024-11-22	14	902 471 3500	asksandym@gmail.com	NULL	0	NULL		NULL	NULL
+735	Hart	Gordon	6 castloton 	darmouth	NS	B2X 3M2	2024-08-21	7	9024972778	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+736	Koningisor	Jim	12 Dighton St	Hull	Massachusetts		2022-08-26	5	508 272 4340	JKoningisor@verizon.net	NULL	0	NULL		NULL	NULL
+737	greer	john	12734 Peggy's Cove Road	Tantallon	NS	B3Z 2M9	2023-08-10	8	902 456 3633	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+738	Dunphy	Mike	160 Schooner Drive	Head of St Margarets	NS	B3Z 2A2	2022-08-25	1	902 456 4359	mdunphy@bellaliant.net	NULL	0	NULL		NULL	NULL
+739	Zimmerman	John	930 North 4th Street	Philadelphia	PA	19123	2022-08-26	1	267 206 4072	jmz8989@outlook.com	NULL	0	NULL		NULL	NULL
+740	Snow	Wayne	1030 woodville road 	Hants County	NS	B0N 2A0	2023-01-24	2	902 489 1116	wsnow@vitalsigne.ca	NULL	0	NULL		NULL	NULL
+741	Patterson	Gary	73 Glenwood Ave	Dartmouth	NS		2022-08-27	1	902 329 1051	frpindustries@hotmail.com	NULL	0	NULL		NULL	NULL
+742	Swinemar	Rick	29 Westport	Mineville	NS	B0Z 1T8	2022-08-27	1	902 209 2969	reswinemar@gmail.com	NULL	0	NULL		NULL	NULL
+743	Getson	Bill	30 new cumberland rd	Pleasantville	NS	B0R 1G0	2023-07-31	4	902 543 7064	wmemgetson@gmail.com	NULL	0	NULL		NULL	NULL
+744	Redmond	Steve	448 Dover St South	Cambridge	Ontario	N3H 1L8	2022-08-29	1	519 239 7204	adanaco@reignmaker.com	NULL	0	NULL		NULL	NULL
+745	Henseley	Harvey	660 Earls Lane	New Times Square	Pennslyvania	19073	2022-08-29	1	610 203 4851	nadhenseley@gmail.com	NULL	0	NULL		NULL	NULL
+746	Electrical	Quinton Mason	13605 Highway 325	Dayspring	NS	B4V 5P2	2022-09-01	2	902 527 0252	qmasonelectrical@eastlink.ca	NULL	0	NULL		NULL	NULL
+747	Premsagar	Vic	40 Forward Ave	Halifax	NS	B3P 1S4	2022-09-10	2	902 441 2159	vic@quickcastmedia.com	NULL	0	NULL		NULL	NULL
+748	Lewis	Allen	15 Lower Jarvis St	Toronto	On	M5E 0C4	2022-08-30	1	416 720 0367	allenroylewis@hotmail.com	NULL	0	NULL	Suite 4004	NULL	NULL
+749	dupre	Paul	8606 desrosiers	Contrecoeur	QC	G0L 1C0	2022-08-30	1	514 235 6901	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+750	Bois	Marie	165 ch des faucons	stoneham et tewkesbury	QC	G3C 0T7	2022-09-02	1	418 928 7597	mpbois1@hotmail.com	NULL	0	NULL		NULL	NULL
+751	Irish	Darin	247 Post Road	Minto	NB	E4B 3A2	2024-08-16	11	705 641 8666	darinirish@gmail.com	NULL	0	NULL		NULL	NULL
+752	Reid	David	1127 Dalhousie St	Halifax	NS	B3H 3W5	2022-09-10	1	902 222 0104	david.arthur.reid@gmail.com	NULL	0	NULL		NULL	NULL
+753	Macleod	Scott	6623 South St.	Halifax	NS	B3H 1V3	2025-08-09	15	902 209 1995	fourhold@eastlink.ca	NULL	0	NULL		NULL	NULL
+754	Van Blarcom	Kirk	7 Port Midship Close	Deep Cove	Nova Scotia	B0J 1T0	2023-08-19	9	289 380 0356	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+755	McDonald	Pete	994 Highway 329	Mill Cove	NS	B0J 1T0	2024-05-05	1	902 279 9050	pete.mcdonald@hotmail.com	NULL	0	NULL		NULL	NULL
+756	Eidt	Thomas	Blockhouse Mines Road	Blockhouse	NS	B0J 1E0	2024-11-22	4	902 717 1865	tom_eidt@hotmail.com	NULL	0	NULL		NULL	NULL
+757	Young	Scott	14 Pleasant Street	Mahone Bay	NS	B0J 2E0	2025-08-11	7	902 212 0109	speyoung@hotmail.com	NULL	0	NULL		NULL	NULL
+758	White	Mark	102-149 Rutledge St	Bedford	NS	B4A 1Y1	2025-08-09	10	902 694 3886	markucco@gmail.com	NULL	0	NULL		NULL	NULL
+759	Hirsch	Greg	1230 Blenheim Terrace	Halifax	NS	B3H 4B2	2024-08-05	5	902  456 2204	shevhirsch@gmail.com	NULL	0	NULL		NULL	NULL
+760	Rubarth	Phillip	45 Angus Walters Drive	Mahone Bay	NS	B0J 2E0	2025-06-07	4	902 277 0066	prubart@gmail.com	NULL	0	NULL		NULL	NULL
+761	Zimmer	Kim	411 Walnut St	Green Cove Springs	Fl	32043	2023-07-04	2	513 702 2242	zimmer.kimberley@gmail.ca	NULL	0	NULL	#19287	NULL	NULL
+762	Mulholland	Ane	Bridge Cottage, Stony Lane	Woodbury	Exeter	EX5 1PP	2023-07-03	1	902 706 5056	frankm1@me.com	NULL	0	NULL		NULL	NULL
+763	Bean	Bill	54 Bayview Drive	Hackett's Cove	NS	B3Z 3J9	2023-08-01	2	902 476 3478	novascotiabill@yahoo.ca	NULL	0	NULL		NULL	NULL
+764	Richard	Bruce	146 Prospect Bay Rd 	Prospect Bay	N.S.	B3T 1Z4	2023-08-03	4	(902)440-4150	brucemrichard@gmail.com	NULL	0	NULL		NULL	NULL
+765	Dewolfe	P	Saint John	NB	NB	n/a	2023-07-07	1	(902)2758377	n/a@gmail.com	NULL	0	NULL		NULL	NULL
+766	Smith	Richard	344 grave street	Windsor	NS	B0N 2T0	2023-07-10	1	902 798 7081	richardsmith@ns.sympatico.ca	NULL	0	NULL		NULL	NULL
+767	Macmaster	Craig	16 doyle drive	Porters Lake	NS	B3E 1J7	2025-07-02	10	902 440 1046	craigsmacmaster@gmail.com	NULL	0	NULL		NULL	NULL
+768	Shore cycle	Ltd	Highway 3	Western Shore	NS	B0J 2E0	2023-08-11	2	902 627 2706	justin@shorecycle.ca	NULL	0	NULL		NULL	NULL
+769	Publacover	David	5592 hwy 329 	Blandford	NS	B0J 1T0	2023-07-10	1	506 863 8044	dwpublacover@gmail.com	NULL	0	NULL		NULL	NULL
+770	Moser	Ryan	37 Lanctz drive	Chester Basin	NS	B0J 1K0	2023-07-08	0	902 277 0033	ryan.moser@hotmail.com	NULL	0	NULL		NULL	NULL
+771	Walsh	Michael	21 minasview drive	Wolfville	NS	B4P 286	2024-08-18	4	902 680 5562	michael_e_walsh@hotmail.com	NULL	0	NULL		NULL	NULL
+772	Wilkie	David	207 Haven Drive	Bridgewater	NS	B4V 4E4	2023-08-12	1	902 527 3029	david.wilkie@exitinterlake.com	NULL	0	NULL		NULL	NULL
+773	Stodart	Andrew	10 silver horse present	Canata	ON	unsure	2025-08-11	10	613 857 9649	and4ew@hotmail.com	NULL	0	NULL		NULL	NULL
+774	Steel	Darrell	11 pleasant street 	Wolfville	NS	B4P 1M6	2023-07-16	2	506 444 1373	dst@mbnet.mb.ca	NULL	0	NULL		NULL	NULL
+775	Daniels	Will	90 pRINCES iNLET rOAD	mARTINS bROOK	ns	b0j 2c0	2023-07-17	0	902 219 0224	danielsjwilliam@gmail.com	NULL	0	NULL		NULL	NULL
+776	Lippman	Mark	PO Box 281	Youngstown	NY	14174	2023-07-17	0	703 980 8715	marklippman3@gmail.com	NULL	0	NULL		NULL	NULL
+777	Rees	Sheila	18 Tyrell Ave	Toronto	ON	M6G 2E9	2023-07-24	5	647 381 8134	sheila.rees@gmail.com	NULL	0	NULL		NULL	NULL
+778	Quigley	Shelley	11 Ravine park Crescent	Halifax	NS		2023-08-01	1	902 430 9233	ShelleyDQuigley@gmail.com	NULL	0	NULL		NULL	NULL
+779	hammitt	james	52 dutchmeadow	wayland	ms	01778	2023-07-24	2	6174294557	a@gmail.com	NULL	0	NULL		NULL	NULL
+780	Kane	Mark	6848 Flinn Street	Halifax	NS	B3L 1J1	2023-08-11	2	902 460 8080	mark.kane@eastlink.ca	NULL	0	NULL		NULL	NULL
+781	King	Blair	215 Spinnaker Drive	Halifax	NS	B3N 3C3	2025-08-06	19	902 499 7629	bking@spacesaversystems.ca	NULL	0	NULL		NULL	NULL
+782	Williams	Alan	74 Sunset Drive	Glen Haven	NS	B3Z 2T4	2024-08-30	8	902 440 8095	alan.williams34@icloud.com	NULL	0	NULL		NULL	NULL
+783	Williams	Alan	74 Sunset Drive	Glen Haven	NS	B3Z 2T4	2023-07-29	1	9024408095	alan.williams34@icloud.com	NULL	0	NULL		NULL	NULL
+784	Broad	Roger	134 Sullivan Drive	Kimberly	BC	V1A 0A7	2023-08-01	4	416 881 5812	roger.broad@gmail.com	NULL	0	NULL		NULL	NULL
+785	Cullen	Andrew	4 Spruce Lane	Bootlers point	NS		2023-07-26	1	902 497 0052	ndrwcullen@gmail.com	NULL	0	NULL		NULL	NULL
+786	Steele	Norman	3 Parkview Lane	Dartmouth	NS	B2W 6E5	2023-08-11	2	902 497 0052	nsteele@eastlink.ca	NULL	0	NULL		NULL	NULL
+787	Shelley	Jim	e-basin	n/a	n\\a	n/a	2023-07-27	1	(902)844-0275	n/a@gmail.com	NULL	0	NULL		NULL	NULL
+788	Swanson	Stephen	103 Colony Place	St Simeon's Island	Ga	03122	2023-07-31	3	301 526 4002	oyster41@aol.com	NULL	0	NULL		NULL	NULL
+789	Benjamin	Michael	1514 Beacon Street 8 	Brookline	MS	02446	2023-08-01	1	617 538 9447	mbenjamin25@gmail.com	NULL	0	NULL		NULL	NULL
+790	Helfand	Alex	2008 Quay Village Court	Annapolis	MD	21403	2023-08-01	1	917 488 3234	ahelfand534@gmail.com	NULL	0	NULL		NULL	NULL
+791	Kidd	Nolene	unit 3 - 19 Willmett St	Townsville	Australia	000 000	2023-08-01	1	782 409 5448	jwk13@bigpond.com	NULL	0	NULL		NULL	NULL
+792	Williamson	Augustus	po bOX 426	bLUE hILL	me	04614	2023-08-05	7	410 925 6264	AUGUSTUS.WILLIAMSON@GMAIL.COM	NULL	0	NULL		NULL	NULL
+793	Surette	Mark	200 Parklea Drive	Head of Saint Margaret's Bay	NS	B3Z 2G5	2023-08-03	2	902 499 1315	mark@landfallholding.ca	NULL	0	NULL		NULL	NULL
+794	Williams	Michael	281 savino road West Bath	Maine	US	04530	2023-08-09	2	782 777 1150	michael123williams@gmail.com	NULL	0	NULL		NULL	NULL
+795	Gillham	Jeff	1647 Cambridge St	Halifax	NS	B3H 4A5	2023-08-11	2	902 402 1836 	lgillham@eastlink.ca	NULL	0	NULL		NULL	NULL
+796	Charbonneau	`Marc	232 - 1477 Lower Water St	Halifax	NS	B3J 3Z4	2023-08-06	2	902 497 4202	mgcharb@yahoo.ca	NULL	0	NULL		NULL	NULL
+797	Frazer	Joe	57 Spar Code	Freeport 	Me	04032	2023-08-10	1	603 498 9697	stananba@bowdoin.edu	NULL	0	NULL		NULL	NULL
+798	evans	mike	6076 coburd rd	halifax	NS		2023-08-17	3	9024480099	mikeevans98@hotmail.com	NULL	0	NULL		NULL	NULL
+799	Pritchette	lary	1920 Westley St	Safety harbour	Fl	34695	2023-08-06	1	7275027888	cpindp@verizon.net	NULL	0	NULL		NULL	NULL
+800	Crouse	Mike	1124 waterloo street	Halifax	NS	B3H 3L4	2023-08-14	1	902 478 9074	mike@founderseast.com	NULL	0	NULL		NULL	NULL
+801	Mcmillan	Scott	27 pearl st 	marblehead	MI	01945	2023-08-09	2	5085724331	st_mcmillan@comcast.net	NULL	0	NULL		NULL	NULL
+802	Farrell	Lisa	6013 Belmont Road	Halifax	NS	B3H 1N3	2023-08-11	2	902 456 8548	doverrun@gmail.com	NULL	0	NULL		NULL	NULL
+803	Mawhinney	Zach	21 Highland Drive	Truro	NS	B2N 1B8	2024-11-22	7	902 899 4511	kmawhinney@gmail.com	NULL	0	NULL		NULL	NULL
+804	Reynolds	Tod	729 West Brompton Ave	Chicago	Il	60657	2023-08-11	2	908 578 6762	todreynolds@gmail.com	NULL	0	NULL		NULL	NULL
+805	fraser	gordon	22 goldfinch ln	lunenburg	NS		2023-08-31	3	9022105779	iam007fraser@gmail.com	NULL	0	NULL		NULL	NULL
+806	Elliot	Bruce	1074 ridgewood  drive	Halifax	NS	B3H 3Y4	2023-08-17	4	416 562 5648	bruce.elliot@hotmail.com	NULL	0	NULL		NULL	NULL
+807	Kingsley-Williams	Topher	627 Main St	Mahone Bay	NS		2023-08-31	4	514 214 5789	topherkw@gmail.com	NULL	0	NULL		NULL	NULL
+808	Coller	David	100 Calamus Meadow Road	Hamden	Conn	06514	2023-08-15	1		dcx100@hotmail.com	NULL	0	NULL		NULL	NULL
+809	Corkell	Pat	PO Box 881	Beauford	NC	28516	2023-08-17	1	954 531 5971	patcork555@hotmail.com	NULL	0	NULL		NULL	NULL
+810	Nickerson	Dave	1249 Route 101 	Nasonworth	NB	E3C 2C7	2023-08-17	2	5064578257	nickersond3021@gmail.com	NULL	0	NULL		NULL	NULL
+811	Fulton	Suzanne	411 Walnut St	Green Cove Springs	Fl	32043	2023-08-17	1	252 626 9563	fultondsan@gmail.com	NULL	0	NULL	Box 13638	NULL	NULL
+812	Power	Rob	23 Picton Beete Cr	Stratford	PEI	C1B 0B9	2023-08-23	2	902 717 2751	roppower@mac.com	NULL	0	NULL		NULL	NULL
+813	Green	Steven`	21 Cleveland Road	Glen Margaret	NS	B3Z 4E7	2023-08-20	1	902 210 0520	stevengreen48@hotmail.com	NULL	0	NULL		NULL	NULL
+814	Lamoureux	Art	45 Sunnydale Dr	Glen Haven	NS	b3z 2t8	2023-08-20	1	587 588 5240	ARTLAMOUREUX20@GMAIL.COM	NULL	0	NULL		NULL	NULL
+815	Syer	Dave	20 Slip Road	Shelburne	NS		2023-08-24	1	902 875 4096	syerchampagne@gmail.com	NULL	0	NULL		NULL	NULL
+816	Neilson	Will	69 Mill island rd	Arrowsic	Maine	04530	2023-08-22	2	207 841 7543	will.neilson53@gmail.com	NULL	0	NULL		NULL	NULL
+817	Eidt	Fred	9581 Highway 3	Maders Cove	NS	B0J 2E0	2023-09-08	2	902 824 0526	eidt.cf@gmail.com	NULL	0	NULL		NULL	NULL
+818	Parke	John	2 Doyle Ct	Bedfor	NS	B4A 2Y7	2023-08-31	3	902 471 4038	jparke056@gmail.com	NULL	0	NULL		NULL	NULL
+819	Robinson	Don	50 Kelly Road	Brookside	NS	B3T 1T6	2024-08-27	8	902 229 6540	donrobinsonus@yahoo.com	NULL	0	NULL		NULL	NULL
+820	Dennis	Paul	344 veiwmount dr	head of st m bay	NS	B3Z 2G3	2024-08-16	11	902 222 5603	rhondaedennis@gmail.com	NULL	0	NULL		NULL	NULL
+821	Ellis	Jack	72 Catherine St	Burlington	Vt	05401	2023-09-02	2	510 612 3452	wildhorse42@pm.me	NULL	0	NULL		NULL	NULL
+822	Ritcey	Bert	250 Ancaster Ave	Ottawa	Ont	K2B 5B4	2024-11-22	6	613 220 2553	britcey@rogers.com	NULL	0	NULL		NULL	NULL
+823	Halliday	Bruce	PO Box 2048	Digby	NS	b0v 1a0	2023-09-04	3	902 521 6679	BDHALLIDAY57@GMAIL.COM	NULL	0	NULL		NULL	NULL
+824	Levangie	Taylor	86 Evandale Lane	Bedford	Nova Scotia	B4B0T2	2024-08-22	3	9022294558	taylorlevangie@gmail.com	NULL	0	NULL		NULL	NULL
+825	Joyce	Neil	69 Madashak Rd	Mahone Bay	Nova Scotia	B0J 2E0	2023-09-02	1	902 229 6056	neiljoyce@ternboatworks.com	NULL	0	NULL		NULL	NULL
+826	Stein	Fredrick	888 biscayne blv	Miami	US	33132	2023-09-04	2	305 720 8513	fredstein2@gmail.com	NULL	0	NULL		NULL	NULL
+827	Parker	Colin	2682 connolly st	Halifax	NS	B3L 3M6	2023-09-03	0		cprker3393@gmail.com	NULL	0	NULL		NULL	NULL
+828	oosterwijk	jack	601 mainstreet appt 3	mahone	nova scotia	b0j 2e0	2025-09-14	3	9022988912	oosterwijkcools@gmailo.com	NULL	0	NULL		NULL	NULL
+829	Grey	Allan	27406 old montreal road	south lancaster	ON	K0C 2C0	2023-10-01	1	613 571 6240	bethunegray@gmail.com	NULL	0	NULL		NULL	NULL
+830	Kennell	Bob	118 Mcnaughten	Hudson	Quebec	J0P1H0	2023-09-08	1	5149742316	rckennell@gmail.com	NULL	0	NULL		NULL	NULL
+831	Callen	Jerry	411 Walnut Street 16197	Green Cove Springs	Florida	32043	2023-10-01	1	6173883990	jcallen@narsil.org	NULL	0	NULL		NULL	NULL
+832	Powell	Mark	90 Parkdale Ave	Bridgewater	NS	B4V 1L9	2025-07-28	5	902 930 2773	2markpowell@gmail.com	NULL	0	NULL		NULL	NULL
+833	Amirault	Darrell	66 Diana Grace Ave	Dartmouth	NS	B2W 6A2	2025-08-02	8	902 789 6809	jennifer_isenor@hotmail.com	NULL	0	NULL		NULL	NULL
+834	Mitchell	Chris	9 Alderwood Drive	Halifax	NS	B3N 1S6	2025-06-07	7	902 471 2768	chris.mitchell001@gmail.com	NULL	0	NULL		NULL	NULL
+835	Kielburger	Peter and Bianca	23 Whitman Road	Conquerall Bank	NS	B4V 0V3	2025-07-02	6	902 521 1978	kielburger@eastlink.ca	NULL	0	NULL		NULL	NULL
+836	Clark	Ian	908 Long Cove Road	Port Medway	NS	B0J 2T0	2025-06-07	3	902 350 3753	litehauskpr@gmail.com	NULL	0	NULL		NULL	NULL
+837	Tissue	Robert	113 Rohrbaugh Lane	Moorefield	WV	26836	2025-08-13	5	304 647 8025	mgtissue@yahoo.com	NULL	0	NULL		NULL	NULL
+838	Bilney	Jacquelyn	81 Lakecrest Drive	Dartmouth	NS	B2X1V6	2024-11-22	2	9024766134	jacquelynbilney@gmail.com	NULL	0	NULL	Apt 521	NULL	NULL
+839	Boudreau	Chett	358 Torrington Drive	Halifax	NS		2025-07-28	3		chetdenboudreau4@eastlink.ca	NULL	0	NULL		NULL	NULL
+840	St Pierre	Normand	5035 Canton Road	Tangier	VA	23440	2024-07-04	2	443 235 3844	normand.st.pierre@gmail.com	NULL	0	NULL		NULL	NULL
+841	Mason	Linda	Dorey Mills Road	Mahone Bay	NS	B0J 2E0	2025-08-12	8	902 523 8370	gibbywentzell@outlook.com	NULL	0	NULL		NULL	NULL
+842	Kuhlmann	Bernt	12600 Hill Country Blvd	Austin	TX		2025-07-31	5	9707393633	bernt101@me.com	NULL	0	NULL	#130	NULL	NULL
+843	Eaves	Jack	304-145 Cartier Ave Pointe Cailr	Quebec	Quebec	H9S 0A2	2024-07-12	2		jack.eaves@gmail.com	NULL	0	NULL		NULL	NULL
+844	Sullivan	David	67 mclaen st	Truro	NS	B2N 4V9	2024-07-07	1	902 956 0416	davesullivanhere@gmail.com	NULL	0	NULL		NULL	NULL
+845	Plume	Rick	195 Glenwood |Dr	Head of St Margrets Bay	NS	B3Z2E7	2024-07-03	2	(902)989-2427	plume41087@gmail.com	NULL	0	NULL		NULL	NULL
+846	Hughes	Tom	25 Camfield Court	Bedford	NS	B4A3S4	2024-09-01	7		twhughes@live.ca	NULL	0	NULL		NULL	NULL
+847	Miller	Craig	1792 Oxford Street	Halifax	NS	B383Z6	2024-07-16	3	902 429 5807	Craig.miller@ns.sympatico.ca	NULL	0	NULL		NULL	NULL
+848	Caines	Byron	28 Marshall Crecent	Cornerbrook Newfoundland	Newfoundland	A2H 7L1	2024-07-16	2	709 638 5605	cwhisper@outlook.com	NULL	0	NULL		NULL	NULL
+849	Mayne	Joe	22 Clearway St	Mahone Bay	NS		2024-08-06	4	5873433532	jpmayne@live.com	NULL	0	NULL		NULL	NULL
+850	Pierce	Calvin	32 Circle Dr	North Kingstown	Road Island	02852	2024-07-12	1		12cjpierce@gmail.com	NULL	0	NULL		NULL	NULL
+851	Devnew	Jack	421 W, Bute St, Unit 304	Norlfolk	Virginia	23510	2024-07-14	2	757 641 7830	jdevnew@compassnorfolk.com	NULL	0	NULL		NULL	NULL
+852	Bishop	Andrew	70 Wellington Road	Port Williams	NS		2024-07-13	0		melissasue79@hotmail.com	NULL	0	NULL		NULL	NULL
+853	Steinwender	Sonya	63 Fiddle Parkway	Hatchet Lake	NS	B3T 2E3	2024-08-26	2	902 412 5873	stein@bellaliant.net	NULL	0	NULL		NULL	NULL
+854	Nauss	Allen	-	East River	NS		2024-07-16	1	902 488 3074	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+855	Poole	Steven	120-165 Duke Street E	Kitchener	ON	N2H6T8	2024-07-20	2	647 262 3269	stevendpoole@gmail.com	NULL	0	NULL		NULL	NULL
+856	Lebedev	Andre	Feldeggstrasse #35	Zurich	CH	8008	2024-07-18	1	+1 347 422 7532	indrick@gmail.com	NULL	0	NULL		NULL	NULL
+857	Leahey	Lorne	x	x	x	x	2024-08-01	1	902 478 5428	jlorneleahey@gmail.com	NULL	0	NULL		NULL	NULL
+858	Stabenow	Brad	67 York St	Bridgewater	NS	B4V 1V9	2024-08-12	2	902 521 7868	gorgulia@yahoo.com	NULL	0	NULL		NULL	NULL
+859	Blagdon	Lloyd	25 Kingsmere court	Halifax	Nova Scotia	B0J2E0	2024-08-15	7	9024711362	morningglory@live.ca	NULL	0	NULL		NULL	NULL
+860	Cochrane	Lisa	119 New Harbour Road	Blandford	NS	B0J 1T0	2024-08-02	1	902 973 1161	ljcstory@gmail.com	NULL	0	NULL		NULL	NULL
+861	Strictland	Robert	93 lakeland St	Beaverbank	NS	B4G1A6	2024-07-21	2	(902)449-8281	rob19321@gmail.com	NULL	0	NULL		NULL	NULL
+862	Baltzer	Adam	1935 Victoria Rd	Aylesford	NS	B0P1C0	2024-07-18	0	9026905832	baltzeradam@hotmail.com	NULL	0	NULL		NULL	NULL
+863	Nemirovsky	Andrew	224 Pentz Road	Pleasentville	NS	B0R1G0	2024-08-07	2	902 237 6061	nemir1977@gmail.com	NULL	0	NULL		NULL	NULL
+864	Collins	Corry	2579 Windsor St	Halifax	NS	B3K 5G4	2025-07-31	13	9023057363	suecollins05@gmail.com	NULL	0	NULL		NULL	NULL
+865	Collins	Corry	2579 winsor st	Halifax	NS	B3K 5C4	2024-07-25	0		corry@maritimewealth.com	NULL	0	NULL		NULL	NULL
+866	Rudden	Paul	32 South St	Bridgewater	NS	B4V 1X9	2024-11-22	1	613 852 5542	lookshaski@yahoo.ca	NULL	0	NULL		NULL	NULL
+867	Campbell	Bob	24 Ships Lane 	Fergeson's Cove	NS	B3V1S7	2025-08-14	5	902 476 1181	bobcampbellstudios@gmail.com	NULL	0	NULL		NULL	NULL
+868	Archibald	David	89 Water St 	Chester	NS	B0J1E0	2025-07-19	4	902 279 0554	a@.com	NULL	0	NULL		NULL	NULL
+869	Daley	Aiden	15 Shelburne Street	Paradise	Newfoundland		2024-08-01	1	709 687 9813	mdaley6@icloud.com	NULL	0	NULL		NULL	NULL
+870	theriault	Eric	23 braemount drive	halifax	NS	b3mp3p	2024-07-31	1	9022408875	sailmariner@yahoo.ca	NULL	0	NULL		NULL	NULL
+871	Mosher	David	60 Union St 	Chester	NS	B0J1J0	2024-07-30	0	902 523 0919	mosherdave@hotmail.com	NULL	0	NULL		NULL	NULL
+872	Mosher	David	60 Union St 	Chester	NS	B0J1J0	2024-08-06	1	902 523 0919	mosherdave@hotmail.com	NULL	0	NULL		NULL	NULL
+873	Bradshaw	Troy	PO Box 466	Jarrell	TX	76537	2024-08-03	2	254 289 0241	troy.e.bradshaw@gmail.com	NULL	0	NULL		NULL	NULL
+874	Charron	Elliot	15 Kings Wharf Place	Dartmouth	NS		2024-08-02	1	819 640 8430	elliot.charron@laposte.fr	NULL	0	NULL		NULL	NULL
+875	Fletcher	Tim	25 dahlia st	Dartmouth	NS	D3A 2R8	2024-08-03	1		twfletcher@gmail.com	NULL	0	NULL		NULL	NULL
+876	Moore	Micheal	1 Ram island	Marion	Massachusetts	02738	2024-08-06	1	5082080517	mmoore@whoi.edu	NULL	0	NULL		NULL	NULL
+877	Collins	Graham	6140 Allan St 	Halifax	NS	B3L 1G6	2024-08-09	2	902 495 7727	gcollins@eastlink.ca	NULL	0	NULL		NULL	NULL
+878	Gordon	Grant	16 Chittick Ave	Halifax	NS	B2Y3J6	2024-08-06	1	902 4561303	sv.vargarant@gmail.com	NULL	0	NULL		NULL	NULL
+879	MacDonald	Morgan	411 Walnut Street 20537	Green Cove Springs	Florida	32043	2024-08-06	2	401 485 0400	morganmacdonald@gmail.com	NULL	0	NULL		NULL	NULL
+880	Inman	Richard	2804 carolway court	Edgewater	Maryland		2024-08-12	3	4102126569	rfinman@gmail.com	NULL	0	NULL		NULL	NULL
+881	Hirsch	Greg	1230 Blenheim Terrace	Halifax	Nova Scotia	B3H 4B2	2025-07-30	3	9024562204	shevhirsch@gmail.com	NULL	0	NULL		NULL	NULL
+882	Forbrigger	Blair	9 Sunset Court	Hatchet Lake	Nova Scotia	B3T 1R8	2024-08-09	3	9024992737	blairforb@gmail.com	NULL	0	NULL		NULL	NULL
+883	Minpz	Curtis	12 Cherry Lane	Bridgewater	Nova Scotia	B4V 3S3	2024-08-07	2	9025439171	curtminpz@icloud.com	NULL	0	NULL		NULL	NULL
+884	Fry	Melissa	82 Rum Runners Lane	Mahone Bay	Nova Scotia	B0J2E0	2025-06-07	6	7097400198	melissadawnfry@gmail.com	NULL	0	NULL		NULL	NULL
+885	Barclay	Richard	PO Box 609	Mahone Bay	Nova Scotia	B0J2E0	2024-08-16	3	9026240348	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+886	Soule	David	1202 Hyde Lane	Richmond	VA	23229	2024-08-12	2	804 338 7182	dpsoule@gmail.com	NULL	0	NULL		NULL	NULL
+887	Voegeli	Fred	88 Saders Road	Bayside	Nova Scotia	B3Z 1LZ	2024-08-30	3	902-456-3803	fred.voegeli@hotmail.com	NULL	0	NULL		NULL	NULL
+888	Flectcher	James 	78 Pleasant Lane	Tantallon 	Nova Scotia	B3Z 2l9	2024-08-19	2	902-403-3001	jimfletcher.ca@gmail.com	NULL	0	NULL		NULL	NULL
+889	Barclay	Richard	PO Box 609	Mahone Bay	Nova Scotia	B0J2E0	2024-11-22	2	9026240348	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+890	Spenser	Daniel	PO Box 609	Mahone Bay	Nova Scotia	B0J2E0	2024-08-16	3	9026240348	civicmarina000@gmail.com	NULL	0	NULL		NULL	NULL
+891	Crossman	Doug	23 New Town Rd	Avondale	NS	B0N 2A0	2025-08-11	7	902 788 2622	dougcross2021@gmail.com	NULL	0	NULL		NULL	NULL
+892	Craig	Terry	144 Buckingham Dr	Stillwater Lake	NS	B3Z 1G2	2025-08-08	4	902 237 5806	terrycraig83@gmail.com	NULL	0	NULL		NULL	NULL
+893	Morris	Sally	142 halfmoon cove road	Chester	NS		2024-08-22	2	5149797893	sallymorris901@gmail.com	NULL	0	NULL		NULL	NULL
+894	Mazo	Rick	16 Mad Turkey Crossing	Savannah	GA	31411	2024-08-16	1	912 667 6951	mazorichard2@gmail.com	NULL	0	NULL		NULL	NULL
+895	Clarkson	Max	194802 Grey Road 13	Flesherton	Ontario		2024-08-20	2		maxclarkson@markdalecable.com	NULL	0	NULL		NULL	NULL
+896	Eastop	Don	20 bridle path	Oro Medonte	Ontario		2024-08-27	2	7053238650	don6590@live.ca	NULL	0	NULL		NULL	NULL
+897	Banks	John	18 highway 3	Hubbards	NS	B0J1T0	2024-08-16	0	9022336626	johnrbanks23@gmail.com	NULL	0	NULL		NULL	NULL
+898	Covert	Christine	11 Adam Ridge Lane	Blockhouse	NS	B0J1E0	2024-08-17	1	778 386 7934	CovertChristine57@gmail.com	NULL	0	NULL		NULL	NULL
+899	MacDonald	Kevin	53 Macdonald Rd	Baddeck	NS	B0E1B0	2024-08-20	1	902 222 9404	kjmacdonald@buckman.ca	NULL	0	NULL		NULL	NULL
+900	Chapman	Philip	21 grosvenor road	Halifax	NS	B3M 2E3	2024-11-22	2	9024524221	pchapman@bwbllp.ca	NULL	0	NULL		NULL	NULL
+901	Rossert	Hellen	305 Nahant Rd	Nahant	MA		2024-08-25	1		no email@gmail.com	NULL	0	NULL		NULL	NULL
+902	Slingerland	John	5 Thunder Drive  	Beverly	MA		2024-08-26	2		jsling1957@gmail.com	NULL	0	NULL		NULL	NULL
+903	Callahan	Chris	137 Aspen Circle	Shelburn 	VT		2024-08-27	1		Jchriscallahan@gmail.com	NULL	0	NULL		NULL	NULL
+904	Trull	Crystal	74 forest dr 	Buburndale	NS		2024-08-27	2		crystaldawnphotography@gmail.com	NULL	0	NULL		NULL	NULL
+905	Storey	Ed	67 Cedar Lane	New Hampton	NH	03256	2024-08-25	1	413-238-1989	edstorey3@gmail.com	NULL	0	NULL		NULL	NULL
+906	MacIntyre	Mike	9 Kinburn Street	Mahone bay	Nova Scotia	B0J2E0	2024-11-22	2	902-471-1942	mike.macintyre@ns.sympatico.ca	NULL	0	NULL		NULL	NULL
+907	Steenstra	Curt	69 old jail lane	Barnstable	MA	02630	2024-08-27	1	5082736910	svllkahi@gmail.com	NULL	0	NULL		NULL	NULL
+908	Harrington	Chris	5 Dakin Drive	Halifax	NS	B3M 2C9	2024-08-27	1	902 471 4495	chris@graphicwhizard.com	NULL	0	NULL		NULL	NULL
+909	Mulhern	Molly	90 Mechanic Street	Camden	ME	04843	2024-08-27	1	207 975 2876	mmulhern2727@gmail.com	NULL	0	NULL		NULL	NULL
+910	Mitchell	Chris	283 Lakecrest Drive	Greenwood	NS		2025-08-07	1	1 902 802 7789	chris.mitchell69@gmail.com	NULL	0	NULL		NULL	NULL
+911	Camfield	Peter	1208 Blenheim Terrace	Halifax	NS	B3H 4B2	2025-08-08	9	902 222 1516	camfield@dal.ca	NULL	0	NULL		NULL	NULL
+912	Miles	Scott	31 Fox Point Court	Upper Tantallon	NS	 B3Z 1N5	2024-09-20	2		smiles1966@gmail.com	NULL	0	NULL		NULL	NULL
+913	Ross	Andrew	29 windrock dr	Halifax	NS		2024-09-01	2	902 471 6955	aross@dal.ca	NULL	0	NULL		NULL	NULL
+914	Quintin	Pat	1420 highway 358	Port Williams	NS	B0P 1T0	2024-11-22	1	9025993912	pat.quitin@bellaliant.net	NULL	0	NULL		NULL	NULL
+915	Cuishle	Mo	26 River Rock way	Calgary	AB		2024-11-22	3	4038055705	rdcustus@gmail.com	NULL	0	NULL		NULL	NULL
+916	Mader	Rodger	319 Main St	Mahone Bay	Nova Scotia	B0J2E0	2024-11-22	1	917 434 2125	rcmader@gmail.com	NULL	0	NULL		NULL	NULL
+917	Griffiths	Andrew	320 Victoria Ave	Saint-Lambert 	QC	J4P 2H8	2025-05-04	1	514 755 6042	J4P1V7@gmail.com	NULL	0	NULL		NULL	NULL
+918	McMillan	James	106 - 164 Regency Park Drive	Halifax	NS	B3S 1P4	2025-06-29	1	772 274 5177	jamesmcmca@yahoo.com	NULL	0	NULL		NULL	NULL
+919	Crouse	David and Tammy	6 Scotia Street	Bridgewater	NS		2025-08-12	7	902 521 2475	duscamshine@gmail.com	NULL	0	NULL		NULL	NULL
+920	Schneidereit	Linda	26 Shady Lane	Mahone Bay	NS	B0J 2E0	2025-07-27	1	902 523 3400	linda.schneidereit@gmail.com	NULL	0	NULL		NULL	NULL
+921	Miller	Suzanne	PO Box 538	Mahone Bay	NS	B0J 2E0	2025-06-07	0	902 521 2414	sujamiller@yahoo.com	NULL	0	NULL		NULL	NULL
+922	Ferraro - Hauck	Timothy	73 East Side Martin's River Road	Martin's River	NS	B0J 2E0	2025-06-07	0	902 332 8787	timothyferrarohauck@gmail.com	NULL	0	NULL		NULL	NULL
+923	Culpepper	Dan	13 Lakeside Drive	Stamford	CT	06903	2025-07-08	2	917 364 3351	danielmculpepper@gmail.com	NULL	0	NULL		NULL	NULL
+924	Findley	Charles	3538 nicholas denys rd	nicholas denys	NB		2025-07-18	9	780 880 1111	chuck@findlayis.me	NULL	0	NULL		NULL	NULL
+925	Fitt	Wilson	Po box 945 Chester	Chester	NS	B0J1J0	2025-07-19	4	9024563315	wfitt@costellofitt.ca	NULL	0	NULL		NULL	NULL
+926	Surrette	Mark	200 Parklea Drive 	St Margaret's Bay 	NS	B3Z 2G5	2025-07-01	2	902-499-1315	masurrette@gmail.com	NULL	0	NULL		NULL	NULL
+927	Scott	Penny	145 Cartier Ave	Point Claire	QC	H9S 0A2	2025-08-13	3	514 796 6062	pc.scott6062@gmail.com	NULL	0	NULL		NULL	NULL
+928	Comeau	Johnathan	5803 St Margarets Bay Road	Halifax	Ns	B3Z 2E3	2025-07-08	1	604-753-0871	cattsjonny@gmail.com	NULL	0	NULL		NULL	NULL
+929	Loory	Adam	311 aneda lane 	Mamaroneck	NY	10543	2025-06-30	1		adam@uksalemakers.com	NULL	0	NULL		NULL	NULL
+930	Lewis	Trevor	23 erondale dr	Lower Sackville	NS		2025-07-03	1	9024304626	trevns23@gmail.com	NULL	0	NULL		NULL	NULL
+931	Eaton	james	linden house brouthton 	uk	uk	s0208ad	2025-07-05	1	447837957095	Eaton.james1@gmail.com	NULL	0	NULL		NULL	NULL
+932	Vehabovich	Tony	6391 shore road 	shelbourne	nova scotia	b0t1w0	2025-07-05	1	6047530871	tony@metalco.biz	NULL	0	NULL		NULL	NULL
+933	Cloutier	Daniel	222 De La Pionieres	Beaupres	QC	G0A 1E0	2025-07-05	1	418 564 1411	daniel.cloutier.55@gmail.com	NULL	0	NULL		NULL	NULL
+934	Penney	John	46 Joshua Slocum Ave	Lewis Lake	NS	B3Z 1C3	2025-08-01	5	902 209 2937	johnhpenney7@gmail.com	NULL	0	NULL		NULL	NULL
+935	crosbie	scott	po box 1363	bay roberts	nl	a0a 1g0	2025-07-09	1	709-725-1117	scrosbie@nlh.nl.ca	NULL	0	NULL		NULL	NULL
+936	Peake	Roy	41 Golf Drive	Port of Spain	Trinidad		2025-07-19	10	1 868 799 2705	roypeake7@gmail.com	NULL	0	NULL		NULL	NULL
+937	Lumsden	Dean	51 Helen Creighton Drive	Bedford	NS	B4B 0Z6	2025-07-15	2	902 225 0774	jdlumsden_@hotmail.com	NULL	0	NULL		NULL	NULL
+938	Morgan	Stephen	26 william roue rd	Mahone bay	Ns	B0J 2E0	2025-07-07	0		StephenMorgan74@gmail.com	NULL	0	NULL		NULL	NULL
+939	Grantmyre	John	871 Marlborough Woods	Halifax	NS	B3H 1H9	2025-08-09	1	902 471 6616	john.grantmyre@dal.ca	NULL	0	NULL		NULL	NULL
+940	Belau	Robert	1016 Pauline St	New Orleans	LA	70117	2025-07-15	2	917 716 9682	robert.belau@gmail.com	NULL	0	NULL		NULL	NULL
+941	Chandler	Bryan	270 royalty rd	Milton station	PEI		2025-07-19	1	9022132998	bcmegs@hotmail.com	NULL	0	NULL		NULL	NULL
+942	Cowper	Stuart	1029 bland st	Halifax	NS		2025-07-15	1	3435406695	stuart.cowper1@gmail.com	NULL	0	NULL		NULL	NULL
+943	Harries	John	50 Herman's Island South Side Ro	mahone bay	NS	B0J 2E0	2025-07-18	6	1 902 212 0725	john@morganscloud.com	NULL	0	NULL		NULL	NULL
+944	Risser	Jesse	123 toni ave	Boutilliers Point	NS	b3z 1x4	2025-07-18	5	1 902 478 6940	jrisser@bellaliant.net	NULL	0	NULL		NULL	NULL
+945	Dumaresq	Syd	139 peninsula road	chester	NS	B0J 1J0	2025-07-19	3	9024564772	syd@spda.ca	NULL	0	NULL		NULL	NULL
+946	Gieradar	Yves	859 Avenue Painchaud	Quebec City	QC	G1S 4L6	2025-07-19	2	4189309231	yvesr.gieradar@gmail.com	NULL	0	NULL		NULL	NULL
+947	Gooday	Reg	101 shaw island road	Chester	NS	B0J 1K0	2025-07-28	3	902 499 3702	reginald.goodday@dal.ca	NULL	0	NULL		NULL	NULL
+948	Anderson	Mark	3014 Mary ave 	Baltimore	MD	21214	2025-07-28	3	410 624 9109	mark12104@msn.com	NULL	0	NULL		NULL	NULL
+949	Coloins	Gran	6140 alan st 	Halifax	NS	B3L 1G6	2025-07-27	2	9024957727	gcolons@eastlink.ca	NULL	0	NULL		NULL	NULL
+950	Roth	Jeff	920 n Osceola ave apt 604	Clearwater	FL	33755	2025-07-27	2	727 492 7932	jeffrothmd@icloud.com	NULL	0	NULL		NULL	NULL
+951	Manter	Brad	26 tenney lane	Scarborough	ME	04074	2025-07-27	1	207 329 4300	svjennyt@gmail.com	NULL	0	NULL		NULL	NULL
+952	Tilley	Khrista	5645 Justice Street	Halifax	NS	B3K 2M7	2025-07-30	1	902-405-0044	ktrobaki@hotmail.com	NULL	0	NULL		NULL	NULL
+953	Huxtable	John	825 Hermans Island Road	Maters Cove	NS	B0J 2E0 	2025-07-31	3	902-497-8926	jbaitch63@gmail.com	NULL	0	NULL		NULL	NULL
+954	Daniel	Gurley	13 Pleasant St	Tucket 	MA	02554	2025-07-30	5	917 859 5995	drg8@mac.com	NULL	0	NULL		NULL	NULL
+955	Guest	Phillip	2118 hw 329	Hubards	NS		2025-07-29	0	9022251147	phillip@freewheeling.ca	NULL	0	NULL		NULL	NULL
+956	Herrmann	Barbara	17 Winchester Road	Newton	MS	02458	2025-08-02	2	781 641 0838	bahtz@comcast.net	NULL	0	NULL		NULL	NULL
+957	Edwards	James	23 Foxberry Hill	Glen Haven	NS	B3Z 2V7	2025-08-03	2	902 233 7533	edwardsjam@gmail.com	NULL	0	NULL		NULL	NULL
+958	Wamback	Brian	34 Pinetree Cres	Hammonds Plains 	NS	B3Z 1K4	2025-08-02	1	902 499 1951	bwamback@accesswave.ca	NULL	0	NULL		NULL	NULL
+959	Gaetz	Floyd	72 Seapoint Road	Dartmouth	NS	B3B 0R8	2025-08-08	2	902 489 3399	floyd@amlnet.com	NULL	0	NULL		NULL	NULL
+960	Carroll	John	547 Conrod Settlement Road	Head of Chesiucook	NS	B0J 2L0	2025-08-04	1	902 691 0258	jonny_carroll@hotmail.com	NULL	0	NULL		NULL	NULL
+961	Robin	Andre	55 rockport dr	Riverview	NS	E1B 5L8	2025-08-01	1		awrobin@yahoo.com	NULL	0	NULL		NULL	NULL
+962	Duncan	Shawn	2379 waverly rd	Waverley	NS		2025-08-06	2	9024785830	sduncan@strum.com	NULL	0	NULL		NULL	NULL
+963	Stark	Andy	612 Northwest 7th st	Williston	FL	32696	2025-08-12	2	3525623880	andystark.personal@gmail.com	NULL	0	NULL		NULL	NULL
+964	Gauthier	Robert	12 Berniers St	Quebec City	PQ	G1R 5H5	2025-08-08	3	819 266 2055	robertgauthier55@gmail.com	NULL	0	NULL	#1208	NULL	NULL
+965	Tregunno	Lesley	2717 gladstone st	Halifax	NS	B3K 0A4	2025-08-06	1	9024412312	lesley.tre@hotmail.com	NULL	0	NULL		NULL	NULL
+966	Barnard	John	22B Harbour Village	Branford	CT	06405	2025-08-08	1	917 440 6190	worley.robin@gmail.com	NULL	0	NULL		NULL	NULL
+967	Diliberto	Steph	3411 27th Parkway	Sarasota	FL	34235	2025-08-08	1	201 280 2173	steph.diliberto@gmail.com	NULL	0	NULL		NULL	NULL
+968	Sharp	Robert	76 Iroquois Avenue	Landing	NJ	07850	2025-08-08	1	973 417 1215	rjsharp@optonline.com	NULL	0	NULL		NULL	NULL
+969	Wightman	Ann	5 - 29 Treehouse Lane	Bridgewater	NS	B4V 9H9	2025-08-11	1	902 298 7845	abwight@gmail.com	NULL	0	NULL		NULL	NULL
+970	Rubarth	Ben	188 sugarwood crt	Porters Lake	NS	B3E 0B1	2025-08-11	1	902 402 8030	bmrubarth@protonmail.com	NULL	0	NULL		NULL	NULL
+971	Julian	Wayne	153 Dempster Ct	Mineville	NS	B2Z 1J2	2025-08-11	2	902 478 6765	wayne.julian@gmail.com	NULL	0	NULL		NULL	NULL
+972	Douglas	Don	272 Boutiliers Point Road	Boutiliers Point	NS	B3Z 1V1	2025-08-11	2	902 471 3566	donjdouglas01@gmail.com	NULL	0	NULL		NULL	NULL
+973	Brown	Bruce	5350 tyley ln	Maridian	MS	39301	2025-08-08	0	6016045092	Bbrownmd@yahoo.com	NULL	0	NULL		NULL	NULL
+974	Jensen	Andy	6000 hw 332	Lahave	NS	B4V 2X3	2025-08-14	2	9025276738	jensen_andy@hotmail.com	NULL	0	NULL		NULL	NULL
+975	Madill	Alex	76 Clayton Drive	Fox Point	NS	B0J 1T0	2025-08-13	1	902 499 1299	wmadill.alex@gmail.com	NULL	0	NULL		NULL	NULL
+976	Claudu	Nick	35 Dunvee	London 	UK	E14 8XR	2025-08-14	0	empty	nick@galliano-clayton.co.uk	NULL	0	NULL		NULL	NULL
+977	Gray	Brandon	192 southgate dr	Bedford	NS	B4A 4K8	2025-08-14	0	705 465 6525	brandon.evergray@gmail.com	NULL	0	NULL		NULL	NULL

@@ -256,13 +256,25 @@ app.post("/api/campers/get", async (req, res)=>{
         return;
     }
     try{
-        const campers = await masterDB("campers").whereRaw('LOWER(last_name) LIKE ?', [`%${req.body.lastName.toLowerCase()}%`])
+        const campers = await masterDB("campers").whereRaw('LOWER(last_name) LIKE ?', [`${req.body.lastName.toLowerCase()}%`])
         res.json(campers);
     }
     catch(err){
         res.status(500).json({error: err.message})
     }
 }) 
+app.post("/api/campers/delete", async(req, res) =>{
+    try{
+        await masterDB("campers")
+        .where("id", req.body.id)
+        .limit(1)
+        .del();
+        res.json({success: true})
+    }
+    catch(err){
+        res.json({error: err.message})
+    }
+})
 
 app.post("/api/camper/id", async (req, res)=>{
     try{
@@ -273,6 +285,18 @@ app.post("/api/camper/id", async (req, res)=>{
         res.status(500).json({error: err.message})
     }
 })
+
+app.post('/api/campers/update', async (req, res) => {
+    try {
+         await masterDB('campers')
+        .where("id", req.body.id)
+        .update(req.body)
+
+        res.json({success: "true"});
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
 
 function toLocalDateOnly(str) {
      const [y, m, d] = str.split("-").map(Number);
