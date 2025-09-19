@@ -250,15 +250,29 @@ app.post("/api/campers/add", async (req,res) => {
         res.status(500).json({error: err.message})
     }
 })
-app.get("/api/campers", async (req, res)=>{
+app.post("/api/campers/get", async (req, res)=>{
+    if(!req.body.lastName){
+        res.json([]);
+        return;
+    }
     try{
-        const campers = await masterDB("campers").select("*");
+        const campers = await masterDB("campers").whereRaw('LOWER(last_name) LIKE ?', [`%${req.body.lastName.toLowerCase()}%`])
         res.json(campers);
     }
     catch(err){
         res.status(500).json({error: err.message})
     }
 }) 
+
+app.post("/api/camper/id", async (req, res)=>{
+    try{
+        const campers = await masterDB("campers").select("*").where("id", req.body.id);
+        res.json(campers);
+    }
+    catch(err){
+        res.status(500).json({error: err.message})
+    }
+})
 
 function toLocalDateOnly(str) {
      const [y, m, d] = str.split("-").map(Number);

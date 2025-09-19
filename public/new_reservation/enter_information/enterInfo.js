@@ -1,4 +1,6 @@
 let userTable;
+let customerList = []
+let saveCustomerData = true;
 
 $("#reservationForm").on("submit", async function (event) {
 
@@ -33,18 +35,19 @@ $("#reservationForm").on("submit", async function (event) {
         boat_size: data.boatLength,
         boat_type: document.getElementById("rigType").value
     }
-
-    await fetch("/api/campers/add", {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(camperPostBody)
-    })
-    .then(res => res.json())
-    .then(data => {
-        if(data.error){
-            alert("Failed to save camper to existing users");
-        }
-    })
+    if(saveCustomerData){
+        await fetch("/api/campers/add", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(camperPostBody)
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.error){
+                alert("Failed to save camper to existing users");
+            }
+        })
+    }   
     
     // If validation passes, process the form
     console.log('Form submitted with data:', data);
@@ -60,25 +63,22 @@ $("#reservationForm").on("submit", async function (event) {
 // User data will be populated by your code
 let userData = {};
 
-function selectUser(button) {
-    const row = button.closest('tr');
-    const name = row.cells[0].textContent;
-    const user = userData[name];
+function selectUser(user) {
     
     if (user) {
         // Fill the form with user data
-        document.getElementById('firstName').value = user.firstName || '';
-        document.getElementById('lastName').value = user.lastName || '';
-        document.getElementById('address').value = user.address || '';
+        document.getElementById('firstName').value = user.first_name || '';
+        document.getElementById('lastName').value = user.last_name || '';
+        document.getElementById('address').value = user.address1 || '';
         document.getElementById('address2').value = user.address2 || '';
         document.getElementById('city').value = user.city || '';
         document.getElementById('state').value = user.state || '';
-        document.getElementById('zip').value = user.zip || '';
+        document.getElementById('zip').value = user.postal || '';
         document.getElementById('phone').value = user.phone || '';
         document.getElementById('email').value = user.email || '';
-        document.getElementById('boatName').value = user.boatName || '';
-        document.getElementById('boatLength').value = user.boatLength || '';
-        document.getElementById('rigType').value = user.rigType || 'Sail Boat';
+        document.getElementById('boatName').value = user.boat_name || '';
+        document.getElementById('boatLength').value = user.boat_size || '';
+        document.getElementById('rigType').value = user.boat_type || 'Sail Boat';
         
         // Update field styling for filled fields
         const inputs = document.querySelectorAll('#reservationForm input[required]');
@@ -87,9 +87,7 @@ function selectUser(button) {
                 input.style.borderColor = '#4CAF50';
             }
         });
-        
-        // Show confirmation
-        alert('User information loaded successfully!');
+        saveCustomerData = false;
     }
 }
 
@@ -119,12 +117,22 @@ $(document).ready(async function() {
             { orderable: false, targets: 4 } // Disable sorting on Action column
         ]
     });
-    await populateUserTable()
 });
 
-$('#usersTable').on('click', '.btn-select', function () {
+$('#usersTable').on('click', '.btn-select', async function () {
     let rowData = userTable.row($(this).parents('tr')).data();
-    console.log(rowData);
+    
+    await fetch("/api/camper/id", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({"id": rowData[0]})
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data[0])
+        selectUser(data[0])
+    })
+
 });
 
 // Add real-time validation feedback
@@ -146,17 +154,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-function searchExistingUser(lastName){
+async function searchExistingUser(inputID){
     //let row = ["2","Jack Oosterwijk", "Oosterwijkcools@gmail.com", "9022988912", "Mahone Bay","<button class='btn btn-select'>Select</button>" ]
     //let node = userTable.row.add(row).draw().node();
 
-    fetch("/api/campers", {
+    let lastName = document.getElementById(inputID).value
+    customerList = [] // reset list
+    userTable.clear().draw();
+    
+    await fetch("/api/campers/get", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({"lastName": lastName})
     })
     .then(res => res.json())
     .then(data => {
-        console.log(data)
+        data.forEach(customer => {
+            customerList.push(customer)
+        });
     })
+
+    console.log(customerList)
+    if(customerList.length > 0){
+        customerList.forEach(customer => {
+            let row = [customer.id, customer.first_name + " " + customer.last_name, customer.email, customer.phone, customer.city, "<button class='btn btn-select'>Select</button>"]
+            userTable.row.add(row)
+        });
+        userTable.draw();
+    }
+        
 }
