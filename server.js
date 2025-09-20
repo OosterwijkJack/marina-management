@@ -131,14 +131,24 @@ app.post('/api/reservations/get_by_id', async (req,res) =>{
     }
 })
 
-app.get("/api/spaces/", async (req, res)=>{
-    try {
-        const spaces = await masterDB('spaces').select('*');
-        res.json(spaces);
-    } catch (err) {
-        res.status(500).json({ error: err.message });
-    }
-})
+app.get("/api/spaces/", async (req, res) => {
+  try {
+    const spaces = await masterDB('spaces')
+      .select('*')
+      .orderByRaw(`
+        CASE 
+          WHEN name LIKE 'M%' 
+          THEN CAST(SUBSTR(name, 2) AS INTEGER) 
+          ELSE NULL 
+        END ASC, name ASC
+      `);
+
+    res.json(spaces);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 
 app.post("/api/spaces/get_by_name", async (req, res)=>{
     try {
@@ -151,6 +161,11 @@ app.post("/api/spaces/get_by_name", async (req, res)=>{
 
 app.post("/api/spaces/add", async (req,res) => {
     try{
+        const dup = await masterDB("spaces").select("*").where("name", req.body.name)
+        if(dup.length > 0){
+            res.status(500).json({error: "Can not add duplicate space."})
+            return;
+        }
         await masterDB("spaces").insert(req.body);
         res.json({success: true})
     }
@@ -297,6 +312,17 @@ app.post('/api/campers/update', async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 });
+app.post("/api/spaces/rate", async (req, res) => {
+    try{
+       const space = await masterDB("spaces").select("*").where("name", req.body.space);
+       res.json({"daily": space[0].daily, "weekly": space[0].weekly, "monthly": space[0].monthly})
+
+    }
+    catch(err){
+        res.status(500).json({"error": err})
+    }
+})
+
 
 function toLocalDateOnly(str) {
      const [y, m, d] = str.split("-").map(Number);

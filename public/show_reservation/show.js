@@ -6,6 +6,7 @@ let resStatus;
 let dateStart;
 let dateEnd;
 let resPayment = 0;
+let resSpace;
 
 const fieldMapping = {
   "startDate": "start",
@@ -33,6 +34,7 @@ window.onload = async function () {
     await populateFields(urlParams);
 
     await calcPrice(window); 
+    getSpaceRate()
 }
 
 
@@ -78,6 +80,7 @@ async function populateFields(data){
         
         let spaceTable = document.querySelector(".site-info-table");
         spaceTable.rows[1].cells[0].innerText = data.space;
+        resSpace = data.space;
 
         resStatus = data.status;
         if(resStatus == "occupied"){
@@ -167,9 +170,10 @@ async function calcPrice(pageWindow, isPrint=false) {
     console.log(days)
         
     let daysCalc = days;
-    const monthlyRate = 400.00;
-    const weeklyRate = 200.00;
-    const dailyRate = 50.00;
+    let spaceRates = await getSpaceRate();
+    const dailyRate = spaceRates.daily ? parseFloat(spaceRates.daily) : 50.00 ;
+    const weeklyRate = spaceRates.weekly ? parseFloat(spaceRates.weekly): dailyRate;
+    const monthlyRate = spaceRates.monthly ? parseFloat(spaceRates.monthly): weeklyRate;
 
     let monthCount = 0;
     let weekCount = 0;
@@ -469,6 +473,20 @@ function fillTable(tableId, rows, pageWindow) {
         });
         tbody.appendChild(tr);
     });
+}
+
+async function getSpaceRate(){
+    let spacePrices;
+    await fetch("/api/spaces/rate", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({"space": resSpace})
+    })
+    .then(res=>res.json())
+    .then(data =>{
+        spacePrices = data;
+    })
+    return spacePrices;
 }
 
 function toLocalDateOnly(str) {

@@ -223,6 +223,7 @@ let dateSlots;
     buildHeaders(dateSlots)
 
     spaceList.forEach(space => {
+        console.log(space)
         reservationManager.addResource(space.name, space.name);
     });
 

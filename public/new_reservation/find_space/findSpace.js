@@ -4,7 +4,8 @@ window.onload = async function(){
 
     table = new DataTable('#spaceTable', {
         searching: false,
-        paging: false
+        paging: false,
+        ordering: false
     });
 
     const urlParams = new URLSearchParams(window.location.search);

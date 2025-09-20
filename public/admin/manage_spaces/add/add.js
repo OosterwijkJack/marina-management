@@ -23,10 +23,11 @@ window.onload = function() {
 
         let status = await writeSpaceDB(formData);
 
-        if(status === 200)
-            alert('Space added successfully!');
+        if(status.error){
+            alert(`Error: ${status.error}`)
+        }
         else{
-            alert("Error adding space")
+            alert("Space added succesfully")
         }
         
         // Reset form
@@ -41,8 +42,8 @@ async function writeSpaceDB(spaceData){
         body: JSON.stringify(spaceData)
     })
     .then(response => {
-        status = response.status
-        console.log(response.status)
+        status = response.json()
+        console.log(status)
     });
     return status
 }

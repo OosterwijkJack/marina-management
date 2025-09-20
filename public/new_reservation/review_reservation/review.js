@@ -1,5 +1,6 @@
 let resID;
 let totalCost = 0;
+let resSpace;
 window.onload = async function () {
     const urlParams = new URLSearchParams(window.location.search);
 
@@ -31,6 +32,7 @@ function populateFields(data){
 
     let siteTable = document.querySelector(".site-info-table");
     siteTable.rows[1].cells[0].innerText = data.get("space")
+    resSpace = data.get("space")
 
 }   
 function completeReservation(){
@@ -143,9 +145,10 @@ async function calcPrice() {
     console.log(days)
         
     let daysCalc = days;
-    const monthlyRate = 400.00;
-    const weeklyRate = 200.00;
-    const dailyRate = 50.00;
+    let spaceRates = await getSpaceRate();
+    const dailyRate = spaceRates.daily ? parseFloat(spaceRates.daily) : 50.00 ;
+    const weeklyRate = spaceRates.weekly ? parseFloat(spaceRates.weekly): dailyRate;
+    const monthlyRate = spaceRates.monthly ? parseFloat(spaceRates.monthly): weeklyRate;
 
     let monthCount = 0;
     let weekCount = 0;
@@ -178,6 +181,20 @@ async function calcPrice() {
     totalCost = total;
 
 }
+async function getSpaceRate(){
+    let spacePrices;
+    await fetch("/api/spaces/rate", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({"space": resSpace})
+    })
+    .then(res=>res.json())
+    .then(data =>{
+        spacePrices = data;
+    })
+    return spacePrices;
+}
+
 function formatDate(date) {
     return date.toLocaleDateString('en-US', {
         month: '2-digit',

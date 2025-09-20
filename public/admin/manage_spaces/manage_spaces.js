@@ -1,8 +1,11 @@
 let table;
 
 window.onload = async function(){
-    table = new DataTable('#spaceTable');
-    table.searching = true;
+    table =  new DataTable('#spaceTable', {
+        searching: false,
+        paging: false,
+        ordering: false
+    });
     await populateSpaceTable();
 
 }
