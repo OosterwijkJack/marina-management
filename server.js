@@ -1,6 +1,7 @@
 const express = require('express');
-const sqlit3 = require('sqlite3')
 const knex = require('knex');
+const favicon = require("serve-favicon");
+const XLSX = require("xlsx");
 
 const masterDB = knex({
   client: 'sqlite3',
@@ -13,6 +14,7 @@ const port = 3000;
 
 app.use(express.static('public'))
 app.use(express.json());
+app.use(favicon(__dirname + "/public/favicon.ico"));
 
 app.get('/reservations', (reg, res) => {
     res.sendFile(__dirname + "/public/reservation_list/index.html")
@@ -46,6 +48,9 @@ app.get("/admin/manage_spaces/edit", (req, res)=>{
     res.sendFile(__dirname + "/public/admin/manage_spaces/edit/index.html")
 })
 
+app.get("/campers", (req, res) =>{
+    res.sendFile(__dirname + "/public/campers/index.html")
+})
 app.get("/show_reservation", (req, res) =>{
     res.sendFile(__dirname + "/public/show_reservation/index.html")
 })
@@ -60,6 +65,9 @@ app.get("/site_availability", (req,res) =>{
 app.get("/in_park", (req, res) => {
     res.sendFile(__dirname + "/public/in_park_list/index.html")
 })
+app.get("/campers/edit", (req, res) =>{
+    res.sendFile(__dirname + "/public/campers/edit/index.html")
+});
 
 app.listen(port, () =>{
     console.log(`Server running at http://localhost:${port}`)
@@ -204,13 +212,9 @@ app.post("/api/spaces/delete", async(req, res) =>{
         res.json({error: err.message})
     }
 })
-
-app.post("/api/spaces/available", async(req, res) => {
-    let space = req.body.space;
-    let id = req.body.id;
-
-    let newStartDate = toLocalDateOnly(req.body.start);
-    let newEndDate = toLocalDateOnly(req.body.end);
+async function isAvailable(space, start, end, id){
+    let newStartDate = toLocalDateOnly(start);
+    let newEndDate = toLocalDateOnly(end);
 
 
     const reservations = await masterDB('reservations').select('*')
@@ -231,13 +235,42 @@ app.post("/api/spaces/available", async(req, res) => {
         }
     });
 
-    if(free == false){
-        res.json({"full": true})
+    return free;
+}
+app.post("/api/spaces/available", async(req, res) => {
+    try{
+        if(isAvailable(req.body.space, req.body.start, req.body.end, req.body.id)){
+            res.json({"free": true})
+        }
+        else{
+            res.json({"full": true})
+        }
     }
-    else{
-        res.json({"free": true})
+    catch(err){
+        res.status(500).json({error: err.message})
+    }
+    
+})
+
+app.post("/api/spaces/available/bulk", async(req, res) => {
+
+    try{
+
+        let data = req.body;
+        let isFreeList = [];
+        for(let i = 0; i<data.length; i++){
+            let free = await isAvailable(data[i].space, data[i].start, data[i].end, data[i].id);
+            isFreeList.push({"free":free});
+        }
+    
+        res.json(isFreeList);
+        return;
+    }
+    catch(err){
+        res.status(500).json({error: err.message})
     }
 })
+
 app.post("/api/payments", async (req,res) => {
     try{
         await masterDB("payments").insert(req.body);
@@ -312,6 +345,15 @@ app.post('/api/campers/update', async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 });
+app.get("/api/campers", async (req, res) => {
+    try {
+        const campers = await masterDB('campers').select('*');
+        res.json(campers);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
 app.post("/api/spaces/rate", async (req, res) => {
     try{
        const space = await masterDB("spaces").select("*").where("name", req.body.space);
@@ -328,3 +370,30 @@ function toLocalDateOnly(str) {
      const [y, m, d] = str.split("-").map(Number);
      return new Date(y, m - 1, d);
  }
+app.get("/api/download-excel", async (req, res) => {
+  // Example dictionary
+  const dict = await masterDB("reservations").select("*");
+    console.log(dict)
+
+  // Create workbook + worksheet
+  const worksheet = XLSX.utils.json_to_sheet(dict);
+  const workbook = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(workbook, worksheet, "Dictionary");
+
+  // Write to buffer (instead of file)
+  const buffer = XLSX.write(workbook, {
+    type: "buffer",
+    bookType: "xlsx"
+  });
+
+  // Send file as download
+  res.setHeader(
+    "Content-Disposition",
+    "attachment; filename=dictionary.xlsx"
+  );
+  res.setHeader(
+    "Content-Type",
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+  );
+  res.send(buffer);
+});

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Management System</title>
+    
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="/libraries/dataTables.dataTables.min.css">
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="header">
+            <h1>Reservation Management System</h1>
+            <div class="status-bar">
+                <div class="status-item" style="background-color: lightgreen ">Checking in today</div>
+                <div class="status-item" style="background-color: yellow;">Overdue for check in</div>
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+            <div class="button-group">
+                <button class="nav-btn" onclick="window.location.href = 'http://localhost:3000/'">Reservation List</button>
+                <button class="nav-btn" onclick="window.location.href = 'http://localhost:3000/in_park'">In Park List</button>
+                <button class="nav-btn" onclick="window.location.href = 'http://localhost:3000/new_reservation'">New Reservation</button>
+                <button class="nav-btn">New Group Reservation</button>
+                <button class="nav-btn primary" onclick="window.location.href = 'http://localhost:3000/campers'">Campers</button>
+                <button class="nav-btn">Groups</button>
+                <button class="nav-btn" onclick="window.location.href = 'http://localhost:3000/site_availability'">Site Availability</button>
+                <button class="nav-btn" onclick="window.location.href = 'http://localhost:3000/admin'">Admin</button>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <div class="table-wrapper">
+                <table id="reservationTable" class="table table-striped table-bordered dt-responsive nowrap" style="color: black">
+                    <thead>
+                        <tr>
+                            <th>ID #</th>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>State</th>
+                            <th>City</th>
+                            <th>Zip</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Action</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be populated by DataTables -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Required JavaScript libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
+    <script src="/campers/campers.js"></script>
+</body>
+</html>

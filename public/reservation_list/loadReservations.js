@@ -57,7 +57,8 @@ async function appendTable(){
                 let paymentFloat = parseFloat(element.amount)
                 payment += paymentFloat;
             });
-        })
+        });
+        
         console.log(resRow.due)
         let dueStr = "$"+ (parseFloat(resRow.due) - payment).toFixed(2);
         let paymentStr = "$" + payment.toFixed(2);

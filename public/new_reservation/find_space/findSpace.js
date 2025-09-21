@@ -25,7 +25,8 @@ window.onload = async function(){
 
 }
 async function populateSpaceTable(startStr, endStr){
-    let spaceList
+    let spaceList;
+    let freeList;
 
     await fetch('/api/spaces', {
         method: 'GET',
@@ -34,25 +35,26 @@ async function populateSpaceTable(startStr, endStr){
     .then(data =>{
         spaceList = data;
     })
-
+    await fetch("/api/spaces/available/bulk", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(spaceList.map(space => ({id: -1, space: space.name, start: startStr, end: endStr})))
+    })
+    .then(res => res.json())
+    .then(data => {
+        freeList = data;
+    });
     let row;
-    for(let i=0; i<spaceList.length; i++){
+    for(let i=0; i<freeList.length; i++){
         // make dates easy to read for the hard working marina employee
-        console.log(spaceList[i].name)
-        await fetch('/api/spaces/available', {
-            method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({id: -1, space: spaceList[i].name, start: startStr, end: endStr})
-        })
-        .then(res => res.json())
-        .then(data => {
-            if(data.free){
-                row = Object.values(spaceList[i]);
-                // append buttons
-                row.push('<button class="select-btn">Select</button>');
-                table.row.add(row).draw();
-            }
-        })
+        
+        if(freeList[i].free){
+            row = Object.values(spaceList[i]);
+            // append buttons
+            row.push('<button class="select-btn">Select</button>');
+            table.row.add(row);
+        }
+        
     }
     table.draw();
 }

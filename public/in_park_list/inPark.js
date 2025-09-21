@@ -101,6 +101,7 @@ $('#reservationTable').on('click', '.check-out-btn', async function () {
         .then(res => res.json())
         .then(data =>{
             if(data.success){
+                location.reload();
             }
         })
     }

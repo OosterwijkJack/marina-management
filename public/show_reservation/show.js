@@ -204,6 +204,12 @@ async function calcPrice(pageWindow, isPrint=false) {
     let dayCost = dailyRate*dayCount;
     let total = monthCost + weekCost + dayCost;
 
+    await fetch("/api/reservations/update", { // update due of res in case of date and price changes
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({id: idNumber, name: "due", value: total})
+    })
+
     console.log(`Months: ${monthCount}`)
     console.log(`Weeks: ${weekCount}`)
     console.log(`Days: ${dayCount}`)
