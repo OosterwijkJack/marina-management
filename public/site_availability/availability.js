@@ -6,9 +6,9 @@
 
  function formatDate(date) {
      return date.toLocaleDateString('en-US', {
-         weekday: 'short',
+         //weekday: 'short',
          day: 'numeric',
-         month: 'short'
+        // month: 'short'
      }).toUpperCase();
  }
  function dateToStr(date) {
@@ -63,7 +63,7 @@
 
      let days = ((largestDate - smallestDate) / (1000 * 60 * 60 * 24)) + 1;
 
-     let minDays = 30;
+     let minDays = 60;
      if(days < minDays){
         largestDate = addDays(largestDate, minDays-days)
         days = ((largestDate - smallestDate) / (1000 * 60 * 60 * 24)) + 1;

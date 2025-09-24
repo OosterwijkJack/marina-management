@@ -70,9 +70,9 @@
 
     /* Date columns - EXACT width matching */
     .availability-table th:not(:first-child) {
-        width: 80px;
-        min-width: 80px;
-        max-width: 80px;
+        width: 50px;
+        min-width: 50px;
+        max-width: 50px;
     }
 
     /* Table cells */
@@ -115,7 +115,7 @@
     /* CSS Grid for seamless bars */
     .row-dates {
         display: grid;
-        grid-template-columns: repeat(var(--num-dates), 80px);
+        grid-template-columns: repeat(var(--num-dates), 50px);
         position: relative;
         height: 50px;
         width: 100%;
@@ -234,9 +234,11 @@
 <button class="nav-btn" onclick="window.location.href = 'http://localhost:3000/in_park'">In Park List</button>
 <button class="nav-btn" onclick="window.location.href = 'http://localhost:3000/new_reservation'">New Reservation</button>
 <button class="nav-btn">New Group Reservation</button>
-<button class="nav-btn" onclick="window.location.href = 'http://localhost:3000/campers'">Campers</button>
+<button class="nav-btn">Campers</button>
 <button class="nav-btn">Groups</button>
 <button class="nav-btn primary" onclick="window.location.href = 'http://localhost:3000/site_availability'">Site Availability</button>
+<button class="nav-btn">Reports</button>
+<button class="nav-btn">Database Backup</button>
 <button class="nav-btn" onclick="window.location.href = 'http://localhost:3000/admin'">Admin</button>
 </div>
 </div>
