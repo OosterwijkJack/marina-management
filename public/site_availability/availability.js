@@ -63,7 +63,7 @@
 
      let days = ((largestDate - smallestDate) / (1000 * 60 * 60 * 24)) + 1;
 
-     let minDays = 60;
+     let minDays = 120;
      if(days < minDays){
         largestDate = addDays(largestDate, minDays-days)
         days = ((largestDate - smallestDate) / (1000 * 60 * 60 * 24)) + 1;
