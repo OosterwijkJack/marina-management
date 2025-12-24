@@ -4,229 +4,271 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reservation Management System</title>
-<link rel="stylesheet" href="/style.css">
+ <link rel="stylesheet" href="/style.css">
 <style>
-    /* Site Availability specific styles */
-    .availability-container {
-        margin: 20px 0;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        overflow: hidden;
-        /* Add max height and vertical scrolling for the entire container */
-        max-height: 70vh;
-        overflow-y: auto;
-        overflow-x: auto;
-    }
 
-    .table-container {
-        /* Remove overflow-x auto from here since container handles it */
-        padding: 0;
-        min-width: fit-content;
-    }
 
-    .availability-table {
-        border-collapse: collapse;
-        width: 100%;
-        table-layout: fixed;
-        min-width: fit-content;
-    }
-    #reservationTable tbody tr {
-        transition: background-color 0.2s ease;
-        background-color: #f0f0f0 !important; 
-    }
+   /* Site Availability specific styles - Optimized for maximum density */
+   body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100vh;
+    height: fit-content; /* Don't reserve extra space */
+}
+.availability-container {
+    margin: 20px 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    /* Maximize vertical space - use most of viewport */
+    max-height: 120vh;
+    min-width: 125vw;
+    transform: scale(0.8);
+    transform-origin: top left;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+.container-fluid {
+    height: 125vh;
+    min-height: auto;
+    padding-bottom: 0;
+}
 
-    /* Header styling - fixed widths */
-    .availability-table th {
-        border: 1px solid #e2e8f0;
-        text-align: center;
-        padding: 8px 4px;
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        font-weight: 600;
-        color: #495057;
-        font-size: 10px;
-        line-height: 1.2;
-        white-space: nowrap;
-        /* Make header sticky */
-        position: sticky;
-        top: 0;
-        z-index: 100;
-    }
+.table-container {
+    padding: 0;
+    min-width: fit-content;
+}
 
-    /* Resource column */
-    .availability-table th:first-child {
-        background: #f0f8ff !important;
-        font-weight: 600;
-        text-align: left;
-        width: 120px;
-        min-width: 120px;
-        max-width: 120px;
-        padding: 8px 12px;
-        /* Make resource column sticky */
-        position: sticky;
-        left: 0;
-        z-index: 101;
-    }
+.availability-table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    min-width: fit-content;
+}
 
-    /* Date columns - EXACT width matching */
-    .availability-table th:not(:first-child) {
-        width: 35px;
-        min-width: 35px;
-        max-width: 35px;
-    }
+#reservationTable tbody tr {
+    transition: background-color 0.2s ease;
+    background-color: #f0f0f0 !important; 
+}
 
-    /* Table cells */
-    .availability-table td {
-        border: 1px solid #e2e8f0;
-        padding: 0;
-        vertical-align: middle;
-    }
+/* Compact header styling - reduced padding */
+.availability-table th {
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    padding: 4px 2px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    font-weight: 600;
+    color: #495057;
+    font-size: 9px;
+    line-height: 1.1;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-    /* Alternating row colors for better readability */
-    .availability-table tbody tr:nth-child(odd) td {
-        background-color: #f8fafc;
-    }
+/* Narrower resource column */
+.availability-table th:first-child {
+    background: #f0f8ff !important;
+    font-weight: 600;
+    text-align: left;
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+    padding: 4px 6px;
+    position: sticky;
+    left: 0;
+    z-index: 101;
+    font-size: 11px;
+}
 
-    .availability-table tbody tr:nth-child(odd) td:first-child {
-        background-color: #e6f3ff !important; /* Slightly darker blue for odd rows */
-    }
+/* Narrower date columns for more columns on screen */
+.availability-table th:not(:first-child) {
+    width: 28px;
+    min-width: 28px;
+    max-width: 28px;
+}
 
-    /* Resource cells */
-    .availability-table td:first-child {
-        background: #f0f8ff !important;
-        font-weight: 600;
-        text-align: left !important;
-        padding: 14px 12px !important;
-        width: 120px;
-        min-width: 120px;
-        max-width: 120px;
-        /* Make resource column sticky */
-        position: sticky;
-        left: 0;
-        z-index: 50;
-    }
+/* Compact table cells */
+.availability-table td {
+    border: 1px solid #e2e8f0;
+    padding: 0;
+    vertical-align: middle;
 
-    /* Date cell container - spans all date columns */
-    .dates-container {
-        padding: 0 !important;
-        border: none !important;
-    }
+}
 
-    /* CSS Grid for seamless bars */
-    .row-dates {
-        display: grid;
-        grid-template-columns: repeat(var(--num-dates), 35px);
-        position: relative;
-        height: 35px;
-        width: 100%;
-    }
+/* Alternating row colors */
+.availability-table tbody tr:nth-child(odd) td {
+    background-color: #f8fafc;
+}
 
-    /* Grid slots - invisible but provide structure */
-    .row-dates > div {
-        border-left: 1px solid #e2e8f0;
-        min-height: 35px;
-        position: relative;
-    }
+.availability-table tbody tr:nth-child(odd) td:first-child {
+    background-color: #e6f3ff !important;
+}
 
-    .row-dates > div:last-child {
-        border-right: 1px solid #e2e8f0;
-    }
+/* Compact resource cells */
+.availability-table td:first-child {
+    background: #f0f8ff !important;
+    font-weight: 600;
+    text-align: left !important;
+    padding: 6px 6px !important;
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+    position: sticky;
+    left: 0;
+    z-index: 50;
+    font-size: 11px;
+    line-height: 1.2;
+}
 
-    /* Beautiful seamless reservation bars */
-    .reservation-bar {
-        background: linear-gradient(135deg, #10b981, #059669);
-        color: black;
-        border-radius: 6px;
-        padding: 4px 8px;
-        font-size: 12px;
-        font-weight: 600;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        cursor: pointer;
-        align-self: center;
-        justify-self: stretch;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.2s ease;
-        z-index: 10;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
+.dates-container {
+    padding: 0 !important;
+    border: none !important;
+}
 
-    .reservation-bar:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        z-index: 20;
-    }
+/* Compact grid with narrower columns */
+.row-dates {
+    display: grid;
+    grid-template-columns: repeat(var(--num-dates), 28px);
+    position: relative;
+    height: 26px;
+    width: 100%;
+}
 
-    /* Status colors */
-    .status-occupied { 
-        background: linear-gradient(135deg, #4CAF50, #45a049); 
-    }
-    .status-reserved { 
-        background: yellow; 
-    }
-    .status-blocked { 
-        background: linear-gradient(135deg, #F44336, #d32f2f); 
-    }
+.row-dates > div {
+    border-left: 1px solid #e2e8f0;
+    min-height: 20px;
+    position: relative;
+}
 
-    .controls {
-        padding: 20px;
-        background: #f8fafc;
-        border-top: 1px solid #e2e8f0;
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        /* Make controls sticky at bottom */
-        position: sticky;
-        bottom: 0;
-        z-index: 90;
-    }
+.row-dates > div:last-child {
+    border-right: 1px solid #e2e8f0;
+}
 
-    .availability-btn {
-        padding: 8px 16px;
-        border: none;
-        border-radius: 6px;
-        font-size: 14px;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.2s ease;
-    }
+/* Compact reservation bars */
+.reservation-bar {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: black;
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    align-self: center;
+    justify-self: stretch;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    z-index: 10;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
 
-    .availability-btn.btn-primary {
-        background: #3b82f6;
-        color: white;
-    }
+.reservation-bar:not(.status-month):hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    z-index: 20;
+    font-size: 11px;
+}
 
-    .availability-btn.btn-primary:hover {
-        background: #2563eb;
-    }
+/* Status colors */
+.status-occupied { 
+    background: linear-gradient(135deg, #4CAF50, #45a049); 
+}
+.status-reserved { 
+    background: yellow; 
+}
+.status-blocked { 
+    background: linear-gradient(135deg, #F44336, #d32f2f); 
+}
+.status-month{
+    background: black;
+    color: white;
+    font-size: 14px;
+}
 
-    .availability-btn.btn-secondary {
-        background: #e2e8f0;
-        color: #475569;
-    }
+/* Compact controls */
+.controls {
+    padding: 12px;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    position: sticky;
+    bottom: 0;
+    z-index: 90;
+}
 
-    .availability-btn.btn-secondary:hover {
-        background: #cbd5e1;
-    }
+.availability-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
 
-    /* Ensure the body and main containers don't create unnecessary scrollbars */
-    body {
-        overflow-x: hidden;
-    }
+.availability-btn.btn-primary {
+    background: #3b82f6;
+    color: white;
+}
 
-    .container-fluid {
-        overflow-x: hidden;
-    }
+.availability-btn.btn-primary:hover {
+    background: #2563eb;
+}
+
+.availability-btn.btn-secondary {
+    background: #e2e8f0;
+    color: #475569;
+}
+
+.availability-btn.btn-secondary:hover {
+    background: #cbd5e1;
+}
+
+/* Prevent unnecessary scrollbars */
+body {
+    overflow-x: hidden;
+}
+
+
+/* Better scrollbar styling for webkit browsers */
+.availability-container::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.availability-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.availability-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.availability-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 </style>
 </head>
 <body>
 <div class="container-fluid">
 <div class="header">
 <h1>Reservation Management System</h1>
+<div class="status-bar" style="padding: 10px;">
+                <div class="status-item" style="background-color: #4CAF50 ">Occupied</div>
+                <div class="status-item" style="background-color: yellow;">Reserved</div>
+            </div>
 </div>
 <div class="nav-buttons">
 <div class="button-group">
@@ -244,14 +286,11 @@
 </div>
 
 <!-- Site Availability Content -->
- <div class="status-bar" style="padding: 10px;">
-                <div class="status-item" style="background-color: #4CAF50 ">Occupied</div>
-                <div class="status-item" style="background-color: yellow;">Reserved</div>
-            </div>
+ 
 <div class="availability-container">
     <div class="table-container">
         <table id="reservationTable" class="availability-table">
-            <thead>
+            <thead id="tableHead">
                 <tr id="headerRow">
                     <th>Resource</th>
                 </tr>

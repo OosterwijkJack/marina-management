@@ -39,7 +39,6 @@
 
         let startDate = new Date(toLocalDateOnly(res.start).toString());
         let endDate = new Date(toLocalDateOnly(res.end).toString());
-        console.log(res)
 
         if (!smallestDate || !largestDate) {
             smallestDate = startDate;
@@ -68,7 +67,6 @@
         largestDate = addDays(largestDate, minDays-days)
         days = ((largestDate - smallestDate) / (1000 * 60 * 60 * 24)) + 1;
      }
-     console.log(smallestDate)
      return {
          startDate: smallestDate,
          endDate: largestDate,
@@ -97,10 +95,11 @@ let dateSlots;
  function buildHeaders(dateSlots){
      const headerRow = document.getElementById("headerRow");
      dateSlots.forEach(slot => {
-     const th = document.createElement("th");
-     th.textContent = slot.label;
-     th.dataset.date = slot.key;
-     headerRow.appendChild(th);
+     const thH = document.createElement("th");
+
+     thH.textContent = slot.label;
+     thH.dataset.date = slot.key;
+     headerRow.appendChild(thH);
  });
  }
 
@@ -111,7 +110,7 @@ let dateSlots;
      }
 
      addReservation(resourceId, startDate, endDate, guestName,resID, status) {
-        if(status != "occupied" && status != "reserved"){
+        if(status != "occupied" && status != "reserved" && status != "month"){
             return
         }
 
@@ -129,12 +128,10 @@ let dateSlots;
 
         //resourceId = spaceList[spaceList.indexOf(resourceId)-1]
         const row = document.querySelector(`[data-resource="${resourceId}"]`);
-        console.log(row)
         
         if (!row) return;
 
         const grid = row.querySelector(".row-dates");
-        console.log(grid)
         if (!grid) return;
 
         const bar = document.createElement("div");
@@ -144,9 +141,12 @@ let dateSlots;
         bar.style.gridRow = "1/2"
         bar.id = resID
 
-        bar.addEventListener("click", () => {
-            window.location.href = `http://localhost:3000/show_reservation/?number=${bar.id}`
-        });
+
+        if(status != "month"){
+            bar.addEventListener("click", () => {
+                window.location.href = `http://localhost:3000/show_reservation/?number=${bar.id}`
+            });
+        }
 
         grid.appendChild(bar);
         const id = `res_${Date.now()}_${Math.random().toString(36).substr(2,9)}`;
@@ -166,8 +166,14 @@ let dateSlots;
          this.reservations.clear();
      }
 
-     addResource(name, id) {
-         const tableBody = document.getElementById("tableBody");
+     addResource(name, id, month) {
+        let tableBody;
+        if(month){
+            tableBody = document.getElementById("tableHead") 
+        }
+        else{
+        tableBody = document.getElementById("tableBody");
+        }
          const tr = document.createElement("tr");
          tr.dataset.resource = id;
 
@@ -184,8 +190,9 @@ let dateSlots;
          grid.style.setProperty("--num-dates", dateSlots.length+1);
 
          dateSlots.forEach(() => {
-             const slot = document.createElement("div");
-             grid.appendChild(slot);
+            const slot = document.createElement("div");
+            grid.appendChild(slot);
+             
          });
 
          datesCell.appendChild(grid);
@@ -218,21 +225,46 @@ let dateSlots;
         spaceList = data
     })
 
-    console.log(reservationList)
     dateSlots = generateDateSlots();
     buildHeaders(dateSlots)
 
+    reservationManager.addResource("", "Month", true)
     spaceList.forEach(space => {
-        console.log(space)
         reservationManager.addResource(space.name, space.name);
     });
 
+    // draw month bars
+    let dates = dateSlots
+    console.log(dates.length)
+    let curDate = new Date(dates[1].key)
+    let curDateMonth = curDate.toLocaleDateString('en-US', { month: 'long' });
+
+    let newDate
+    let newDateMonth
+    for(let i = 2; i < dates.length; i++){
+        newDate = new Date(dates[i].key)
+        newDateMonth = newDate.toLocaleDateString('en-US', { month: 'long' })
+        if(newDateMonth != curDateMonth){
+            let startDate = dateToStr(curDate)
+            let endDate = dateToStr(newDate)
+            console.log(startDate)
+            console.log(endDate)
+            reservationManager.addReservation("Month", startDate, endDate, curDate.toLocaleDateString('en-US', { month: 'long' }), curDate.toLocaleDateString('en-US', { month: 'long' }), "month");
+            curDate = newDate;
+            curDateMonth = newDateMonth;
+        }
+    }
+    reservationManager.addReservation("Month", dateToStr(curDate), dateToStr(addDays(newDate, 1)), curDate.toLocaleDateString('en-US', { month: 'long' }), curDate.toLocaleDateString('en-US', { month: 'long' }), "month");   
+
+    
+
+
     reservationList.forEach(res => {
         let name = res.first_name + " " + res.last_name
-        console.log(res.status)
         reservationManager.addReservation(res.space, res.start, res.end, name, res.id, res.status)
         //first = false;
         
     })
+    
     
  });

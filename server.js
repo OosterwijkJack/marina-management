@@ -69,9 +69,16 @@ app.get("/campers/edit", (req, res) =>{
     res.sendFile(__dirname + "/public/campers/edit/index.html")
 });
 
-app.listen(port, () =>{
-    console.log(`Server running at http://localhost:${port}`)
-})
+try{
+    app.listen(port, () =>{
+        console.log(`Server running at http://localhost:${port}`)
+    })
+}
+catch(err){
+    console.log(err)
+}
+
+
 
 
 app.post("/api/reservations/update/payment", async (req,res)=>{
